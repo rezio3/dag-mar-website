@@ -1,0 +1,88 @@
+.mgr-Dagmara-Toporowska-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background-color: #f5f5f5;
+	width: 100%;
+	height: 680px;
+
+	.DT-container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+
+		.DT-img {
+			background-image: url(../../img/arc.png);
+			background-size: cover;
+			width: 446px;
+			height: 604px;
+
+			.DTimage {
+				width: 443px;
+				height: 638px;
+				transform: translateY(-32px);
+				transition: 0.5s ease-out;
+			}
+
+			.DTimage:hover {
+				width: 463px;
+				height: 672px;
+				transform: translateY(-50px);
+			}
+		}
+		.DT-description {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			width: 806px;
+			margin-left: 5%;
+			height: 100%;
+
+			h1 {
+				margin-top: 0;
+				font-weight: bold;
+				font-family: "Lato", sans-serif;
+				letter-spacing: 1.6px;
+				font-size: 24px;
+				margin-bottom: 34px;
+			}
+
+			p {
+				margin: 15px 0;
+				font-size: 16px;
+				font-weight: 400;
+				font-style: normal;
+				font-family: "Inter", sans-serif;
+				line-height: 27px;
+				// font-weight: lighter;
+			}
+		}
+
+		.see-offer2 {
+			margin-top: 50px;
+			width: 163px;
+			height: 54px;
+			letter-spacing: 0.3px;
+			font-size: 18px;
+			font-style: normal;
+			font-family: "Lato", sans-serif;
+			font-weight: 700;
+			background-color: #6c090a;
+			text-align: center;
+			border: 2px #6c090a solid;
+			color: #f8f8f8;
+			cursor: pointer;
+			z-index: 1;
+			border-radius: 30px;
+			transition: 0.3s ease-out;
+		}
+
+		.see-offer2:hover {
+			background-color: #f8f8f8;
+			color: #6c090a;
+		}
+	}
+}

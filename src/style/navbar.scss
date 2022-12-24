@@ -1,0 +1,138 @@
+html {
+	scroll-timeline: custom_name;
+}
+.nav-up {
+	height: 90px;
+}
+.nav-scrolled {
+	height: 70px;
+}
+
+.logo-up {
+	width: 216px;
+	height: 216px;
+}
+
+.navigation-contaier {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: #630708;
+	transition: height 0.2s ease-in-out;
+	z-index: 2;
+
+	.left-navbar {
+		margin-left: 15%;
+		width: 50%;
+	}
+
+	.right-navbar {
+		margin-right: 15%;
+		width: 50%;
+	}
+
+	button {
+		display: inline-block;
+		padding: 20px 20px;
+		margin: 10px 10px;
+		position: relative;
+		border: none;
+		background-color: #630708;
+		color: #e9e8e2;
+		font-size: 15px;
+		font-family: "Lato", sans-serif;
+		letter-spacing: 2px;
+		font-weight: 600;
+		text-transform: uppercase;
+		cursor: pointer;
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.navbtn::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0%;
+		height: 2px;
+		background-color: #e9e8e2;
+		transition: width 0.3s ease-in-out;
+	}
+
+	button:hover::before {
+		width: 100%;
+	}
+
+	.contact-button {
+		margin: 0;
+		padding: 0;
+		text-transform: none;
+		font-size: 15px;
+		background-color: #6c090a;
+		width: 149px;
+		height: 44px;
+		letter-spacing: 1px;
+		border-radius: 40px;
+		gap: 10px;
+		border: 2px solid rgba(233, 232, 226, 0);
+		transition: 0.3s ease-in-out;
+	}
+
+	.contact-button:hover {
+		border: 2px solid rgba(233, 232, 226, 1);
+		animation: contact-hover 0.3s ease-in-out;
+	}
+
+	.language-btn {
+		margin-left: 380px;
+		margin-right: 30px;
+	}
+
+	.logo-img {
+		position: absolute;
+		background-size: cover;
+		background-image: url(../../img/logo.png);
+		transform: translateY(80px);
+		transition: 0.2s ease-in-out;
+	}
+	.logo-scrolled {
+		width: 130px;
+		height: 130px;
+		background-size: cover;
+		transform: translateY(30px);
+		transition: 0.2s ease-in-out;
+	}
+}
+
+@keyframes contact-hover {
+	0% {
+		background-color: #6c090a;
+	}
+
+	50% {
+		background-color: #972628;
+	}
+
+	100% {
+		background-color: #6c090a;
+	}
+}
+
+@media (max-width: 1850px) {
+	.navigation-contaier {
+		.language-btn {
+			margin-left: 250px;
+		}
+		.left-navbar {
+			margin-left: 230px;
+		}
+	}
+
+	.nav-up {
+		height: 70px;
+	}
+}
