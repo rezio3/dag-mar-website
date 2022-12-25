@@ -8,17 +8,24 @@ import Opinion5 from "./Opinions/Opinion5";
 import Opinion6 from "./Opinions/Opinion6";
 
 const Opinions = () => {
-	const opinion1 = <Opinion1 active={true} />;
-	const opinion2 = <Opinion2 active={true} />;
-	const opinion3 = <Opinion3 active={true} />;
-	const opinion4 = <Opinion4 active={false} />;
-	const opinion5 = <Opinion5 active={false} />;
-	const opinion6 = <Opinion6 active={false} />;
+	let opinionsContainer = {
+		opinion1: true,
+		opinion2: false,
+		opinion3: false,
+		opinion4: false,
+		opinion5: false,
+		opinion6: false,
+	};
+	const opinion1 = <Opinion1 />;
+	const opinion2 = <Opinion2 />;
+	const opinion3 = <Opinion3 />;
+	const opinion4 = <Opinion4 />;
+	const opinion5 = <Opinion5 />;
+	const opinion6 = <Opinion6 />;
 
 	const [opinion, setOpinion] = useState({
-		activeOpinions: [opinion4, opinion5, opinion6],
+		activeOpinion: [0],
 		allOpinions: [opinion1, opinion2, opinion3, opinion4, opinion5, opinion6],
-		arrayOfActiveOpinions: [4, 5, 6],
 		rightArrowOn: true,
 		leftArrowOn: true,
 	});
@@ -87,45 +94,106 @@ const Opinions = () => {
 	};
 
 	const handleLeftArrow = () => {
-		const { arrayOfActiveOpinions } = opinion;
-		const tempArr = arrayOfActiveOpinions;
-		const firstElememnt = tempArr[0];
-		tempArr.pop();
+		// console.log(opinion.allOpinions[opinion.activeOpinion].type.name);
+		// const nextOpinionArrPush = 0;
+		// if (opinion.activeOpinion[0] === 6) {
+		// 	nextOpinionArrPush = 6;
+		// } else {
+		const nextOpinionArrPush =
+			opinion.activeOpinion[0] !== 0 ? opinion.activeOpinion[0] - 1 : 5;
+		// console.log(nextOpinionArrPush);
+		// }
+		const newArr = opinion.activeOpinion;
+		newArr.unshift(nextOpinionArrPush);
+		console.log(newArr);
 
-		if (firstElememnt === 1) {
-			tempArr.unshift(6);
-			handleLeftArrayPushing(tempArr);
-		} else if (firstElememnt === 6) {
-			tempArr.unshift(5);
-			handleLeftArrayPushing(tempArr);
-		} else if (firstElememnt === 5) {
-			tempArr.unshift(4);
-			handleLeftArrayPushing(tempArr);
-		} else {
-			tempArr.unshift(firstElememnt - 1);
-			handleLeftArrayPushing(tempArr);
-		}
+		setOpinion({
+			...opinion,
+			activeOpinion: newArr,
+			leftArrowOn: false,
+		});
+		setTimeout(() => {
+			const swipeOutOpinion = document.getElementById(
+				`${opinion.allOpinions[[opinion.activeOpinion[1]]].type.name}`
+			);
+			console.log(nextOpinionArrPush);
+			swipeOutOpinion.classList.add("swipe-to-right");
+			const swipeInOpinion = document.getElementById(
+				`${opinion.allOpinions[[nextOpinionArrPush]].type.name}`
+			);
+			swipeInOpinion.classList.add("swipe-from-left");
+		}, 1);
+
+		setTimeout(() => {
+			const swipeInOpinion = document.getElementById(
+				`${opinion.allOpinions[[nextOpinionArrPush]].type.name}`
+			);
+			swipeInOpinion.classList.remove("swipe-from-left");
+			if (opinion.activeOpinion[1] === 0) {
+				setOpinion({
+					...opinion,
+					activeOpinion: [5],
+					leftArrowOn: true,
+				});
+			} else {
+				setOpinion({
+					...opinion,
+					activeOpinion: [nextOpinionArrPush],
+					leftArrowOn: true,
+				});
+			}
+		}, 600);
 	};
 
 	const handleRightArrow = () => {
-		const { arrayOfActiveOpinions } = opinion;
-		const tempArr = arrayOfActiveOpinions;
-		const lastElememnt = tempArr.slice(-1);
-		tempArr.shift();
-		// console.log(lastElememnt[0]);
-		if (lastElememnt[0] === 6) {
-			tempArr.push(1);
-			handleRightArrayPushing(tempArr);
-		} else if (lastElememnt[0] === 1) {
-			tempArr.push(2);
-			handleRightArrayPushing(tempArr);
-		} else if (lastElememnt[0] === 2) {
-			tempArr.push(3);
-			handleRightArrayPushing(tempArr);
-		} else {
-			tempArr.push(lastElememnt[0] + 1);
-			handleRightArrayPushing(tempArr);
-		}
+		// console.log(opinion.allOpinions[opinion.activeOpinion].type.name);
+		const swipeOutOpinion = document.getElementById(
+			`${opinion.allOpinions[opinion.activeOpinion].type.name}`
+		);
+
+		swipeOutOpinion.classList.add("swipe-to-left");
+		console.log(swipeOutOpinion);
+
+		// const nextOpinionArrPush = 0;
+		// if (opinion.activeOpinion[0] === 6) {
+		// 	nextOpinionArrPush = 6;
+		// } else {
+		const nextOpinionArrPush =
+			opinion.activeOpinion[0] !== 5 ? opinion.activeOpinion[0] + 1 : 0;
+		console.log(nextOpinionArrPush);
+		// }
+
+		const newArr = opinion.activeOpinion;
+		newArr.push(nextOpinionArrPush);
+
+		setOpinion({
+			...opinion,
+			activeOpinion: newArr,
+			rightArrowOn: false,
+		});
+
+		setTimeout(() => {
+			const swipeInOpinion = document.getElementById(
+				`${opinion.allOpinions[[nextOpinionArrPush]].type.name}`
+			);
+			swipeInOpinion.classList.add("swipe-from-right");
+		}, 1);
+
+		setTimeout(() => {
+			if (opinion.activeOpinion[0] === 6) {
+				setOpinion({
+					...opinion,
+					activeOpinion: [1],
+					rightArrowOn: true,
+				});
+			} else {
+				setOpinion({
+					...opinion,
+					activeOpinion: [nextOpinionArrPush],
+					rightArrowOn: true,
+				});
+			}
+		}, 600);
 	};
 
 	return (
@@ -145,9 +213,10 @@ const Opinions = () => {
 					</div>
 					<div className="opinions-description" id="opinions-description">
 						<div className="opinions-description2" id="opinions-description2">
-							{opinion.activeOpinions.map((e) => {
-								return e;
+							{opinion.activeOpinion.map((e) => {
+								return opinion.allOpinions[e];
 							})}
+							{/* {opinion.allOpinions[opinion.activeOpinion]}; */}
 						</div>
 					</div>
 					<div

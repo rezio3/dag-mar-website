@@ -131,37 +131,61 @@
   background-color: #242424;
 }
 
-.right-animation {
-  animation: right-anim 0.45s ease forwards;
+.swipe-to-left {
+  animation: swipe-to-left-anim 0.5s forwards;
 }
 
-.left-animation {
-  animation: left-anim 0.45s ease forwards;
+.swipe-to-right {
+  animation: swipe-to-right-anim 0.5s forwards;
 }
 
-@keyframes right-anim {
-  0% {
-    margin-right: 0;
-  }
-  100% {
-    margin-right: 1388px;
-  }
+.swipe-from-right {
+  display: none;
+  animation: swipe-from-right-anim 0.5s forwards;
 }
-@keyframes left-anim {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: 1388px;
-  }
+
+.swipe-from-left {
+  display: none;
+  animation: swipe-from-left-anim 0.5s forwards;
 }
-@keyframes opinion-anim-right-deactive {
+
+@keyframes swipe-to-left-anim {
   0% {
-    right: 0;
-    display: flex;
+    right: -347px;
   }
   100% {
     right: 694px;
-    display: none;
+  }
+}
+@keyframes swipe-to-right-anim {
+  0% {
+    left: -347px;
+  }
+  100% {
+    left: 694px;
+  }
+}
+@keyframes swipe-from-right-anim {
+  0% {
+    right: -1338px;
+  }
+  20% {
+    display: flex;
+    right: -1338px;
+  }
+  100% {
+    right: 347px;
+  }
+}
+@keyframes swipe-from-left-anim {
+  0% {
+    left: -1338px;
+  }
+  20% {
+    display: flex;
+    left: -1338px;
+  }
+  100% {
+    left: 347px;
   }
 }
