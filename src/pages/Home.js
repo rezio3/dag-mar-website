@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../style/css/home.css";
 import Stats from "./homeComponents/Stats.js";
 import Values from "./homeComponents/Values";
@@ -6,8 +6,11 @@ import Dt from "./homeComponents/Dt";
 import Opinions from "./homeComponents/Opinions";
 import { useScrollTo } from "react-use-window-scroll";
 import WhoTrustedUs from "./homeComponents/WhoTrustedUs";
+import CookiesWindow from "../layouts/CookiesWindow";
+import { CookiesContext } from "../context/CookiesContext";
 
 const Home = () => {
+	const [cookies, setCookies] = useContext(CookiesContext);
 	const scrollTo = useScrollTo();
 	const scrollDown = () => {
 		scrollTo({
@@ -45,24 +48,7 @@ const Home = () => {
 			<Values />
 			<Opinions />
 			<WhoTrustedUs />
-			<footer className="footer-container">
-				<div className="footer-address-container">
-					<span>Biuro Tłumaczeń Przysięgłych DAG-MAR</span>
-					<span>Karkonoska 1C 59-300 Lubin</span>
-				</div>
-				<div className="footer-contact-container">
-					<span>+48 76 846 10 64 </span>
-					<span> +48 607 618 567</span>
-					<span>biuro@dag-mar.pl</span>
-				</div>
-				<div className="footer-social-icons">
-					<button className="fb-icon icon-footer-btn"></button>
-					<button className="ig-icon icon-footer-btn"></button>
-				</div>
-			</footer>
-			<div className="copyright-container">
-				<span>2021 &copy; DAG-MAR</span>
-			</div>
+			{cookies.cookiesOn ? <CookiesWindow /> : null};
 		</div>
 	);
 };

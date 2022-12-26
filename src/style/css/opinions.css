@@ -118,17 +118,18 @@
 .opinions-container-0 .opinions-container .segments-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 80px;
+  width: 140px;
   height: 10px;
 }
 .opinions-container-0 .opinions-container .segments-container .carousel-segment {
   opacity: 0.3;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50px;
-  background-color: #242424;
+  background-color: none;
+  border: 1px #6c6c6c solid;
 }
 
 .swipe-to-left {
@@ -140,12 +141,10 @@
 }
 
 .swipe-from-right {
-  display: none;
   animation: swipe-from-right-anim 0.5s forwards;
 }
 
 .swipe-from-left {
-  display: none;
   animation: swipe-from-left-anim 0.5s forwards;
 }
 

@@ -1,8 +1,8 @@
 import React from "react";
 
-const Opinion1 = () => {
+const Opinion1 = (props) => {
 	return (
-		<div className={`opinion-container`} id="Opinion1">
+		<div className={`opinion-container ${props.style}`} id="Opinion1">
 			<p className="opinion">
 				Podstawowy i najprostszy przepis na szarlotkę na kruchym cieście. To
 				bardzo szybka do zrobienia szarlotka, którą polecam każdemu. Poradzą z

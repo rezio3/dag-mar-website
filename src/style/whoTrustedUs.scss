@@ -3,11 +3,12 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	height: 294px;
+	height: 250px;
 	width: 100%;
-	background-color: #e9e8e2;
+	background-color: #f5f5f5;
 
 	.who-trusted-us-header {
+		margin-top: 20px;
 		font-family: "Lato", sans-serif;
 		font-weight: 700;
 		font-size: 24px;
@@ -18,12 +19,12 @@
 	}
 
 	.trusted-logos {
-		position: absolute;
+		position: relative;
 		width: 100%;
 		overflow: hidden;
 
 		.trusted-logos-animate {
-			margin-top: 120px;
+			margin-top: 45px;
 			position: relative;
 			display: flex;
 			flex-wrap: nowrap;

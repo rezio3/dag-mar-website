@@ -1,8 +1,8 @@
 import React from "react";
 
-const Opinion5 = () => {
+const Opinion5 = (props) => {
 	return (
-		<div className={`opinion-container`} id="Opinion5">
+		<div className={`opinion-container ${props.style}`} id="Opinion5">
 			<p className="opinion">
 				Nasze poznańskie złomowisko przyjmuje metale i surowce wtórne zarówno od
 				klientów indywidualnych, jak i firm. Bez względu na to, czy jesteś osobą

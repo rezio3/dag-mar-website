@@ -1,8 +1,8 @@
 import React from "react";
 
-const Opinion3 = () => {
+const Opinion3 = (props) => {
 	return (
-		<div className={`opinion-container`} id="Opinion3">
+		<div className={`opinion-container ${props.style}`} id="Opinion3">
 			<p className="opinion">
 				Żaden dzień się nie powtórzy, nie ma dwóch podobnych nocy, dwóch tych
 				samych pocałunków, dwóch jednakich spojrzeń w oczy.

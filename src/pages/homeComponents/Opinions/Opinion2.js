@@ -1,8 +1,8 @@
 import React from "react";
 
-const Opinion2 = () => {
+const Opinion2 = (props) => {
 	return (
-		<div className={`opinion-container`} id="Opinion2">
+		<div className={`opinion-container ${props.style}`} id="Opinion2">
 			<p className="opinion">
 				Dylatacja czasu - zjawisko różnic w pomiarze czasu dokonywanym
 				równolegle w dwóch różnych układach odniesienia, z których jeden

@@ -6,6 +6,7 @@ import Opinion3 from "./Opinions/Opinion3";
 import Opinion4 from "./Opinions/Opinion4";
 import Opinion5 from "./Opinions/Opinion5";
 import Opinion6 from "./Opinions/Opinion6";
+import OpinionSegments from "./Opinions/opinionSegment";
 
 const Opinions = () => {
 	let opinionsContainer = {
@@ -16,82 +17,20 @@ const Opinions = () => {
 		opinion5: false,
 		opinion6: false,
 	};
-	const opinion1 = <Opinion1 />;
-	const opinion2 = <Opinion2 />;
-	const opinion3 = <Opinion3 />;
-	const opinion4 = <Opinion4 />;
-	const opinion5 = <Opinion5 />;
-	const opinion6 = <Opinion6 />;
+	const opinion1 = <Opinion1 key="op1" style={"kupa"} />;
+	const opinion2 = <Opinion2 key="op2" style={"kupa"} />;
+	const opinion3 = <Opinion3 key="op3" style={"kupa"} />;
+	const opinion4 = <Opinion4 key="op4" style={"kupa"} />;
+	const opinion5 = <Opinion5 key="op5" style={"kupa"} />;
+	const opinion6 = <Opinion6 key="op6" style={"kupa"} />;
 
 	const [opinion, setOpinion] = useState({
 		activeOpinion: [0],
+		currentView: 1,
 		allOpinions: [opinion1, opinion2, opinion3, opinion4, opinion5, opinion6],
 		rightArrowOn: true,
 		leftArrowOn: true,
 	});
-
-	const handleRightArrayPushing = (tempArr) => {
-		const newOpinionArray = [];
-		newOpinionArray.push(
-			tempArr.map((e) => {
-				e -= 1;
-				return opinion.allOpinions[e];
-			})
-		);
-		// console.log(newOpinionArray);
-		const rightCarouselAnimation = document.getElementById(
-			"opinions-description2"
-		);
-
-		rightCarouselAnimation.classList.add("right-animation");
-		setOpinion({
-			...opinion,
-			rightArrowOn: false,
-			leftArrowOn: false,
-		});
-		setTimeout(() => {
-			rightCarouselAnimation.classList.remove("right-animation");
-			setOpinion({
-				...opinion,
-				activeOpinions: newOpinionArray,
-				arrayOfActiveOpinions: tempArr,
-				rightArrowOn: true,
-				leftArrowOn: true,
-			});
-		}, 560);
-	};
-
-	const handleLeftArrayPushing = (tempArr) => {
-		// console.log(tempArr);
-		const newOpinionArray = [];
-		newOpinionArray.push(
-			tempArr.map((e) => {
-				e -= 1;
-				return opinion.allOpinions[e];
-			})
-		);
-		// console.log(newOpinionArray);
-		const rightCarouselAnimation = document.getElementById(
-			"opinions-description2"
-		);
-
-		rightCarouselAnimation.classList.add("left-animation");
-		setOpinion({
-			...opinion,
-			rightArrowOn: false,
-			leftArrowOn: false,
-		});
-		setTimeout(() => {
-			rightCarouselAnimation.classList.remove("left-animation");
-			setOpinion({
-				...opinion,
-				activeOpinions: newOpinionArray,
-				arrayOfActiveOpinions: tempArr,
-				rightArrowOn: true,
-				leftArrowOn: true,
-			});
-		}, 560);
-	};
 
 	const handleLeftArrow = () => {
 		// console.log(opinion.allOpinions[opinion.activeOpinion].type.name);
@@ -106,11 +45,20 @@ const Opinions = () => {
 		const newArr = opinion.activeOpinion;
 		newArr.unshift(nextOpinionArrPush);
 		console.log(newArr);
+		let tempCurrentView = null;
+		if (opinion.currentView === 1) {
+			tempCurrentView = 6;
+		} else {
+			tempCurrentView = opinion.currentView - 1;
+		}
+
+		console.log("current-view " + tempCurrentView);
 
 		setOpinion({
 			...opinion,
 			activeOpinion: newArr,
 			leftArrowOn: false,
+			currentView: tempCurrentView,
 		});
 		setTimeout(() => {
 			const swipeOutOpinion = document.getElementById(
@@ -119,14 +67,14 @@ const Opinions = () => {
 			console.log(nextOpinionArrPush);
 			swipeOutOpinion.classList.add("swipe-to-right");
 			const swipeInOpinion = document.getElementById(
-				`${opinion.allOpinions[[nextOpinionArrPush]].type.name}`
+				`${opinion.allOpinions[nextOpinionArrPush].type.name}`
 			);
 			swipeInOpinion.classList.add("swipe-from-left");
 		}, 1);
 
 		setTimeout(() => {
 			const swipeInOpinion = document.getElementById(
-				`${opinion.allOpinions[[nextOpinionArrPush]].type.name}`
+				`${opinion.allOpinions[nextOpinionArrPush].type.name}`
 			);
 			swipeInOpinion.classList.remove("swipe-from-left");
 			if (opinion.activeOpinion[1] === 0) {
@@ -134,12 +82,14 @@ const Opinions = () => {
 					...opinion,
 					activeOpinion: [5],
 					leftArrowOn: true,
+					currentView: tempCurrentView,
 				});
 			} else {
 				setOpinion({
 					...opinion,
 					activeOpinion: [nextOpinionArrPush],
 					leftArrowOn: true,
+					currentView: tempCurrentView,
 				});
 			}
 		}, 600);
@@ -165,16 +115,24 @@ const Opinions = () => {
 
 		const newArr = opinion.activeOpinion;
 		newArr.push(nextOpinionArrPush);
+		let tempCurrentView = null;
+		if (opinion.currentView === 6) {
+			tempCurrentView = 1;
+		} else {
+			tempCurrentView = opinion.currentView + 1;
+		}
+		console.log("current-view " + tempCurrentView);
 
 		setOpinion({
 			...opinion,
 			activeOpinion: newArr,
 			rightArrowOn: false,
+			currentView: tempCurrentView,
 		});
 
 		setTimeout(() => {
 			const swipeInOpinion = document.getElementById(
-				`${opinion.allOpinions[[nextOpinionArrPush]].type.name}`
+				`${opinion.allOpinions[nextOpinionArrPush].type.name}`
 			);
 			swipeInOpinion.classList.add("swipe-from-right");
 		}, 1);
@@ -185,13 +143,23 @@ const Opinions = () => {
 					...opinion,
 					activeOpinion: [1],
 					rightArrowOn: true,
+					currentView: tempCurrentView,
 				});
+				const swipeInOpinion = document.getElementById(
+					`${opinion.allOpinions[nextOpinionArrPush].type.name}`
+				);
+				swipeInOpinion.classList.remove("swipe-from-right");
 			} else {
 				setOpinion({
 					...opinion,
 					activeOpinion: [nextOpinionArrPush],
 					rightArrowOn: true,
+					currentView: tempCurrentView,
 				});
+				const swipeInOpinion = document.getElementById(
+					`${opinion.allOpinions[nextOpinionArrPush].type.name}`
+				);
+				swipeInOpinion.classList.remove("swipe-from-right");
 			}
 		}, 600);
 	};
@@ -231,17 +199,35 @@ const Opinions = () => {
 					</div>
 				</div>
 				<div className="segments-container">
-					<div
-						className="carousel-segment"
-						style={{ opacity: opinion.activeOpinion === 1 ? "1" : "0.3" }}
+					<OpinionSegments
+						style={{
+							backgroundColor: opinion.currentView === 1 ? "#6c6c6c" : null,
+						}}
 					/>
-					<div
-						className="carousel-segment"
-						style={{ opacity: opinion.activeOpinion === 2 ? "1" : "0.3" }}
+					<OpinionSegments
+						style={{
+							backgroundColor: opinion.currentView === 2 ? "#6c6c6c" : null,
+						}}
 					/>
-					<div
-						className="carousel-segment"
-						style={{ opacity: opinion.activeOpinion === 3 ? "1" : "0.3" }}
+					<OpinionSegments
+						style={{
+							backgroundColor: opinion.currentView === 3 ? "#6c6c6c" : null,
+						}}
+					/>
+					<OpinionSegments
+						style={{
+							backgroundColor: opinion.currentView === 4 ? "#6c6c6c" : null,
+						}}
+					/>
+					<OpinionSegments
+						style={{
+							backgroundColor: opinion.currentView === 5 ? "#6c6c6c" : null,
+						}}
+					/>
+					<OpinionSegments
+						style={{
+							backgroundColor: opinion.currentView === 6 ? "#6c6c6c" : null,
+						}}
 					/>
 				</div>
 			</div>
