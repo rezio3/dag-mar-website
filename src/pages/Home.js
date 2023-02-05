@@ -6,11 +6,11 @@ import Dt from "./homeComponents/Dt";
 import Opinions from "./homeComponents/Opinions";
 import { useScrollTo } from "react-use-window-scroll";
 import WhoTrustedUs from "./homeComponents/WhoTrustedUs";
-import CookiesWindow from "../layouts/CookiesWindow";
-import { CookiesContext } from "../context/CookiesContext";
+import { NewsContext } from "../context/NewsContext";
+import NewsWindow from "../layouts/NewsWindow";
 
 const Home = () => {
-	const [cookies, setCookies] = useContext(CookiesContext);
+	const [news, setNews] = useContext(NewsContext);
 	const scrollTo = useScrollTo();
 	const scrollDown = () => {
 		scrollTo({
@@ -21,6 +21,7 @@ const Home = () => {
 	};
 	return (
 		<div className="page-container">
+			{news.newsOn ? <NewsWindow /> : null}
 			<div className="header-container">
 				<div className="header-span-container">
 					<h1>
@@ -28,10 +29,9 @@ const Home = () => {
 						Twoje potrzeby
 					</h1>
 					<h3>
-						Jeśli szukacie Państwo Tłumacza przysięgłego lub osoby, która <br />
-						przełoży tekst z języka ojczystego na język obcy lub odwrotnie
-						<br />
-						to dobrze trafiliście. W naszym Biurze możecie Państwo zlecić <br />
+						Jeśli szukacie Państwo Tłumacza przysięgłego lub osoby, która
+						przełoży tekst z języka ojczystego na język obcy lub odwrotnie to
+						dobrze trafiliście. W naszym Biurze możecie Państwo zlecić
 						tłumaczenie z niemal każdego języka europejskiego i nie tylko.
 					</h3>
 					<button className="see-offer">Zobacz ofertę</button>
@@ -48,16 +48,11 @@ const Home = () => {
 			<Values />
 			<Opinions />
 			<WhoTrustedUs />
-			{cookies.cookiesOn ? <CookiesWindow /> : null};
 		</div>
 	);
 };
 
 export default Home;
-
-// podnieść podkreślniki
-// większa przerwa pod zaufali nam
-// wieksza przerwa nad "co mówią o nas klienci"
 
 // pozycjonowanie zeby storna zostala na gorze
 // znaleźć legitny serwis mailowy
