@@ -13,7 +13,11 @@
   justify-content: space-between;
   margin-top: 30px;
   height: 160px;
-  width: 75%;
+  width: 70%;
+}
+.footer-container .upper-footer-container a {
+  text-decoration: none;
+  color: #242424;
 }
 .footer-container .upper-footer-container .footer-logo {
   width: 82px;
@@ -26,6 +30,7 @@
   align-items: flex-start;
   height: 120px;
   width: 450px;
+  color: #242424;
 }
 .footer-container .upper-footer-container .footer-address h2 {
   font-family: "Lato", sans-serif;
@@ -62,6 +67,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 38px;
+  color: #242424;
 }
 .footer-container .upper-footer-container .footer-contact-btn {
   position: relative;
@@ -84,14 +90,15 @@
   cursor: pointer;
 }
 .footer-container .upper-footer-container .footer-contact-btn:hover {
-  border: 2px solid rgb(233, 232, 226);
-  animation: contact-hover 0.3s ease-in-out;
+  border: 2px solid #6c090a;
+  background-color: #e9e8e2;
+  color: #6c090a;
 }
 .footer-container .lower-footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 75%;
+  width: 70%;
   height: 76px;
   border-top: 1px #cecece solid;
 }
@@ -100,4 +107,52 @@
   font-family: "Inter", sans-serif;
   font-size: 12px;
   letter-spacing: 0.3px;
+}
+.footer-container .lower-footer-container .icons-footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-right: 40px;
+}
+.footer-container .lower-footer-container .icons-footer-container .icon {
+  padding: 10px;
+}
+
+@media (max-width: 1300px) {
+  .footer-address {
+    margin-left: 20px;
+  }
+  .footer-address h2 {
+    width: 300px;
+  }
+  .footer-container .upper-footer-container .aboutUs-footer {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1550px) {
+  @-moz-document url-prefix() {
+    .footer-container .upper-footer-container {
+      width: 80%;
+    }
+    .footer-container .upper-footer-container .aboutUs-footer {
+      margin-right: 20px;
+    }
+    .footer-container .lower-footer-container {
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 1450px) {
+  @-moz-document url-prefix() {
+    .footer-container .upper-footer-container {
+      width: 90%;
+    }
+    .footer-container .upper-footer-container .aboutUs-footer {
+      margin-right: 20px;
+    }
+    .footer-container .lower-footer-container {
+      width: 90%;
+    }
+  }
 }
