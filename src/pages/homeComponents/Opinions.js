@@ -1,47 +1,64 @@
 import React, { useState } from "react";
 import "../../style/css/opinions.css";
-import Opinion1 from "./Opinions/Opinion1";
-import Opinion2 from "./Opinions/Opinion2";
-import Opinion3 from "./Opinions/Opinion3";
-import Opinion4 from "./Opinions/Opinion4";
-import Opinion5 from "./Opinions/Opinion5";
-import Opinion6 from "./Opinions/Opinion6";
+import Opinion from "./Opinions/Opinion";
 import OpinionSegments from "./Opinions/opinionSegment";
 
 const Opinions = () => {
-	let opinionsContainer = {
-		opinion1: true,
-		opinion2: false,
-		opinion3: false,
-		opinion4: false,
-		opinion5: false,
-		opinion6: false,
-	};
-	const opinion1 = <Opinion1 key="op1" style={"kupa"} />;
-	const opinion2 = <Opinion2 key="op2" style={"kupa"} />;
-	const opinion3 = <Opinion3 key="op3" style={"kupa"} />;
-	const opinion4 = <Opinion4 key="op4" style={"kupa"} />;
-	const opinion5 = <Opinion5 key="op5" style={"kupa"} />;
-	const opinion6 = <Opinion6 key="op6" style={"kupa"} />;
+	const opinionsData = [
+		{
+			opinionText: `Podstawowy i najprostszy przepis na szarlotkę na kruchym cieście. To
+		bardzo szybka do
+		 zrobienia szarlotka, którą polecam każdemu. Poradzą z nią sobie
+		nawet osoby, które
+		 rzadziej pieką i gotują. Jest pyszna!`,
+			author: `Zbyszko z Bogdańca`,
+		},
+		{
+			opinionText: `Dylatacja czasu - zjawisko różnic w pomiarze czasu dokonywanym
+			równolegle w dwóch
+			 różnych układach odniesienia, z których jeden przemieszcza się
+			względem drugiego.
+			 Pomiar dotyczy czasu trwania tego samego zjawiska.`,
+			author: `Kłapouchy`,
+		},
+		{
+			opinionText: `Żaden dzień się nie powtórzy, nie ma dwóch podobnych nocy, dwóch tych
+			samych
+			 pocałunków, dwóch jednakich spojrzeń w oczy.`,
+			author: `Szostakowicz/Szymborska`,
+		},
+		{
+			opinionText: `Monster High - amerykańska linia lalek stworzona przez Garrett Sander z
+			ilustracjami
+			 wykonanymi przez Kellee Riley.`,
+			author: `Prezydent Duda`,
+		},
+		{
+			opinionText: `Nasze poznańskie złomowisko przyjmuje metale i surowce wtórne zarówno od
+			klientów
+			 indywidualnych, jak i firm. Bez względu na to, czy jesteś osobą
+			prywatną`,
+			author: `Piotrek`,
+		},
+		{
+			opinionText: `	First things first I'ma say all the words inside my head I'm fired up
+			and tired of the way that
+			 things have been, oh-ooh The way that things have been`,
+			author: `Lord Sith`,
+		},
+	];
 
 	const [opinion, setOpinion] = useState({
 		activeOpinion: [0],
 		currentView: 1,
-		allOpinions: [opinion1, opinion2, opinion3, opinion4, opinion5, opinion6],
 		rightArrowOn: true,
 		leftArrowOn: true,
+		whichArrow: 1,
 	});
 
 	const handleLeftArrow = () => {
-		// console.log(opinion.allOpinions[opinion.activeOpinion].type.name);
-		// const nextOpinionArrPush = 0;
-		// if (opinion.activeOpinion[0] === 6) {
-		// 	nextOpinionArrPush = 6;
-		// } else {
 		const nextOpinionArrPush =
 			opinion.activeOpinion[0] !== 0 ? opinion.activeOpinion[0] - 1 : 5;
-		// console.log(nextOpinionArrPush);
-		// }
 		const newArr = opinion.activeOpinion;
 		newArr.unshift(nextOpinionArrPush);
 		console.log(newArr);
@@ -59,30 +76,17 @@ const Opinions = () => {
 			activeOpinion: newArr,
 			leftArrowOn: false,
 			currentView: tempCurrentView,
+			whichArrow: 0,
 		});
-		setTimeout(() => {
-			const swipeOutOpinion = document.getElementById(
-				`${opinion.allOpinions[[opinion.activeOpinion[1]]].type.name}`
-			);
-			console.log(nextOpinionArrPush);
-			swipeOutOpinion.classList.add("swipe-to-right");
-			const swipeInOpinion = document.getElementById(
-				`${opinion.allOpinions[nextOpinionArrPush].type.name}`
-			);
-			swipeInOpinion.classList.add("swipe-from-left");
-		}, 1);
 
 		setTimeout(() => {
-			const swipeInOpinion = document.getElementById(
-				`${opinion.allOpinions[nextOpinionArrPush].type.name}`
-			);
-			swipeInOpinion.classList.remove("swipe-from-left");
 			if (opinion.activeOpinion[1] === 0) {
 				setOpinion({
 					...opinion,
 					activeOpinion: [5],
 					leftArrowOn: true,
 					currentView: tempCurrentView,
+					whichArrow: 0,
 				});
 			} else {
 				setOpinion({
@@ -90,31 +94,21 @@ const Opinions = () => {
 					activeOpinion: [nextOpinionArrPush],
 					leftArrowOn: true,
 					currentView: tempCurrentView,
+					whichArrow: 0,
 				});
 			}
 		}, 600);
 	};
 
 	const handleRightArrow = () => {
-		// console.log(opinion.allOpinions[opinion.activeOpinion].type.name);
-		const swipeOutOpinion = document.getElementById(
-			`${opinion.allOpinions[opinion.activeOpinion].type.name}`
-		);
-
-		swipeOutOpinion.classList.add("swipe-to-left");
-		console.log(swipeOutOpinion);
-
-		// const nextOpinionArrPush = 0;
-		// if (opinion.activeOpinion[0] === 6) {
-		// 	nextOpinionArrPush = 6;
-		// } else {
+		console.log("click");
 		const nextOpinionArrPush =
 			opinion.activeOpinion[0] !== 5 ? opinion.activeOpinion[0] + 1 : 0;
 		console.log(nextOpinionArrPush);
-		// }
 
 		const newArr = opinion.activeOpinion;
 		newArr.push(nextOpinionArrPush);
+		console.log(newArr);
 		let tempCurrentView = null;
 		if (opinion.currentView === 6) {
 			tempCurrentView = 1;
@@ -128,14 +122,8 @@ const Opinions = () => {
 			activeOpinion: newArr,
 			rightArrowOn: false,
 			currentView: tempCurrentView,
+			whichArrow: 1,
 		});
-
-		setTimeout(() => {
-			const swipeInOpinion = document.getElementById(
-				`${opinion.allOpinions[nextOpinionArrPush].type.name}`
-			);
-			swipeInOpinion.classList.add("swipe-from-right");
-		}, 1);
 
 		setTimeout(() => {
 			if (opinion.activeOpinion[0] === 6) {
@@ -144,22 +132,16 @@ const Opinions = () => {
 					activeOpinion: [1],
 					rightArrowOn: true,
 					currentView: tempCurrentView,
+					whichArrow: 1,
 				});
-				const swipeInOpinion = document.getElementById(
-					`${opinion.allOpinions[nextOpinionArrPush].type.name}`
-				);
-				swipeInOpinion.classList.remove("swipe-from-right");
 			} else {
 				setOpinion({
 					...opinion,
 					activeOpinion: [nextOpinionArrPush],
 					rightArrowOn: true,
 					currentView: tempCurrentView,
+					whichArrow: 1,
 				});
-				const swipeInOpinion = document.getElementById(
-					`${opinion.allOpinions[nextOpinionArrPush].type.name}`
-				);
-				swipeInOpinion.classList.remove("swipe-from-right");
 			}
 		}, 600);
 	};
@@ -172,7 +154,6 @@ const Opinions = () => {
 					<div
 						className="carousel-left-arrow carousel-arrow"
 						onClick={opinion.leftArrowOn ? handleLeftArrow : null}
-						// style={{ opacity: opinion.activeOpinion === 1 ? "0" : "0.3" }}
 					>
 						<button
 							className="material-symbols-outlined left-arrow arrow"
@@ -181,16 +162,44 @@ const Opinions = () => {
 					</div>
 					<div className="opinions-description" id="opinions-description">
 						<div className="opinions-description2" id="opinions-description2">
-							{opinion.activeOpinion.map((e) => {
-								return opinion.allOpinions[e];
+							{opinion.activeOpinion.map((e, index) => {
+								console.log(index);
+								return (
+									<Opinion
+										opinionText={opinionsData[e].opinionText}
+										opinionAuthor={opinionsData[e].author}
+										key={e}
+										anim={(() => {
+											if (opinion.whichArrow === 1) {
+												if (opinion.activeOpinion.length === 2) {
+													if (index === 0) {
+														return "opinion-container swipe-to-left";
+													} else {
+														return "opinion-container swipe-from-right";
+													}
+												} else if (opinion.activeOpinion.length === 1) {
+													return "opinion-container swipe-from-right";
+												}
+											} else {
+												if (opinion.activeOpinion.length === 2) {
+													if (index === 0) {
+														return "opinion-container swipe-from-left";
+													} else {
+														return "opinion-container swipe-to-right";
+													}
+												} else if (opinion.activeOpinion.length === 1) {
+													return "opinion-container swipe-from-left";
+												}
+											}
+										})()}
+									/>
+								);
 							})}
-							{/* {opinion.allOpinions[opinion.activeOpinion]}; */}
 						</div>
 					</div>
 					<div
 						className="carousel-right-arrow carousel-arrow"
 						onClick={opinion.rightArrowOn ? handleRightArrow : null}
-						// style={{ opacity: opinion.activeOpinion === 3 ? "0" : "0.3" }}
 					>
 						<button
 							className="material-symbols-outlined right-arrow arrow"
