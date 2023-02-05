@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "LatoLatinWebSemibold";
+  src: url(../../fonts/LatoLatin-Semibold.ttf);
+}
 .page-container {
   display: flex;
   flex-direction: column;
+  background-color: #f7f7f7;
 }
 
 .header-container {
@@ -18,7 +23,7 @@
 }
 .header-container .header-span-container {
   position: absolute;
-  width: 70vw;
+  width: 70%;
   height: 650px;
   top: 200px;
   z-index: 0;
@@ -28,14 +33,14 @@
   font-size: 55px;
   color: #242424;
   font-family: "Lato", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
 }
 .header-container .header-span-container h3 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   width: 676px;
   font-size: 22px;
-  color: #505050;
+  color: #6c6c6c;
   line-height: 34px;
 }
 .header-container .header-span-container .see-offer {
@@ -87,4 +92,97 @@
 .header-container .arrow-down-circle:hover {
   width: 68px;
   height: 68px;
+}
+
+@media (max-width: 992px) {
+  .page-container {
+    width: 100%;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 100vw;
+    height: 540px;
+    background-position: -500px 0;
+  }
+  .header-container .header-span-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: 350px;
+    top: 120px;
+    z-index: 0;
+  }
+  .header-container .header-span-container h1 {
+    margin-top: 40px;
+    font-size: 35px;
+    color: #242424;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+  }
+  .header-container .header-span-container h3 {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    font-size: 15px;
+    color: #6c6c6c;
+    line-height: 16px;
+  }
+  .header-container .header-span-container .see-offer {
+    margin-top: 30px;
+    width: 153px;
+    min-height: 42px;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    font-style: normal;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    background-color: #6c090a;
+    text-align: center;
+    border: 2px #6c090a solid;
+    color: #f8f8f8;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 30px;
+    transition: 0.3s ease-out;
+  }
+  .header-container .header-span-container .see-offer:hover {
+    background-color: #f8f8f8;
+    color: #6c090a;
+  }
+  .header-container .arrow-down-circle {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    border: 1px black solid;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+    top: 220px;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+  }
+  .header-container .arrow-down-circle .arrow-down {
+    font-size: 60px;
+    cursor: pointer;
+    background-image: url(../../img/arrow-down.png);
+    background-color: transparent;
+    border: none;
+    width: 28px;
+    height: 28px;
+    background-size: cover;
+  }
+  .header-container .arrow-down-circle:hover {
+    width: 34px;
+    height: 34px;
+  }
 }
