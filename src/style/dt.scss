@@ -1,8 +1,10 @@
+@import "./colors";
+
 .mgr-Dagmara-Toporowska-container {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	background-color: #f5f5f5;
+	background-color: $white;
 	width: 100%;
 	height: 680px;
 
@@ -43,7 +45,7 @@
 
 			h1 {
 				margin-top: 0;
-				font-weight: bold;
+				font-weight: 700;
 				font-family: "Lato", sans-serif;
 				letter-spacing: 1.6px;
 				font-size: 24px;
@@ -51,6 +53,7 @@
 			}
 
 			p {
+				color: $txt;
 				margin: 15px 0;
 				font-size: 16px;
 				font-weight: 400;
@@ -70,10 +73,10 @@
 			font-style: normal;
 			font-family: "Lato", sans-serif;
 			font-weight: 700;
-			background-color: #6c090a;
+			background-color: $red-btn;
 			text-align: center;
-			border: 2px #6c090a solid;
-			color: #f8f8f8;
+			border: 2px $red-btn solid;
+			color: $white;
 			cursor: pointer;
 			z-index: 1;
 			border-radius: 30px;
@@ -81,8 +84,128 @@
 		}
 
 		.see-offer2:hover {
-			background-color: #f8f8f8;
-			color: #6c090a;
+			background-color: $white;
+			color: $red-btn;
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	@-moz-document url-prefix() {
+		.mgr-Dagmara-Toporowska-container {
+			.DT-container {
+				.DT-description {
+					width: 750px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.mgr-Dagmara-Toporowska-container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		background-color: $white;
+		width: 95vw;
+		height: auto;
+		margin-top: 50px;
+
+		.DT-container {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+
+			.DT-img {
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				background-image: url(../../img/arc.png);
+				background-size: cover;
+				width: 153px;
+				height: 218px;
+				margin-right: 10px;
+
+				.DTimage {
+					width: 153px;
+					height: 218px;
+					transform: translateY(0px);
+				}
+				.DTimage:hover {
+					width: 153px;
+					height: 218px;
+					transform: translateY(0px);
+				}
+			}
+			.DT-description {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 90vw;
+				// margin-left: 5%;
+				margin-left: 0;
+				height: 100%;
+				text-align: center;
+
+				h1 {
+					margin-top: 0;
+					font-weight: 700;
+					font-family: "Lato", sans-serif;
+					letter-spacing: 1.6px;
+					font-size: 20px;
+					margin-bottom: 34px;
+				}
+
+				p {
+					color: $txt;
+					margin: 15px 0;
+					font-size: 16px;
+					font-weight: 400;
+					font-style: normal;
+					font-family: "Inter", sans-serif;
+					line-height: 27px;
+					// font-weight: lighter;
+				}
+
+				.button-and-DT-img {
+					width: 95vw;
+					height: 220px;
+
+					display: flex;
+					justify-content: space-evenly;
+					align-items: flex-end;
+				}
+			}
+
+			.see-offer2 {
+				margin-top: 0;
+				margin-bottom: 35%;
+				width: 153px;
+				min-height: 42px;
+				letter-spacing: 0.3px;
+				font-size: 16px;
+				font-style: normal;
+				font-family: "Lato", sans-serif;
+				font-weight: 700;
+				background-color: #6c090a;
+				text-align: center;
+				border: 2px #6c090a solid;
+				color: #f8f8f8;
+				cursor: pointer;
+				z-index: 1;
+				border-radius: 30px;
+				transition: 0.3s ease-out;
+			}
+
+			.see-offer2:hover {
+				background-color: #f8f8f8;
+				color: #6c090a;
+			}
 		}
 	}
 }
