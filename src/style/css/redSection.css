@@ -1,0 +1,47 @@
+.red-section-container {
+  margin-top: 150px;
+  width: 100%;
+  height: 480px;
+  background-color: #6c090a;
+  background-image: url(../../img/faq-second-frame.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.red-section-container h2 {
+  color: #e9e8e2;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+.red-section-container span {
+  color: #e9e8e2;
+  margin-top: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  line-height: 27px;
+  font-style: normal;
+}
+.red-section-container .write-us-btn {
+  height: 44px;
+  width: 146px;
+  border-radius: 100px;
+  background: none;
+  border: 1.5px #e9e8e2 solid;
+  color: #e9e8e2;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  margin-top: 40px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+.red-section-container .write-us-btn:hover {
+  opacity: 0.6;
+}
