@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dag-mar-website/static/css/main.1665c3da.css",
+    "main.js": "/dag-mar-website/static/js/main.dbc0590d.js",
+    "static/media/main-bg.jpg": "/dag-mar-website/static/media/main-bg.ea811e4bb2261450f306.jpg",
+    "static/media/two-business-partners-working-office 1.png": "/dag-mar-website/static/media/two-business-partners-working-office 1.dbd07a35a08799fc65f8.png",
+    "static/media/DT.png": "/dag-mar-website/static/media/DT.112e7992006f0aac3322.png",
+    "static/media/contact-big-frames.png": "/dag-mar-website/static/media/contact-big-frames.0c1ff524a52d56c25a1c.png",
+    "static/media/faq-second-frame.png": "/dag-mar-website/static/media/faq-second-frame.c47dd8e3e61ea894db8a.png",
+    "static/media/values-bg.png": "/dag-mar-website/static/media/values-bg.dc555de851de058bfc71.png",
+    "static/media/LatoLatin-Semibold.ttf": "/dag-mar-website/static/media/LatoLatin-Semibold.c27fb2cbec582af3ca7a.ttf",
+    "static/media/second-background.png": "/dag-mar-website/static/media/second-background.45f46038db0dc336bfe6.png",
+    "static/media/faq-frame.png": "/dag-mar-website/static/media/faq-frame.ef8e56e75318e45f93c9.png",
+    "static/media/contact-frame.png": "/dag-mar-website/static/media/contact-frame.18b5a0a1c7ab606c66ec.png",
+    "static/media/logo.svg": "/dag-mar-website/static/media/logo.585de769593db39f456a.svg",
+    "index.html": "/dag-mar-website/index.html",
+    "static/media/plus.svg": "/dag-mar-website/static/media/plus.bdcc8a2c322dfe51669292aaaf91238a.svg",
+    "main.1665c3da.css.map": "/dag-mar-website/static/css/main.1665c3da.css.map",
+    "main.dbc0590d.js.map": "/dag-mar-website/static/js/main.dbc0590d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1665c3da.css",
+    "static/js/main.dbc0590d.js"
+  ]
+}
