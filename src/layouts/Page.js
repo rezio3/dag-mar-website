@@ -1,12 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
+import Offer from "../pages/Offer";
+import Fortranslators from "../pages/Fortranslators";
+import Faq from "../pages/Faq";
+import Contact from "../pages/Contact";
+import Media from "react-media";
 
 const Page = () => {
 	window.onscroll = () => {
 		const myNav = document.getElementById("nav");
 		const logo = document.getElementById("logo");
-		if (window.scrollY > 100) {
+		if (window.scrollY > 50) {
 			myNav.classList.add("nav-scrolled");
 			myNav.classList.remove("nav-up");
 			logo.classList.add("logo-scrolled");
@@ -23,9 +28,10 @@ const Page = () => {
 		<div className="page-container">
 			<Routes>
 				<Route path="/" element={<Home />} />
-				{/* <Route path="/music" element={<Music />} />
 				<Route path="/offer" element={<Offer />} />
-				<Route path="/contact" element={<Contact />} /> */}
+				<Route path="/fortranslators" element={<Fortranslators />} />
+				<Route path="/faq" element={<Faq />} />
+				<Route path="/contact" element={<Contact />} />
 			</Routes>
 		</div>
 	);
