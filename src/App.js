@@ -5,21 +5,22 @@ import Navbar from "./layouts/Navbar";
 import Page from "./layouts/Page";
 import Footer from "./layouts/Footer";
 import "./App.css";
-import Cookies from "./context/CookiesContext";
+import News from "./context/NewsContext";
+import { HashRouter } from "react-router-dom";
 
 function App() {
 	return (
-		<Router>
+		<HashRouter>
 			<ScrollToTop>
-				<Cookies>
+				<News>
 					<div className="App">
 						<Navbar />
 						<Page />
 						<Footer />
 					</div>
-				</Cookies>
+				</News>
 			</ScrollToTop>
-		</Router>
+		</HashRouter>
 	);
 }
 
