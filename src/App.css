@@ -3,4 +3,26 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Lato", sans-serif;
+	height: 100%;
+}
+
+@media (max-width: 1815px) {
+	html,
+	body {
+		zoom: 85%;
+	}
+}
+
+@media (max-width: 1300px) {
+	html,
+	body {
+		zoom: 80%;
+	}
+}
+
+@media (max-width: 992px) {
+	html,
+	body {
+		zoom: 100%;
+	}
 }
