@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "LatoLatinWebSemibold";
+  src: url(../../fonts/LatoLatin-Semibold.ttf);
+}
 html {
   scroll-timeline: custom_name;
 }
@@ -11,8 +15,8 @@ html {
 }
 
 .logo-up {
-  width: 216px;
-  height: 216px;
+  width: 215px;
+  height: 215px;
 }
 
 .navigation-contaier {
@@ -26,25 +30,42 @@ html {
   z-index: 2;
 }
 .navigation-contaier .left-navbar {
-  margin-left: 15%;
+  margin-left: 14%;
   width: 50%;
 }
 .navigation-contaier .right-navbar {
-  margin-right: 15%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 14%;
   width: 50%;
+}
+.navigation-contaier .logo-img {
+  position: absolute;
+  background-size: cover;
+  background-image: url(../../img/logo.svg);
+  transform: translateY(80px);
+  transition: 0.2s ease-out;
+}
+.navigation-contaier .logo-scrolled {
+  width: 130px;
+  height: 130px;
+  background-size: cover;
+  transform: translateY(30px);
+  transition: 0.2s ease-out;
 }
 .navigation-contaier button {
   display: inline-block;
-  padding: 20px 20px;
-  margin: 10px 10px;
+  padding: 10px 10px;
+  margin: 10px 20px;
   position: relative;
   border: none;
   background-color: #630708;
   color: #e9e8e2;
   font-size: 15px;
-  font-family: "Lato", sans-serif;
+  font-family: "LatoLatinWebSemibold", sans-serif;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: normal;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -65,6 +86,7 @@ html {
   width: 100%;
 }
 .navigation-contaier .contact-button {
+  text-align: center;
   margin: 0;
   padding: 0;
   text-transform: none;
@@ -82,23 +104,61 @@ html {
   border: 2px solid rgb(233, 232, 226);
   animation: contact-hover 0.3s ease-in-out;
 }
+.navigation-contaier .faq:hover::before {
+  width: 100%;
+}
 .navigation-contaier .language-btn {
-  margin-left: 380px;
-  margin-right: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2px;
+  padding: 10px;
 }
-.navigation-contaier .logo-img {
+.navigation-contaier .language-btn .only-btn {
+  display: flex;
+  align-items: center;
+  color: #e9e8e2;
+  font-family: "LatoLatinWebSemibold", sans-serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  cursor: default;
+  font-size: 15px;
+}
+.navigation-contaier .language-btn .material-symbols-outlined {
+  text-align: center;
+}
+.navigation-contaier .language-btn .language-choice-window {
   position: absolute;
-  background-size: cover;
-  background-image: url(../../img/logo.png);
-  transform: translateY(80px);
-  transition: 0.2s ease-in-out;
+  left: 72.5%;
+  top: 70%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 0px;
+  width: 104px;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease-out;
 }
-.navigation-contaier .logo-scrolled {
-  width: 130px;
-  height: 130px;
-  background-size: cover;
-  transform: translateY(30px);
-  transition: 0.2s ease-in-out;
+.navigation-contaier .language-btn .language-choice-window span {
+  margin-left: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #242424;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+.navigation-contaier .language-btn .language-choice-window .eng-span:hover {
+  opacity: 0.7;
+}
+.navigation-contaier .language-btn .language-choice-window .de-span:hover {
+  opacity: 0.7;
+}
+.navigation-contaier .language-btn:hover .language-choice-window {
+  height: 86px;
 }
 
 @keyframes contact-hover {
@@ -112,14 +172,70 @@ html {
     background-color: #6c090a;
   }
 }
-@media (max-width: 1850px) {
-  .navigation-contaier .language-btn {
-    margin-left: 250px;
+.active .navbtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e9e8e2;
+  transition: width 0.3s ease-in-out;
+}
+.active .contact-button {
+  border: 2px solid rgb(233, 232, 226);
+}
+
+@media (max-width: 1800px) {
+  @-moz-document url-prefix() {
+    .navigation-contaier .right-navbar .language-btn .language-choice-window {
+      left: 70%;
+    }
   }
-  .navigation-contaier .left-navbar {
-    margin-left: 230px;
+}
+@media (max-width: 1580px) {
+  .right-navbar .language-btn .language-choice-window {
+    left: 74%;
   }
-  .nav-up {
-    height: 70px;
+  @-moz-document url-prefix() {
+    .navigation-contaier .right-navbar .language-btn .language-choice-window {
+      left: 68%;
+    }
+  }
+}
+@media (max-width: 1450px) {
+  .right-navbar .language-btn .language-choice-window {
+    left: 72%;
+  }
+}
+@media (max-width: 1150px) {
+  .right-navbar .language-btn .language-choice-window {
+    left: 70%;
+  }
+}
+@media (max-width: 1300px) {
+  @-moz-document url-prefix() {
+    .navigation-contaier .left-navbar {
+      margin-left: 5%;
+    }
+    .navigation-contaier .right-navbar {
+      margin-right: 5%;
+    }
+    .navigation-contaier .right-navbar .language-btn .language-choice-window {
+      left: 73%;
+    }
+    .nav-up {
+      height: 80px;
+    }
+  }
+}
+@media (min-width: 2350px) {
+  .right-navbar .language-btn .language-choice-window {
+    left: 75%;
+  }
+}
+@media (min-width: 2800px) {
+  .right-navbar .language-btn .language-choice-window {
+    left: 77%;
   }
 }
