@@ -13,18 +13,10 @@ const NewsWindow = () => {
 		<div className="news-container">
 			<div className="news-x-btn" onClick={handleCloseButton} />
 			<h4>Szanowni Klienci,</h4>
-			<p>
-				informujemy, iż nasze biuro w
-				dniaasdjdkjhqwjkehqjkehqkjwheqjdhsfhskjdhqjwehkjqwhekjsdaskdjhjhkjch
-				24-31 grudnia będzie nieczynne.
-			</p>
-			<p>
-				Życzymy Wesołych Świąt
-				orazwheqwekjqhwejqwjehqwejkqwhekjqhwjkehqwjkehkqjwehjkqwhrjqhrk
-				Szczęśliwego Nowego Roku.
-			</p>
+			<p>informujemy, iż nasze biuro w 24-31 grudnia będzie nieczynne.</p>
+			<p>Życzymy Wesołych Świąt Szczęśliwego Nowego Roku.</p>
 			<button className="news-ok-btn" onClick={handleCloseButton}>
-				Ok byczku
+				Ok
 			</button>
 		</div>
 	);
