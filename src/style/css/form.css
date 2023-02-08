@@ -236,7 +236,7 @@
       font-size: 16px;
     }
     .form-section-container .form-container .contact-form .name-input-container,
-.form-section-container .form-container .contact-form .email-and-theme-container {
+    .form-section-container .form-container .contact-form .email-and-theme-container {
       margin: 12px 0;
       width: 100%;
       display: flex;
