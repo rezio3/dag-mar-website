@@ -21,7 +21,7 @@ const Dt = () => {
 										2001. Początkowo swoją ofertę kierowaliśmy do osób, które
 										zainteresowane były wykonaniem tłumaczeń z języka
 										angielskiego. Dynamiczny rozwój naszych usług oraz chęć
-										wyjścia naprzeciw oczekiwaniom kontrahentów sprawiły,że w
+										wyjścia naprzeciw oczekiwaniom kontrahentów sprawiły, że w
 										roku 2005 założyliśmy Biuro Tłumaczeń. Doskonale wiemy jak
 										pomóc naszym Klientom, ponieważ sami również dokonujemy
 										przekładu. Właścicielką Biura jest tłumacz przysięgły języka
@@ -56,7 +56,7 @@ const Dt = () => {
 										2001. Początkowo swoją ofertę kierowaliśmy do osób, które
 										zainteresowane były wykonaniem tłumaczeń z języka
 										angielskiego. Dynamiczny rozwój naszych usług oraz chęć
-										wyjścia naprzeciw oczekiwaniom kontrahentów sprawiły,że w
+										wyjścia naprzeciw oczekiwaniom kontrahentów sprawiły, że w
 										roku 2005 założyliśmy Biuro Tłumaczeń. Doskonale wiemy jak
 										pomóc naszym Klientom, ponieważ sami również dokonujemy
 										przekładu. Właścicielką Biura jest tłumacz przysięgły języka
