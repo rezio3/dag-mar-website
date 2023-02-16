@@ -97,6 +97,7 @@
 @media (max-width: 992px) {
   .page-container {
     width: 100%;
+    background-color: #f5f5f5;
   }
   .header-container {
     display: flex;
@@ -105,15 +106,18 @@
     flex-direction: column;
     margin-top: 40px;
     width: 100vw;
-    height: 540px;
-    background-position: -500px 0;
+    height: 600px;
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: -180px 0px;
   }
   .header-container .header-span-container {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 30px;
     width: 85%;
     height: 350px;
     top: 120px;
@@ -121,33 +125,33 @@
   }
   .header-container .header-span-container h1 {
     margin-top: 40px;
-    font-size: 35px;
+    font-size: 26px;
     color: #242424;
     font-family: "Lato", sans-serif;
     font-weight: 700;
   }
   .header-container .header-span-container h3 {
-    text-align: center;
+    text-align: left;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     color: #6c6c6c;
-    line-height: 16px;
+    line-height: 24px;
   }
   .header-container .header-span-container .see-offer {
     margin-top: 30px;
-    width: 153px;
-    min-height: 42px;
+    width: 192px;
+    min-height: 62px;
     letter-spacing: 0.3px;
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-family: "Lato", sans-serif;
     font-weight: 700;
-    background-color: #6c090a;
+    background-color: #f8f8f8;
     text-align: center;
     border: 2px #6c090a solid;
-    color: #f8f8f8;
+    color: #6c090a;
     cursor: pointer;
     z-index: 1;
     border-radius: 30px;
@@ -158,28 +162,7 @@
     color: #6c090a;
   }
   .header-container .arrow-down-circle {
-    position: relative;
-    width: 34px;
-    height: 34px;
-    border: 1px black solid;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.3;
-    top: 220px;
-    transition: 0.3s ease-out;
-    cursor: pointer;
-  }
-  .header-container .arrow-down-circle .arrow-down {
-    font-size: 60px;
-    cursor: pointer;
-    background-image: url(../../img/arrow-down.png);
-    background-color: transparent;
-    border: none;
-    width: 28px;
-    height: 28px;
-    background-size: cover;
+    display: none;
   }
   .header-container .arrow-down-circle:hover {
     width: 34px;

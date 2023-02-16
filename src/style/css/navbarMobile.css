@@ -54,8 +54,6 @@ html {
   height: 45px;
 }
 .m-navigation-contaier .burger-icon-container .fa-bars {
-  background-size: cover;
-  position: relative;
   color: #e9e8e2;
   padding: 20px;
   cursor: pointer;
