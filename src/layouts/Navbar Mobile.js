@@ -46,7 +46,7 @@ const NavbarMobile = () => {
 			<div className="burger-icon-container">
 				{burgerActive ? (
 					// <i class="fa-regular fa-arrow-up fa-3x"></i>
-					<i className="fa-regular fa-x fa-2x" onClick={handleBurgerBtn}></i>
+					<i class="fa-solid fa-bars" onClick={handleBurgerBtn}></i>
 				) : (
 					<i className="fa-solid fa-bars fa-2x" onClick={handleBurgerBtn} />
 				)}
