@@ -10,12 +10,13 @@ const Fortranslators = () => {
 			<div className="second-section">
 				<h2>Czekamy na ciebie</h2>
 				<span>
-					Lorem ipsum dolor sit amet consectetur. In neque turpis est ultrices
-					non fermentum nulla. Habitasse
-					<br /> molestie sodales consectetur fermentum at in id blandit
-					pharetra. Vel massa pellentesque nunc nullam
-					<br /> augue fames sit scelerisque. Vulputate ipsum faucibus viverra
-					vitae semper.
+					Jeśli zna Pani/Pan perfekcyjnie jeden lub więcej języków obcych,
+					swobodnie posługuje się językiem polskim, ma przynajmniej kilkuletnie{" "}
+					<br />
+					doświadczenie w tłumaczeniu dokumentów, jest osobą odpowiedzialną,
+					solidną, dyspozycyjną, pracującą samodzielnie lub potrafiącą
+					<br /> włączyć się do zespołu i jest zainteresowana/y podjęciem
+					współpracy z naszym Biurem zapraszamy do kontaktu.
 				</span>
 				<NavLink to="/contact" className="nav-btn-desktop">
 					<button className="write-us-btn">Napisz do nas</button>
