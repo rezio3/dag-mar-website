@@ -10,7 +10,7 @@ const Values = () => {
 					<div className="value-one value-img"></div>
 					<span>Rzetelność</span>
 				</div>
-				<div className="value">
+				<div className="value exper">
 					<div className="value-two value-img"></div>
 					<span>Doświadczenie</span>
 				</div>
