@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../style/css/opinions.css";
 import Opinion from "./Opinions/Opinion";
 import OpinionSegments from "./Opinions/opinionSegment";
+import Media from "react-media";
 
 const Opinions = () => {
 	const opinionsData = [
@@ -154,7 +155,7 @@ const Opinions = () => {
 						// Desktop
 						<div className="opinions-container-0">
 							<div className="opinions-container">
-								<h1 className="opinions-header">Co mówią o nas klienci</h1>
+								<h2 className="opinions-header">Co mówią o nas klienci?</h2>
 								<div className="carousel-container">
 									<div
 										className="carousel-left-arrow carousel-arrow"
@@ -262,17 +263,11 @@ const Opinions = () => {
 						// Mobile
 						<div className="opinions-container-0">
 							<div className="opinions-container">
-								<h1 className="opinions-header">Co mówią o nas klienci</h1>
+								<h2 className="opinions-header">
+									Co mówią o nas <br />
+									klienci?
+								</h2>
 								<div className="carousel-container">
-									<div
-										className="carousel-left-arrow carousel-arrow"
-										onClick={opinion.leftArrowOn ? handleLeftArrow : null}
-									>
-										<button
-											className="material-symbols-outlined left-arrow arrow"
-											id="scroll-btn"
-										></button>
-									</div>
 									<div
 										className="opinions-description"
 										id="opinions-description"
@@ -315,6 +310,17 @@ const Opinions = () => {
 												);
 											})}
 										</div>
+									</div>
+								</div>
+								<div className="arrows-container">
+									<div
+										className="carousel-left-arrow carousel-arrow"
+										onClick={opinion.leftArrowOn ? handleLeftArrow : null}
+									>
+										<button
+											className="material-symbols-outlined left-arrow arrow"
+											id="scroll-btn"
+										></button>
 									</div>
 									<div
 										className="carousel-right-arrow carousel-arrow"
