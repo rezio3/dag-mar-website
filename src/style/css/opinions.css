@@ -52,7 +52,7 @@
   left: 0;
 }
 .opinions-container-0 .opinions-container .carousel-container .opinions-description .opinions-description2 .opinion-container {
-  position: static;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
