@@ -39,7 +39,7 @@
   margin-left: 5%;
   height: 100%;
 }
-.mgr-Dagmara-Toporowska-container .DT-container .DT-description h1 {
+.mgr-Dagmara-Toporowska-container .DT-container .DT-description h2 {
   margin-top: 0;
   font-weight: 700;
   font-family: "Lato", sans-serif;
@@ -110,40 +110,41 @@
     align-items: flex-end;
     background-image: url(../../img/arc.png);
     background-size: cover;
-    width: 153px;
-    height: 218px;
+    width: 276px;
+    height: 393px;
     margin-right: 10px;
   }
   .mgr-Dagmara-Toporowska-container .DT-container .DT-img .DTimage {
-    width: 153px;
-    height: 218px;
-    transform: translateY(0px);
+    width: 276px;
+    height: 393px;
+    transform: translateX(10px);
   }
   .mgr-Dagmara-Toporowska-container .DT-container .DT-img .DTimage:hover {
-    width: 153px;
-    height: 218px;
-    transform: translateY(0px);
+    width: 276px;
+    height: 393px;
+    transform: translateX(10px);
   }
   .mgr-Dagmara-Toporowska-container .DT-container .DT-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 90vw;
     margin-left: 0;
     height: 100%;
     text-align: center;
   }
-  .mgr-Dagmara-Toporowska-container .DT-container .DT-description h1 {
+  .mgr-Dagmara-Toporowska-container .DT-container .DT-description h2 {
     margin-top: 0;
     font-weight: 700;
     font-family: "Lato", sans-serif;
     letter-spacing: 1.6px;
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 34px;
   }
   .mgr-Dagmara-Toporowska-container .DT-container .DT-description p {
     color: #6c6c6c;
+    text-align: left;
     margin: 15px 0;
     font-size: 16px;
     font-weight: 400;
@@ -153,16 +154,15 @@
   }
   .mgr-Dagmara-Toporowska-container .DT-container .DT-description .button-and-DT-img {
     width: 95vw;
-    height: 220px;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: flex-start;
   }
   .mgr-Dagmara-Toporowska-container .DT-container .see-offer2 {
-    margin-top: 0;
-    margin-bottom: 35%;
-    width: 153px;
-    min-height: 42px;
+    margin: 50px 0;
+    width: 163px;
+    min-height: 54px;
     letter-spacing: 0.3px;
     font-size: 16px;
     font-style: normal;
