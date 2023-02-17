@@ -147,100 +147,229 @@ const Opinions = () => {
 	};
 
 	return (
-		<div className="opinions-container-0">
-			<div className="opinions-container">
-				<h1 className="opinions-header">Co mówią o nas klienci</h1>
-				<div className="carousel-container">
-					<div
-						className="carousel-left-arrow carousel-arrow"
-						onClick={opinion.leftArrowOn ? handleLeftArrow : null}
-					>
-						<button
-							className="material-symbols-outlined left-arrow arrow"
-							id="scroll-btn"
-						></button>
-					</div>
-					<div className="opinions-description" id="opinions-description">
-						<div className="opinions-description2" id="opinions-description2">
-							{opinion.activeOpinion.map((e, index) => {
-								console.log(index);
-								return (
-									<Opinion
-										opinionText={opinionsData[e].opinionText}
-										opinionAuthor={opinionsData[e].author}
-										key={e}
-										anim={(() => {
-											if (opinion.whichArrow === 1) {
-												if (opinion.activeOpinion.length === 2) {
-													if (index === 0) {
-														return "opinion-container swipe-to-left";
-													} else {
-														return "opinion-container swipe-from-right";
-													}
-												} else if (opinion.activeOpinion.length === 1) {
-													return "opinion-container swipe-from-right";
-												}
-											} else {
-												if (opinion.activeOpinion.length === 2) {
-													if (index === 0) {
-														return "opinion-container swipe-from-left";
-													} else {
-														return "opinion-container swipe-to-right";
-													}
-												} else if (opinion.activeOpinion.length === 1) {
-													return "opinion-container swipe-from-left";
-												}
-											}
-										})()}
+		<>
+			<Media query="(min-width: 992px)">
+				{(matches) => {
+					return matches ? (
+						// Desktop
+						<div className="opinions-container-0">
+							<div className="opinions-container">
+								<h1 className="opinions-header">Co mówią o nas klienci</h1>
+								<div className="carousel-container">
+									<div
+										className="carousel-left-arrow carousel-arrow"
+										onClick={opinion.leftArrowOn ? handleLeftArrow : null}
+									>
+										<button
+											className="material-symbols-outlined left-arrow arrow"
+											id="scroll-btn"
+										></button>
+									</div>
+									<div
+										className="opinions-description"
+										id="opinions-description"
+									>
+										<div
+											className="opinions-description2"
+											id="opinions-description2"
+										>
+											{opinion.activeOpinion.map((e, index) => {
+												console.log(index);
+												return (
+													<Opinion
+														opinionText={opinionsData[e].opinionText}
+														opinionAuthor={opinionsData[e].author}
+														key={e}
+														anim={(() => {
+															if (opinion.whichArrow === 1) {
+																if (opinion.activeOpinion.length === 2) {
+																	if (index === 0) {
+																		return "opinion-container swipe-to-left";
+																	} else {
+																		return "opinion-container swipe-from-right";
+																	}
+																} else if (opinion.activeOpinion.length === 1) {
+																	return "opinion-container swipe-from-right";
+																}
+															} else {
+																if (opinion.activeOpinion.length === 2) {
+																	if (index === 0) {
+																		return "opinion-container swipe-from-left";
+																	} else {
+																		return "opinion-container swipe-to-right";
+																	}
+																} else if (opinion.activeOpinion.length === 1) {
+																	return "opinion-container swipe-from-left";
+																}
+															}
+														})()}
+													/>
+												);
+											})}
+										</div>
+									</div>
+									<div
+										className="carousel-right-arrow carousel-arrow"
+										onClick={opinion.rightArrowOn ? handleRightArrow : null}
+									>
+										<button
+											className="material-symbols-outlined right-arrow arrow"
+											id="scroll-btn"
+										></button>
+									</div>
+								</div>
+								<div className="segments-container">
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 1 ? "#6c6c6c" : null,
+										}}
 									/>
-								);
-							})}
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 2 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 3 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 4 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 5 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 6 ? "#6c6c6c" : null,
+										}}
+									/>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div
-						className="carousel-right-arrow carousel-arrow"
-						onClick={opinion.rightArrowOn ? handleRightArrow : null}
-					>
-						<button
-							className="material-symbols-outlined right-arrow arrow"
-							id="scroll-btn"
-						></button>
-					</div>
-				</div>
-				<div className="segments-container">
-					<OpinionSegments
-						style={{
-							backgroundColor: opinion.currentView === 1 ? "#6c6c6c" : null,
-						}}
-					/>
-					<OpinionSegments
-						style={{
-							backgroundColor: opinion.currentView === 2 ? "#6c6c6c" : null,
-						}}
-					/>
-					<OpinionSegments
-						style={{
-							backgroundColor: opinion.currentView === 3 ? "#6c6c6c" : null,
-						}}
-					/>
-					<OpinionSegments
-						style={{
-							backgroundColor: opinion.currentView === 4 ? "#6c6c6c" : null,
-						}}
-					/>
-					<OpinionSegments
-						style={{
-							backgroundColor: opinion.currentView === 5 ? "#6c6c6c" : null,
-						}}
-					/>
-					<OpinionSegments
-						style={{
-							backgroundColor: opinion.currentView === 6 ? "#6c6c6c" : null,
-						}}
-					/>
-				</div>
-			</div>
-		</div>
+					) : (
+						// Mobile
+						<div className="opinions-container-0">
+							<div className="opinions-container">
+								<h1 className="opinions-header">Co mówią o nas klienci</h1>
+								<div className="carousel-container">
+									<div
+										className="carousel-left-arrow carousel-arrow"
+										onClick={opinion.leftArrowOn ? handleLeftArrow : null}
+									>
+										<button
+											className="material-symbols-outlined left-arrow arrow"
+											id="scroll-btn"
+										></button>
+									</div>
+									<div
+										className="opinions-description"
+										id="opinions-description"
+									>
+										<div
+											className="opinions-description2"
+											id="opinions-description2"
+										>
+											{opinion.activeOpinion.map((e, index) => {
+												console.log(index);
+												return (
+													<Opinion
+														opinionText={opinionsData[e].opinionText}
+														opinionAuthor={opinionsData[e].author}
+														key={e}
+														anim={(() => {
+															if (opinion.whichArrow === 1) {
+																if (opinion.activeOpinion.length === 2) {
+																	if (index === 0) {
+																		return "opinion-container swipe-to-left";
+																	} else {
+																		return "opinion-container swipe-from-right";
+																	}
+																} else if (opinion.activeOpinion.length === 1) {
+																	return "opinion-container swipe-from-right";
+																}
+															} else {
+																if (opinion.activeOpinion.length === 2) {
+																	if (index === 0) {
+																		return "opinion-container swipe-from-left";
+																	} else {
+																		return "opinion-container swipe-to-right";
+																	}
+																} else if (opinion.activeOpinion.length === 1) {
+																	return "opinion-container swipe-from-left";
+																}
+															}
+														})()}
+													/>
+												);
+											})}
+										</div>
+									</div>
+									<div
+										className="carousel-right-arrow carousel-arrow"
+										onClick={opinion.rightArrowOn ? handleRightArrow : null}
+									>
+										<button
+											className="material-symbols-outlined right-arrow arrow"
+											id="scroll-btn"
+										></button>
+									</div>
+								</div>
+								<div className="segments-container">
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 1 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 2 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 3 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 4 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 5 ? "#6c6c6c" : null,
+										}}
+									/>
+									<OpinionSegments
+										style={{
+											backgroundColor:
+												opinion.currentView === 6 ? "#6c6c6c" : null,
+										}}
+									/>
+								</div>
+							</div>
+						</div>
+					);
+				}}
+			</Media>
+		</>
 	);
 };
 
