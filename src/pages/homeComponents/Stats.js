@@ -1,22 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import Media from "react-media";
 import "../../style/css/stats.css";
-
-const useScrollPosition = () => {
-	const [scrollPosition, setScrollPosition] = useState(0);
-
-	useEffect(() => {
-		const updatePosition = () => {
-			setScrollPosition(window.pageYOffset);
-		};
-		window.addEventListener("scroll", updatePosition);
-		updatePosition();
-		return () => window.removeEventListener("scroll", updatePosition);
-	}, []);
-
-	return scrollPosition;
-};
 
 const Number = ({ n }) => {
 	const { num } = useSpring({
@@ -34,20 +19,18 @@ const Number = ({ n }) => {
 };
 const Stats = () => {
 	const [scrolled, setScrolled] = useState(false);
-	let scrollPosition = useScrollPosition();
-	console.log(scrollPosition);
-	if (scrolled === false && scrollPosition >= 150) {
-		setScrolled(true);
-	} else if (scrolled === true && scrollPosition < 150) {
-		setScrolled(false);
-	}
-	// useEffect(() => {
-	// const scrollHandler = () => {
-
-	//
-	// };
-	// scrollPosition.addEventListener("scroll", scrollHandler);
-	// }, [scrolled]);
+	const myRef = useRef();
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const entry = entries[0];
+				setScrolled(entry.isIntersecting);
+			},
+			{ threshold: 0.7 }
+		);
+		observer.observe(myRef.current);
+	}, []);
+	console.log(scrolled);
 
 	return (
 		<>
@@ -55,7 +38,7 @@ const Stats = () => {
 				{(matches) => {
 					return matches ? (
 						// desktop
-						<section className="stats-container" id="section1">
+						<section ref={myRef} className="stats-container" id="section1">
 							<div className="first-stat stats">
 								<span className="stat-number">
 									{scrolled ? <Number n={26} /> : 0}
@@ -88,23 +71,33 @@ const Stats = () => {
 						<section className="stats-container" id="section1">
 							<div className="first-block-stats block">
 								<div className="first-stat stats">
-									<span className="stat-number">26</span>
+									<span className="stat-number">
+										{" "}
+										{scrolled ? <Number n={26} /> : 0}
+									</span>
 									<span className="stat-description">tłumaczonych języków</span>
 								</div>
 								<div className="second-stat stats">
-									<span className="stat-number">21</span>
+									<span className="stat-number">
+										{" "}
+										{scrolled ? <Number n={21} /> : 0}
+									</span>
 									<span className="stat-description">lat doświadczenia</span>
 								</div>
 							</div>
 							<div className="second-block-stats block">
 								<div className="third-stat stats">
-									<span className="stat-number thousand">1000+</span>
+									<span className="stat-number thousand">
+										{scrolled ? <Number n={1000} /> : 0}+
+									</span>
 									<span className="stat-description">
 										zadowolonych klientów
 									</span>
 								</div>
 								<div className="forth-stat stats">
-									<span className="stat-number">16</span>
+									<span ref={myRef} className="stat-number">
+										{scrolled ? <Number n={16} /> : 0}
+									</span>
 									<span className="stat-description">
 										współpracujących partnerów
 									</span>
