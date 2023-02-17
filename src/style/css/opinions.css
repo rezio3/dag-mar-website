@@ -339,7 +339,7 @@
     border-radius: 50px;
     background-color: none;
     border: 1px #6c6c6c solid;
-    margin-top: 50px;
+    margin-top: 70px;
   }
   .swipe-to-left {
     animation: swipe-to-left-anim 0.5s forwards;
