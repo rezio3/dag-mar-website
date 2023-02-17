@@ -15,7 +15,7 @@ const Dt = () => {
 									<img src={DTimage} className="DTimage" />
 								</div>
 								<div className="DT-description">
-									<h1>JAK TO SIĘ ZACZĘŁO?</h1>
+									<h2>O NAS</h2>
 									<p>
 										Działalnością związaną z tłumaczeniami zajmujemy się od roku
 										2001. Początkowo swoją ofertę kierowaliśmy do osób, które
@@ -50,7 +50,7 @@ const Dt = () => {
 						<section className="mgr-Dagmara-Toporowska-container" id="section3">
 							<div className="DT-container">
 								<div className="DT-description">
-									<h1>JAK TO SIĘ ZACZĘŁO?</h1>
+									<h2>O NAS</h2>
 									<p>
 										Działalnością związaną z tłumaczeniami zajmujemy się od roku
 										2001. Początkowo swoją ofertę kierowaliśmy do osób, które
