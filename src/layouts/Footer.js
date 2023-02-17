@@ -4,6 +4,7 @@ import "../style/css/footer.css";
 import footerLogo from "../img/footer-logo.png";
 import fbIcon from "../img/FacebookIcon.png";
 import googleIcon from "../img/GoogleIcon.png";
+import Media from "react-media";
 
 const Footer = () => {
 	return (
