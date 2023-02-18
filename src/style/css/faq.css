@@ -96,4 +96,10 @@
     border-bottom: 1px #cecece solid;
     transition: 0.3s ease-out;
   }
+  .faq-container .line-active {
+    height: 160px;
+  }
+  .faq-container .rotate {
+    rotate: -45deg;
+  }
 }
