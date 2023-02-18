@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../style/css/footer.css";
-import footerLogo from "../img/footer-logo.png";
-import fbIcon from "../img/FacebookIcon.png";
-import googleIcon from "../img/GoogleIcon.png";
+import footerLogo from "../img/footer-logo.svg";
+import fbIcon from "../img/FacebookIcon.svg";
+import googleIcon from "../img/GoogleIcon.svg";
 import Media from "react-media";
 
 const Footer = () => {
