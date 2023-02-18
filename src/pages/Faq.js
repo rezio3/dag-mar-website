@@ -59,7 +59,6 @@ const Faq = () => {
 	});
 
 	const handlePlusClick = (e) => {
-		// console.log(e.target.id);
 		setQuestionsView({
 			...questionsView,
 			[e.target.id]: !questionsView[e.target.id],
