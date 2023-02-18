@@ -53,4 +53,22 @@
 }
 
 @media (max-width: 992px) {
+	.red-section-container {
+		height: 570px;
+		h2 {
+			margin-top: 70px;
+			text-align: center;
+			width: 90%;
+		}
+		span {
+			font-size: 16px;
+			width: 90%;
+		}
+		.write-us-btn {
+			height: 50px;
+			width: 145px;
+			margin-top: 44px;
+			margin-bottom: 61px;
+		}
+	}
 }
