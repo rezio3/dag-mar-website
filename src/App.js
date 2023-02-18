@@ -13,9 +13,9 @@ function App() {
 	const [burgerActive, setBurgerActive] = useState(false);
 	return (
 		<HashRouter>
-			{!burgerActive ? (
-				<ScrollToTop>
-					<News>
+			<ScrollToTop>
+				<News>
+					{!burgerActive ? (
 						<div className="App">
 							<Navbar
 								burgerActive={burgerActive}
@@ -24,11 +24,14 @@ function App() {
 							<Page />
 							<Footer />
 						</div>
-					</News>
-				</ScrollToTop>
-			) : (
-				<MenuInBurgerIcon />
-			)}
+					) : (
+						<MenuInBurgerIcon
+							burgerActive={burgerActive}
+							setBurgerActive={setBurgerActive}
+						/>
+					)}
+				</News>
+			</ScrollToTop>
 		</HashRouter>
 	);
 }
