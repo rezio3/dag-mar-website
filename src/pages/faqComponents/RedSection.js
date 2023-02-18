@@ -7,10 +7,10 @@ const RedSection = () => {
 		<div className="red-section-container">
 			<h2>Nadal nie uzyskałeś odpowiedzi?</h2>
 			<span>
-				Lorem ipsum dolor sit amet consectetur. Arcu ultrices ipsum sed a enim
-				scelerisque suspendisse et quam. Commodo
-				<br /> pharetra vel posuere mauris. Cursus lacus nisi cum morbi quam
-				ipsum leo quam augue.{" "}
+				Jesteśmy otwarci na Państwa pytania - chętnie rozwiejemy wszelkie
+				wątpliwości związane z wykonywaniem tłumaczeńw naszym biurze. Zachęcamy
+				do skontaktowania się z nami poprzez formularz kontaktowy, do którego
+				prowadzi poniższy przycisk.
 			</span>
 			<NavLink to="/contact" className="nav-btn-desktop">
 				<button className="write-us-btn">Napisz do nas</button>
