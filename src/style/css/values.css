@@ -150,6 +150,7 @@
     background-size: cover;
     height: 84px;
     width: 83px;
+    margin-left: 5px;
   }
   .values-we-offer-container .values-box .value .value-one:hover {
     height: 93px;
@@ -183,6 +184,7 @@
     background-size: cover;
     height: 83px;
     width: 75px;
+    margin-right: 10px;
   }
   .values-we-offer-container .values-box .value .value-four:hover {
     height: 93.1px;
@@ -208,7 +210,7 @@
     color: #e9e8e2;
     line-height: 45.6px;
   }
-  .values-we-offer-container .values-box .exper {
-    margin-left: 20px;
+  .values-we-offer-container .values-box .lower-span {
+    margin-right: 10px;
   }
 }

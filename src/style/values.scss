@@ -167,6 +167,7 @@
 					background-size: cover;
 					height: 84px;
 					width: 83px;
+					margin-left: 5px;
 				}
 
 				.value-one:hover {
@@ -204,6 +205,7 @@
 					background-size: cover;
 					height: 83px;
 					width: 75px;
+					margin-right: 10px;
 				}
 
 				.value-four:hover {
@@ -233,8 +235,9 @@
 					line-height: 45.6px;
 				}
 			}
-			.exper {
-				margin-left: 20px;
+
+			.lower-span {
+				margin-right: 10px;
 			}
 		}
 	}
