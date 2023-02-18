@@ -270,11 +270,11 @@
 						position: relative;
 						display: flex;
 						flex-direction: row;
-						justify-content: center;
-						align-items: flex-start;
+						justify-content: flex-end;
+						align-items: center;
 						width: 4164px;
 						height: 289px;
-						left: -5px;
+						left: 0px;
 
 						.opinion-container {
 							position: absolute;
@@ -282,7 +282,7 @@
 							justify-content: center;
 							align-items: center;
 							flex-direction: column;
-							min-width: 309px;
+							min-width: 100%;
 							height: 259px;
 							margin-top: 40px;
 
@@ -409,7 +409,7 @@
 		}
 
 		100% {
-			right: 694px;
+			right: 350px;
 		}
 	}
 	@keyframes swipe-to-right-anim {
@@ -418,13 +418,13 @@
 		}
 
 		100% {
-			left: 694px;
+			left: 350px;
 		}
 	}
 
 	@keyframes swipe-from-right-anim {
 		0% {
-			right: -1338px;
+			right: -618px;
 		}
 
 		100% {
@@ -433,7 +433,7 @@
 	}
 	@keyframes swipe-from-left-anim {
 		0% {
-			left: -1338px;
+			left: -618px;
 		}
 
 		100% {
