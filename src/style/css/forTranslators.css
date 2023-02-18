@@ -7,7 +7,7 @@
 }
 .for-translators-container .translators-first-section {
   width: 75%;
-  margin-top: 320px;
+  margin-top: 260px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -15,7 +15,7 @@
 .for-translators-container .translators-first-section .translators-text {
   display: flex;
   flex-direction: column;
-  margin-bottom: 180px;
+  margin-bottom: 360px;
 }
 .for-translators-container .translators-first-section .translators-text .translators-header-container {
   display: flex;
@@ -155,5 +155,129 @@
     width: 528px;
     height: 737px;
     transform: translate(0%, 0%);
+  }
+}
+@media (max-width: 992px) {
+  .for-translators-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+  .for-translators-container .translators-first-section {
+    width: 90%;
+    margin-top: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .for-translators-container .translators-first-section .translators-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 180px;
+  }
+  .for-translators-container .translators-first-section .translators-text .translators-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 645px;
+    height: 155px;
+    background-image: url(../../img/contact-frame.png);
+    margin-bottom: 28px;
+    padding-left: 58px;
+    color: #242424;
+  }
+  .for-translators-container .translators-first-section .translators-text .translators-header-container h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1.6px;
+  }
+  .for-translators-container .translators-first-section .translators-text .translators-header-container h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .for-translators-container .translators-first-section .translators-text p {
+    margin-left: 58px;
+    width: 628px;
+    margin-right: 164px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #6c6c6c;
+  }
+  .for-translators-container .translators-first-section .translators-arc-img {
+    background-image: url(../../img/arc-translators.png);
+    background-size: cover;
+    width: 588px;
+    height: 748px;
+  }
+  .for-translators-container .translators-first-section .translators-arc-img .translators-img {
+    background-image: url(../../img/two-business-partners-working-office\ 1.png);
+    background-size: cover;
+    width: 528px;
+    height: 737px;
+    margin-top: 35px;
+    transition: 0.5s ease-out;
+  }
+  .for-translators-container .translators-first-section .translators-arc-img .translators-img:hover {
+    width: 545px;
+    height: 769px;
+    transform: translate(-3%, -3%);
+    z-index: -1;
+  }
+  .for-translators-container .second-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 480px;
+    background-image: url(../../img/faq-second-frame.png);
+    background-color: #6c090a;
+    z-index: 1;
+    color: #e9e8e2;
+  }
+  .for-translators-container .second-section h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+  }
+  .for-translators-container .second-section span {
+    margin-top: 8px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .for-translators-container .second-section .write-us-btn {
+    height: 44px;
+    width: 146px;
+    border-radius: 100px;
+    background: none;
+    border: 1.5px #e9e8e2 solid;
+    color: #e9e8e2;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    margin-top: 40px;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+  }
+  .for-translators-container .second-section .write-us-btn:hover {
+    opacity: 0.6;
   }
 }
