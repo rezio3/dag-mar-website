@@ -26,7 +26,7 @@ const Stats = () => {
 				const entry = entries[0];
 				setScrolled(entry.isIntersecting);
 			},
-			{ threshold: 0.7 }
+			{ threshold: 0.2 }
 		);
 		observer.observe(myRef.current);
 	}, []);
@@ -68,7 +68,7 @@ const Stats = () => {
 						</section>
 					) : (
 						// mobile
-						<section className="stats-container" id="section1">
+						<section ref={myRef} className="stats-container" id="section1">
 							<div className="first-block-stats block">
 								<div className="first-stat stats">
 									<span className="stat-number">
@@ -95,7 +95,7 @@ const Stats = () => {
 									</span>
 								</div>
 								<div className="forth-stat stats">
-									<span ref={myRef} className="stat-number">
+									<span className="stat-number">
 										{scrolled ? <Number n={16} /> : 0}
 									</span>
 									<span className="stat-description">
