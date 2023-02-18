@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../style/css/MenuInBurgerIcon.css";
+import xImg from "../img/burgerMenuX.svg";
 
 const MenuInBurgerIcon = (props) => {
 	const handleClick = () => {
@@ -8,6 +9,9 @@ const MenuInBurgerIcon = (props) => {
 	};
 	return (
 		<div className="burger-nav-content">
+			<div className="x-container">
+				<img src={xImg} className="x-button" onClick={handleClick} />
+			</div>
 			<div className="buttons-container">
 				<NavLink to="/" end className="m-nav-btn-desktop">
 					<div className="button-container" onClick={handleClick}>
@@ -19,7 +23,7 @@ const MenuInBurgerIcon = (props) => {
 						<button className="m-navbtn">Oferta</button>
 					</div>
 				</NavLink>
-				<NavLink to="/fortranslators" className="nav-btn-desktop">
+				<NavLink to="/fortranslators" className="m-nav-btn-desktop">
 					<div className="button-container" onClick={handleClick}>
 						<button className="m-navbtn">Dla tłumaczy</button>
 					</div>
@@ -29,6 +33,10 @@ const MenuInBurgerIcon = (props) => {
 						<button className="m-faq m-navbtn">FAQ</button>
 					</div>
 				</NavLink>
+				<div className="languages-container">
+					<span className="m-navbtn">PL</span>
+					<span className="material-symbols-outlined">expand_more</span>
+				</div>
 				{/* <div className="m-language-btn">
 				<div className="m-only-btn">
 					<span>PL</span>
