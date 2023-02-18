@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../style/css/navbarMobile.css";
+import burgerIcon from "../img/burger-icon.svg";
 
 const NavbarMobile = (props) => {
 	const handleBurgerBtn = () => {
@@ -12,9 +13,9 @@ const NavbarMobile = (props) => {
 			<div className="burger-icon-container">
 				{props.burgerActive ? (
 					// <i class="fa-regular fa-arrow-up fa-3x"></i>
-					<i class="fa-solid fa-bars" onClick={handleBurgerBtn}></i>
+					<img src={burgerIcon} onClick={handleBurgerBtn} />
 				) : (
-					<i className="fa-solid fa-bars fa-2x" onClick={handleBurgerBtn} />
+					<img src={burgerIcon} onClick={handleBurgerBtn} />
 				)}
 			</div>
 		</div>
