@@ -80,22 +80,21 @@ const Footer = () => {
 										<NavLink to="/offer" className="nav-btn-desktop">
 											<span className="footer-link">Oferta</span>
 										</NavLink>
-										<NavLink to="/contact" className="nav-btn-desktop">
-											<button className="footer-contact-btn">
-												Skontaktuj się
-											</button>
+										<NavLink to="/fortranslators" className="nav-btn-desktop">
+											<span className="footer-link">Dla Tłumaczy</span>
 										</NavLink>
 									</div>
 									<div className="aboutUs-offer-FAQ-translators-footer aboutUs-right">
 										<span className="footer-link">Płatności</span>
-										<NavLink to="/fortranslators" className="nav-btn-desktop">
-											<span className="footer-link">Dla Tłumaczy</span>
-										</NavLink>
+
 										<NavLink to="/faq" className="nav-btn-desktop">
 											<span className="footer-link">FAQ</span>
 										</NavLink>
 									</div>
 								</div>
+								<NavLink to="/contact" className="nav-btn-desktop">
+									<button className="footer-contact-btn">Skontaktuj się</button>
+								</NavLink>
 							</div>
 							<div className="lower-footer-container">
 								<div className="icons-footer-container">

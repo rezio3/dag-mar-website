@@ -237,9 +237,11 @@
   .footer-container .upper-footer-container .middle-footer-container .aboutUs-offer-FAQ-translators-footer {
     height: 100%;
     width: 50%;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .footer-container .upper-footer-container .middle-footer-container .aboutUs-offer-FAQ-translators-footer span {
     font-size: 18px;
