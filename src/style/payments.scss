@@ -76,4 +76,78 @@
 }
 
 @media (max-width: 992px) {
+	.payments-container {
+		background-color: $white;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: 10px;
+
+		h2 {
+			margin-top: 100px;
+			text-transform: uppercase;
+			margin-bottom: 65px;
+		}
+
+		.linePayments {
+			height: 80px;
+			width: 90%;
+			overflow: hidden;
+			border-bottom: 1px #cecece solid;
+			transition: 0.3s ease-out;
+
+			.visible-line {
+				height: 80px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.visible-span-text {
+					font-family: "Inter", sans-serif;
+					font-weight: 600;
+					font-size: 16px;
+					letter-spacing: 0.3px;
+					color: $black;
+				}
+
+				.plus {
+					cursor: pointer;
+					color: $black;
+					opacity: 0.6;
+					padding: 15px;
+					transition: 0.3s ease-out;
+				}
+			}
+
+			.unvisible-line {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+
+				p {
+					color: $txt;
+					height: 80px;
+					width: 100%;
+					font-family: "Inter", sans-serif;
+					font-weight: 400;
+					font-size: 16px;
+				}
+			}
+		}
+
+		.linePayments:last-child {
+			margin-bottom: 150px;
+			border-bottom: none;
+		}
+		.linePayments-active {
+			height: 160px;
+		}
+
+		.rotate {
+			rotate: -45deg;
+		}
+	}
 }

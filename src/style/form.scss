@@ -397,4 +397,218 @@
 }
 
 @media (max-width: 992px) {
+	.form-section-container {
+		flex-direction: column;
+		margin-top: 80px;
+		height: 300px;
+
+		.contact-with-us-text-container {
+			width: 90%;
+			margin-left: 0px;
+
+			.contact-with-us-text {
+				display: flex;
+				align-items: center;
+				width: 90%;
+
+				h2 {
+					width: 80%;
+					color: $black;
+					font-family: "Lato", sans-serif;
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 24px;
+					margin-left: 55px;
+					letter-spacing: 1.6px;
+				}
+			}
+			.contact-with-us-bottomtext {
+				display: block;
+				margin: 44px 0 0 55px;
+				font-family: "Inter", sans-serif;
+				font-weight: 400;
+				font-size: 16px;
+				color: $txt;
+				line-height: 27px;
+			}
+		}
+
+		.form-container {
+			width: 90%;
+			margin: 160px 0 0 0;
+
+			.contact-form {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+
+				.contact-input {
+					width: 200px;
+					height: 53px;
+					background: none;
+					border: 1px #cecece solid;
+					border-radius: 10px;
+					padding-left: 20px;
+					font-family: "Inter", sans-serif;
+					font-weight: 400;
+					font-size: 16px;
+				}
+
+				.name-input-container,
+				.email-and-theme-container {
+					margin: 14px 0;
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					font-family: "Inter", sans-serif;
+				}
+				.contact-msg {
+					background: none;
+					width: auto;
+					height: 179px;
+					margin-top: 14px;
+					border: 1px #cecece solid;
+					border-radius: 10px;
+					padding: 10px;
+				}
+			}
+
+			.policy-and-sender-container {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				.pole {
+					font-family: "Inter", sans-serif;
+					font-weight: 400;
+					font-size: 10px;
+					color: #8d8d8d;
+				}
+
+				.upload-file-container {
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+					height: 70px;
+
+					.file-upload-button-container {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						align-items: flex-start;
+
+						.file-upload-button {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 161px;
+							height: 44px;
+							border: 1px solid $txt;
+							border-radius: 22px;
+							font-family: "Lato", sans-serif;
+							font-weight: 700;
+							font-size: 16px;
+							color: $txt;
+							cursor: pointer;
+							transition: 0.2s ease-out;
+
+							.add-file-input {
+								display: none;
+							}
+						}
+						.file-upload-button:hover {
+							opacity: 0.5;
+						}
+						.file-name {
+							display: none;
+							position: relative;
+							font-family: "Inter", sans-serif;
+							font-size: 14px;
+							top: 5px;
+							color: green;
+							font-weight: bold;
+							left: 35px;
+						}
+						.file-name-active {
+							display: flex;
+						}
+					}
+					.file-condition-container {
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-start;
+						align-items: flex-start;
+						margin-left: 20px;
+					}
+				}
+
+				.policy-container {
+					margin-top: 14px;
+					margin-bottom: 28px;
+					display: flex;
+					justify-content: space-between;
+
+					.policy {
+						width: 90%;
+						font-family: "Inter", sans-serif;
+						font-weight: 400;
+						font-size: 10px;
+						color: #8d8d8d;
+					}
+				}
+				.sender-container {
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+					justify-content: space-between;
+					width: 100%;
+					margin-top: 15px;
+
+					.send-btn {
+						width: 173px;
+						height: 44px;
+						border: 2px solid $red-btn;
+						border-radius: 22px;
+						font-family: "Lato", sans-serif;
+						font-weight: 700;
+						font-size: 16px;
+						background-color: $red-btn;
+						color: $washed-white;
+						cursor: pointer;
+						transition: 0.3s ease-out;
+						letter-spacing: 0.3px;
+					}
+
+					.form-error {
+						display: none;
+						position: relative;
+						font-family: "Inter", sans-serif;
+						font-size: 14px;
+						top: 5px;
+						color: rgb(179, 0, 0);
+						font-weight: bold;
+						left: 4px;
+					}
+					.form-error-active {
+						display: flex;
+					}
+
+					.form-sent {
+						display: flex;
+						color: green;
+						left: 16px;
+					}
+
+					.send-btn:hover {
+						color: $red-btn;
+						background-color: $white;
+					}
+				}
+			}
+		}
+	}
 }
