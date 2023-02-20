@@ -362,52 +362,59 @@
   }
 }
 @media (max-width: 992px) {
-  .form-section-container {
+  .m-form-section-container {
+    width: 100%;
+    height: 1700px;
+    display: flex;
     flex-direction: column;
+  }
+  .m-form-section-container .m-contact-with-us-text-container {
     margin-top: 180px;
-    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .form-section-container .contact-with-us-text-container {
-    width: 90%;
-    margin-left: 0px;
-  }
-  .form-section-container .contact-with-us-text-container .contact-with-us-text {
+  .m-form-section-container .m-contact-with-us-text-container .m-contact-with-us-text {
     display: flex;
     align-items: center;
-    width: 90%;
+    justify-content: center;
+    background-image: url(../../img/contact-frame.png);
+    width: 100%;
+    height: 155px;
+    margin-bottom: 50px;
   }
-  .form-section-container .contact-with-us-text-container .contact-with-us-text h2 {
-    width: 80%;
+  .m-form-section-container .m-contact-with-us-text-container .m-contact-with-us-text h2 {
+    width: 90%;
     color: #242424;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 24px;
-    margin-left: 55px;
     letter-spacing: 1.6px;
   }
-  .form-section-container .contact-with-us-text-container .contact-with-us-bottomtext {
-    display: block;
-    margin: 44px 0 0 55px;
+  .m-form-section-container .m-contact-with-us-text-container .m-contact-with-us-bottomtext {
+    width: 90%;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #6c6c6c;
     line-height: 27px;
   }
-  .form-section-container .form-container {
-    width: 90%;
-    margin: 160px 0 0 0;
+  .m-form-section-container .m-form-container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
   }
-  .form-section-container .form-container .contact-form {
+  .m-form-section-container .m-form-container .m-contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  .form-section-container .form-container .contact-form .contact-input {
-    width: 200px;
+  .m-form-section-container .m-form-container .m-contact-form .m-contact-input {
+    width: 80%;
     height: 53px;
     background: none;
     border: 1px #cecece solid;
@@ -417,53 +424,56 @@
     font-weight: 400;
     font-size: 16px;
   }
-  .form-section-container .form-container .contact-form .name-input-container,
-  .form-section-container .form-container .contact-form .email-and-theme-container {
-    margin: 14px 0;
-    width: 100%;
+  .m-form-section-container .m-form-container .m-contact-form .m-input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 510px;
     justify-content: space-between;
     font-family: "Inter", sans-serif;
   }
-  .form-section-container .form-container .contact-form .contact-msg {
+  .m-form-section-container .m-form-container .m-contact-form .m-input-container .m-contact-msg {
     background: none;
-    width: auto;
+    width: 80%;
     height: 179px;
-    margin-top: 14px;
     border: 1px #cecece solid;
     border-radius: 10px;
     padding: 10px;
   }
-  .form-section-container .form-container .policy-and-sender-container {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .form-section-container .form-container .policy-and-sender-container .pole {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-pole {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 10px;
+    width: 90%;
     color: #8d8d8d;
+    margin: 15px 0 10px;
   }
-  .form-section-container .form-container .policy-and-sender-container .upload-file-container {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     height: 70px;
+    width: 90%;
   }
-  .form-section-container .form-container .policy-and-sender-container .upload-file-container .file-upload-button-container {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-upload-button-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
   }
-  .form-section-container .form-container .policy-and-sender-container .upload-file-container .file-upload-button-container .file-upload-button {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-upload-button-container .m-file-upload-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 161px;
+    width: 144px;
     height: 44px;
     border: 1px solid #6c6c6c;
     border-radius: 22px;
@@ -471,16 +481,11 @@
     font-weight: 700;
     font-size: 16px;
     color: #6c6c6c;
-    cursor: pointer;
-    transition: 0.2s ease-out;
   }
-  .form-section-container .form-container .policy-and-sender-container .upload-file-container .file-upload-button-container .file-upload-button .add-file-input {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-upload-button-container .m-file-upload-button .m-add-file-input {
     display: none;
   }
-  .form-section-container .form-container .policy-and-sender-container .upload-file-container .file-upload-button-container .file-upload-button:hover {
-    opacity: 0.5;
-  }
-  .form-section-container .form-container .policy-and-sender-container .upload-file-container .file-upload-button-container .file-name {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-upload-button-container .m-file-name {
     display: none;
     position: relative;
     font-family: "Inter", sans-serif;
@@ -490,40 +495,52 @@
     font-weight: bold;
     left: 35px;
   }
-  .form-section-container .form-container .policy-and-sender-container .upload-file-container .file-upload-button-container .file-name-active {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-upload-button-container .m-file-name-active {
     display: flex;
   }
-  .form-section-container .form-container .policy-and-sender-container .upload-file-container .file-condition-container {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-condition-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 20px;
+    width: 156px;
   }
-  .form-section-container .form-container .policy-and-sender-container .policy-container {
-    margin-top: 14px;
-    margin-bottom: 28px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .form-section-container .form-container .policy-and-sender-container .policy-container .policy {
-    width: 90%;
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-condition-container span {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 10px;
     color: #8d8d8d;
   }
-  .form-section-container .form-container .policy-and-sender-container .sender-container {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-policy-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-policy-container .m-policy {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: #8d8d8d;
+  }
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-policy-container .m-policy a {
+    text-decoration: underline;
+  }
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 15px;
+    justify-content: center;
+    width: 90%;
+    height: 70px;
   }
-  .form-section-container .form-container .policy-and-sender-container .sender-container .send-btn {
-    width: 173px;
-    height: 44px;
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container .m-send-btn-container {
+    width: 100%;
+  }
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container .m-send-btn-container .m-send-btn {
+    width: 100%;
+    height: 45px;
     border: 2px solid #6c090a;
     border-radius: 22px;
     font-family: "Lato", sans-serif;
@@ -535,7 +552,7 @@
     transition: 0.3s ease-out;
     letter-spacing: 0.3px;
   }
-  .form-section-container .form-container .policy-and-sender-container .sender-container .form-error {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container .m-send-btn-container .m-form-error {
     display: none;
     position: relative;
     font-family: "Inter", sans-serif;
@@ -545,15 +562,15 @@
     font-weight: bold;
     left: 4px;
   }
-  .form-section-container .form-container .policy-and-sender-container .sender-container .form-error-active {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container .m-send-btn-container .m-form-error-active {
     display: flex;
   }
-  .form-section-container .form-container .policy-and-sender-container .sender-container .form-sent {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container .m-send-btn-container .m-form-sent {
     display: flex;
     color: green;
     left: 16px;
   }
-  .form-section-container .form-container .policy-and-sender-container .sender-container .send-btn:hover {
+  .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container .m-send-btn-container .m-send-btn:hover {
     color: #6c090a;
     background-color: #f5f5f5;
   }

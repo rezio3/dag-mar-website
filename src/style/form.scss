@@ -397,34 +397,38 @@
 }
 
 @media (max-width: 992px) {
-	.form-section-container {
+	.m-form-section-container {
+		width: 100%;
+		height: 1700px;
+		display: flex;
 		flex-direction: column;
-		margin-top: 80px;
-		height: 300px;
 
-		.contact-with-us-text-container {
-			width: 90%;
-			margin-left: 0px;
+		.m-contact-with-us-text-container {
+			margin-top: 180px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
-			.contact-with-us-text {
+			.m-contact-with-us-text {
 				display: flex;
 				align-items: center;
-				width: 90%;
-
+				justify-content: center;
+				background-image: url(../../img/contact-frame.png);
+				width: 100%;
+				height: 155px;
+				margin-bottom: 50px;
 				h2 {
-					width: 80%;
+					width: 90%;
 					color: $black;
 					font-family: "Lato", sans-serif;
 					font-weight: 700;
 					text-transform: uppercase;
 					font-size: 24px;
-					margin-left: 55px;
 					letter-spacing: 1.6px;
 				}
 			}
-			.contact-with-us-bottomtext {
-				display: block;
-				margin: 44px 0 0 55px;
+			.m-contact-with-us-bottomtext {
+				width: 90%;
 				font-family: "Inter", sans-serif;
 				font-weight: 400;
 				font-size: 16px;
@@ -433,19 +437,21 @@
 			}
 		}
 
-		.form-container {
-			width: 90%;
-			margin: 160px 0 0 0;
+		.m-form-container {
+			width: 100%;
+			margin-top: 50px;
+			display: flex;
+			justify-content: center;
 
-			.contact-form {
+			.m-contact-form {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 				width: 100%;
 
-				.contact-input {
-					width: 200px;
+				.m-contact-input {
+					width: 80%;
 					height: 53px;
 					background: none;
 					border: 1px #cecece solid;
@@ -456,56 +462,61 @@
 					font-size: 16px;
 				}
 
-				.name-input-container,
-				.email-and-theme-container {
-					margin: 14px 0;
-					width: 100%;
+				.m-input-container {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+					width: 100%;
+					height: 510px;
 					justify-content: space-between;
 					font-family: "Inter", sans-serif;
-				}
-				.contact-msg {
-					background: none;
-					width: auto;
-					height: 179px;
-					margin-top: 14px;
-					border: 1px #cecece solid;
-					border-radius: 10px;
-					padding: 10px;
+
+					.m-contact-msg {
+						background: none;
+						width: 80%;
+						height: 179px;
+						border: 1px #cecece solid;
+						border-radius: 10px;
+						padding: 10px;
+					}
 				}
 			}
 
-			.policy-and-sender-container {
+			.m-policy-and-sender-container {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 
-				.pole {
+				.m-pole {
 					font-family: "Inter", sans-serif;
 					font-weight: 400;
 					font-size: 10px;
+					width: 90%;
 					color: #8d8d8d;
+
+					margin: 15px 0 10px;
 				}
 
-				.upload-file-container {
+				.m-upload-file-container {
 					display: flex;
-					flex-direction: row;
-					align-items: flex-start;
+					justify-content: space-between;
+					align-items: center;
 					height: 70px;
 
-					.file-upload-button-container {
+					width: 90%;
+					.m-file-upload-button-container {
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
 						align-items: flex-start;
 
-						.file-upload-button {
+						.m-file-upload-button {
 							display: flex;
 							justify-content: center;
 							align-items: center;
-							width: 161px;
+							width: 144px;
 							height: 44px;
 							border: 1px solid $txt;
 							border-radius: 22px;
@@ -513,17 +524,13 @@
 							font-weight: 700;
 							font-size: 16px;
 							color: $txt;
-							cursor: pointer;
-							transition: 0.2s ease-out;
 
-							.add-file-input {
+							.m-add-file-input {
 								display: none;
 							}
 						}
-						.file-upload-button:hover {
-							opacity: 0.5;
-						}
-						.file-name {
+
+						.m-file-name {
 							display: none;
 							position: relative;
 							font-family: "Inter", sans-serif;
@@ -533,79 +540,94 @@
 							font-weight: bold;
 							left: 35px;
 						}
-						.file-name-active {
+						.m-file-name-active {
 							display: flex;
 						}
 					}
-					.file-condition-container {
+					.m-file-condition-container {
 						display: flex;
 						flex-direction: column;
 						justify-content: flex-start;
 						align-items: flex-start;
 						margin-left: 20px;
+						width: 156px;
+
+						span {
+							font-family: "Inter", sans-serif;
+							font-weight: 400;
+							font-size: 10px;
+							color: #8d8d8d;
+						}
 					}
 				}
 
-				.policy-container {
-					margin-top: 14px;
-					margin-bottom: 28px;
+				.m-policy-container {
+					margin-top: 20px;
+					margin-bottom: 30px;
+					width: 90%;
 					display: flex;
 					justify-content: space-between;
 
-					.policy {
-						width: 90%;
+					.m-policy {
 						font-family: "Inter", sans-serif;
 						font-weight: 400;
 						font-size: 10px;
 						color: #8d8d8d;
+						a {
+							text-decoration: underline;
+						}
 					}
 				}
-				.sender-container {
+
+				.m-sender-container {
 					display: flex;
 					flex-direction: row;
-					align-items: flex-start;
-					justify-content: space-between;
-					width: 100%;
-					margin-top: 15px;
 
-					.send-btn {
-						width: 173px;
-						height: 44px;
-						border: 2px solid $red-btn;
-						border-radius: 22px;
-						font-family: "Lato", sans-serif;
-						font-weight: 700;
-						font-size: 16px;
-						background-color: $red-btn;
-						color: $washed-white;
-						cursor: pointer;
-						transition: 0.3s ease-out;
-						letter-spacing: 0.3px;
-					}
+					justify-content: center;
+					width: 90%;
+					height: 70px;
 
-					.form-error {
-						display: none;
-						position: relative;
-						font-family: "Inter", sans-serif;
-						font-size: 14px;
-						top: 5px;
-						color: rgb(179, 0, 0);
-						font-weight: bold;
-						left: 4px;
-					}
-					.form-error-active {
-						display: flex;
-					}
+					.m-send-btn-container {
+						width: 100%;
+						.m-send-btn {
+							width: 100%;
+							height: 45px;
+							border: 2px solid $red-btn;
+							border-radius: 22px;
+							font-family: "Lato", sans-serif;
+							font-weight: 700;
+							font-size: 16px;
+							background-color: $red-btn;
+							color: $washed-white;
+							cursor: pointer;
+							transition: 0.3s ease-out;
+							letter-spacing: 0.3px;
+						}
 
-					.form-sent {
-						display: flex;
-						color: green;
-						left: 16px;
-					}
+						.m-form-error {
+							display: none;
+							position: relative;
+							font-family: "Inter", sans-serif;
+							font-size: 14px;
+							top: 5px;
+							color: rgb(179, 0, 0);
+							font-weight: bold;
+							left: 4px;
+						}
+						.m-form-error-active {
+							display: flex;
+						}
 
-					.send-btn:hover {
-						color: $red-btn;
-						background-color: $white;
+						.m-form-sent {
+							display: flex;
+							color: green;
+							left: 16px;
+						}
+
+						.m-send-btn:hover {
+							color: $red-btn;
+							background-color: $white;
+						}
 					}
 				}
 			}

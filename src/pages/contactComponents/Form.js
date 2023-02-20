@@ -196,26 +196,26 @@ const Form = () => {
 							</div>
 						</div>
 					) : (
-						<div className="form-section-container">
-							<div className="contact-with-us-text-container">
-								<div className="contact-with-us-text">
+						<div className="m-form-section-container">
+							<div className="m-contact-with-us-text-container">
+								<div className="m-contact-with-us-text">
 									<h2>Skontaktuj się z nami</h2>
 								</div>
-								<span className="contact-with-us-bottomtext">
+								<span className="m-contact-with-us-bottomtext">
 									Lorem ipsum dolor sit amet consectetur. In adipiscing sed
 									auctor est condimentum pellentesque mauris consequat quis.
 									Sollicitudin lacus nibh metus pellentesque congue tempor risus
 									rhoncus.{" "}
 								</span>
 							</div>
-							<div className="form-container">
-								<form className="contact-form" onSubmit={handleSubmit}>
-									<div className="name-input-container">
+							<div className="m-form-container">
+								<form className="m-contact-form" onSubmit={handleSubmit}>
+									<div className="m-input-container">
 										<input
 											name="name"
 											type="name"
 											placeholder="Imię*"
-											className="name-input contact-input"
+											className="-m-name-input m-contact-input"
 											onChange={handleInput}
 											value={formVal.name}
 										/>
@@ -223,17 +223,16 @@ const Form = () => {
 											name="surname"
 											type="surname"
 											placeholder="Nazwisko*"
-											className="surname-input contact-input"
+											className="m-surname-input m-contact-input"
 											onChange={handleInput}
 											value={formVal.surname}
 										/>
-									</div>
-									<div className="email-and-theme-container">
+
 										<input
 											name="email"
 											type="email"
 											placeholder="Adres e-mail*"
-											className="email-input contact-input"
+											className="m-email-input m-contact-input"
 											onChange={handleInput}
 											value={formVal.email}
 										/>
@@ -241,28 +240,28 @@ const Form = () => {
 											name="topic"
 											type="topic"
 											placeholder="Temat wiadomości*"
-											className="theme-input contact-input"
+											className="m-theme-input m-contact-input"
 											onChange={handleInput}
 											value={formVal.topic}
 										/>
+										<textarea
+											name="message"
+											type="message"
+											placeholder="Treść wiadomości*"
+											className="m-contact-msg m-contact-input"
+											onChange={handleInput}
+											value={formVal.message}
+										/>
 									</div>
-									<textarea
-										name="message"
-										type="message"
-										placeholder="Treść wiadomości*"
-										className="contact-msg contact-input"
-										onChange={handleInput}
-										value={formVal.message}
-									/>
 
-									<div className="policy-and-sender-container">
-										<span className="pole">*Pole obowiązkowe</span>
-										<div className="upload-file-container">
-											<div className="file-upload-button-container">
-												<label className="file-upload-button">
+									<div className="m-policy-and-sender-container">
+										<span className="m-pole">*Pole obowiązkowe</span>
+										<div className="m-upload-file-container">
+											<div className="m-file-upload-button-container">
+												<label className="m-file-upload-button">
 													<input
 														type="file"
-														className="add-file-input"
+														className="m-add-file-input"
 														id="file-upload"
 														onChange={handleFileUpload}
 													/>
@@ -272,14 +271,14 @@ const Form = () => {
 													id="file-name"
 													className={
 														fileName
-															? "file-name file-name-active"
-															: "file-name"
+															? "m-file-name m-file-name-active"
+															: "m-file-name"
 													}
 												>
 													Dodano plik &#10004;
 												</label>
 											</div>
-											<div className="file-condition-container">
+											<div className="m-file-condition-container">
 												<span>
 													Dodaj załącznik w formacie: txt, doc,
 													<br /> docx, pdf, jpg, jpeg, png, xls lub xlsx.
@@ -287,24 +286,24 @@ const Form = () => {
 												<span>Wielkość pliku do 10 MB</span>
 											</div>
 										</div>
-										<div className="policy-container">
-											<span className="policy">
+										<div className="m-policy-container">
+											<span className="m-policy">
 												Klikając Prześlij formularz zgadzasz się na
 												przetwarzanie danych osobowych, zawartych w{" "}
 												<a>Polityce prywatności</a>.
 											</span>
 										</div>
-										<div className="sender-container">
-											<div className="send-btn-container">
-												<button className="send-btn" type="submit">
+										<div className="m-sender-container">
+											<div className="m-send-btn-container">
+												<button className="m-send-btn" type="submit">
 													Prześlij formularz
 												</button>
 												<label
 													id="form-error"
 													className={
 														formVal.formValid
-															? "form-error form-error-active"
-															: "form-error form-sent"
+															? "m-form-error m-form-error-active"
+															: "m-form-error m-form-sent"
 													}
 												>
 													{formVal.formValid
