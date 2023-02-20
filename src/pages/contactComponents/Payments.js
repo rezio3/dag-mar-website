@@ -6,7 +6,6 @@ const Payments = () => {
 	const [paymentsView, setPaymentsView] = useState({
 		line1Active: false,
 		line2Active: false,
-		line3Active: false,
 	});
 
 	const handlePlusClick = (e) => {
@@ -17,7 +16,7 @@ const Payments = () => {
 		});
 	};
 
-	const { line1Active, line2Active, line3Active } = paymentsView;
+	const { line1Active, line2Active } = paymentsView;
 
 	return (
 		<div className="payments-container">
@@ -31,7 +30,7 @@ const Payments = () => {
 			>
 				<div className="visible-line">
 					<span className="visible-span-text">
-						Dane do przelewu: Biuro Tłumaczeń DAG-MAR Dagmara Toporowska
+						Biuro Tłumaczeń Przysięgłych DAG-MAR Dagmara Toporowska
 					</span>
 					<img
 						src={plus}
@@ -64,7 +63,7 @@ const Payments = () => {
 			>
 				<div className="visible-line">
 					<span className="visible-span-text">
-						Dane do przelewu: Biuro Tłumaczeń DAG-MAR sp. z o.o.
+						Biuro Tłumaczeń Przysięgłych DAG-MAR S.C.
 					</span>
 					<img
 						src={plus}
@@ -74,39 +73,6 @@ const Payments = () => {
 								: "material-symbols-outlined plus"
 						}
 						id="line2Active"
-						onClick={handlePlusClick}
-					/>
-				</div>
-				<div className="unvisible-line">
-					<p>
-						Kod BIC/SWIFT mBanku: BREXPLPWMBK
-						<br /> mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ
-					</p>
-					<p>
-						Skrytka pocztowa 2108
-						<br /> 90-959 Łódź 2
-					</p>
-				</div>
-			</div>
-			<div
-				className={
-					line3Active
-						? "line3 linePayments linePayments-active"
-						: "line3 linePayments"
-				}
-			>
-				<div className="visible-line">
-					<span className="visible-span-text">
-						Dodatkowe dane do przelewu zagranicznego
-					</span>
-					<img
-						src={plus}
-						className={
-							line3Active
-								? "material-symbols-outlined plus rotate"
-								: "material-symbols-outlined plus"
-						}
-						id="line3Active"
 						onClick={handlePlusClick}
 					/>
 				</div>
