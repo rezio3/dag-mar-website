@@ -74,9 +74,9 @@
     margin-bottom: 10px;
   }
   .payments-container h2 {
-    margin-top: 100px;
+    margin-top: 63px;
     text-transform: uppercase;
-    margin-bottom: 65px;
+    margin-bottom: 46px;
   }
   .payments-container .linePayments {
     height: 80px;
@@ -119,11 +119,11 @@
     font-size: 16px;
   }
   .payments-container .linePayments:last-child {
-    margin-bottom: 150px;
+    margin-bottom: 61px;
     border-bottom: none;
   }
   .payments-container .linePayments-active {
-    height: 160px;
+    height: 260px;
   }
   .payments-container .rotate {
     rotate: -45deg;
