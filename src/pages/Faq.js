@@ -57,14 +57,12 @@ const Faq = () => {
 		faqLine7Active: false,
 		faqLine8Active: false,
 	});
-
 	const handlePlusClick = (e) => {
 		setQuestionsView({
 			...questionsView,
 			[e.target.id]: !questionsView[e.target.id],
 		});
 	};
-
 	return (
 		<div className="faq-container">
 			<div className="faq-header-container">
