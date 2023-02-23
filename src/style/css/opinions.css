@@ -73,12 +73,12 @@
 }
 .opinions-container-0 .opinions-container .carousel-container .opinions-description .opinions-description2 .opinion-container .author {
   font-family: "Inter", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   color: #8d8d8d;
-  font-style: italic;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 25px;
   text-align: center;
+  letter-spacing: 1px;
   margin: 30px 0;
 }
 .opinions-container-0 .opinions-container .carousel-arrow {
@@ -269,11 +269,12 @@
   }
   .opinions-container-0 .opinions-container .carousel-container .opinions-description .opinions-description2 .opinion-container .author {
     font-family: "Inter", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     color: #8d8d8d;
-    font-style: italic;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     text-align: center;
     margin: 30px 0;
   }
@@ -300,24 +301,25 @@
   .opinions-container-0 .opinions-container .carousel-arrow .arrow {
     font-size: 60px;
     cursor: pointer;
-    background-image: url(../../img/arrow-down.png);
+    background-image: url(../../img/arrow-down.svg);
     background-color: transparent;
+    background-color: black;
     border: none;
-    width: 34px;
+    max-width: 34px;
     height: 34px;
     background-size: cover;
   }
   .opinions-container-0 .opinions-container .carousel-arrow .left-arrow {
-    rotate: 90deg;
+    rotate: 180deg;
   }
   .opinions-container-0 .opinions-container .carousel-arrow .right-arrow {
-    rotate: -90deg;
+    rotate: 0deg;
   }
   .opinions-container-0 .opinions-container .carousel-left-arrow {
-    left: 20%;
+    left: 0%;
   }
   .opinions-container-0 .opinions-container .carousel-right-arrow {
-    left: 80%;
+    left: 0%;
   }
   .opinions-container-0 .opinions-container .carousel-arrow:hover {
     transform: translateX(0%);
