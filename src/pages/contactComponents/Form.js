@@ -280,8 +280,8 @@ const Form = () => {
 											</div>
 											<div className="m-file-condition-container">
 												<span>
-													Dodaj załącznik w formacie: txt, doc,
-													<br /> docx, pdf, jpg, jpeg, png, xls lub xlsx.
+													Dodaj załącznik w formacie: txt, doc, docx, pdf, jpg,
+													jpeg, png, xls lub xlsx.
 												</span>
 												<span>Wielkość pliku do 10 MB</span>
 											</div>
