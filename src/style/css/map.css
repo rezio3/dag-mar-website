@@ -100,6 +100,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 90%;
+    height: 565px;
     margin: 0;
   }
   .map-and-address-container .location-and-address-container .location h2 {
@@ -111,10 +112,12 @@
     margin: 0;
     font-size: 16px;
   }
+  .map-and-address-container .location-and-address-container .address {
+    width: 100%;
+  }
   .map-and-address-container .location-and-address-container .address h2 {
     margin-top: 34px;
     margin-bottom: 25px;
-    text-transform: uppercase;
     font-size: 24px;
   }
   .map-and-address-container .location-and-address-container .address p {
