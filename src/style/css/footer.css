@@ -163,6 +163,7 @@
     align-items: center;
     flex-direction: column;
     height: 483px;
+    padding-top: 0px;
     width: 100%;
     background-color: #e9e8e2;
   }
@@ -172,7 +173,7 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 50px;
-    height: 220px;
+    height: 265px;
     width: 85%;
   }
   .footer-container .upper-footer-container a {
@@ -235,7 +236,7 @@
     margin-left: 0px;
   }
   .footer-container .upper-footer-container .middle-footer-container .aboutUs-offer-FAQ-translators-footer {
-    height: 100%;
+    height: auto;
     width: 50%;
     margin: 20px 0;
     display: flex;
@@ -267,6 +268,7 @@
     width: 85%;
     height: 143px;
     border-top: 1px #cecece solid;
+    margin-bottom: 10px;
   }
   .footer-container .lower-footer-container span {
     color: #6c6c6c;
