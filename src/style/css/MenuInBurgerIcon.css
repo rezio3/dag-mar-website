@@ -84,3 +84,12 @@
   border: 2px solid rgb(233, 232, 226);
   animation: contact-hover 0.3s ease-in-out;
 }
+
+@media (min-width: 500px) {
+  .burger-nav-content {
+    height: 100%;
+  }
+  .burger-nav-content .m-contact-button {
+    margin-bottom: 50px;
+  }
+}

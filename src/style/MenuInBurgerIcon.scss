@@ -96,3 +96,13 @@
 		}
 	}
 }
+
+@media (min-width: 500px) {
+	.burger-nav-content {
+		height: 100%;
+
+		.m-contact-button {
+			margin-bottom: 50px;
+		}
+	}
+}
