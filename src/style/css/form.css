@@ -384,7 +384,7 @@
     margin-bottom: 50px;
   }
   .m-form-section-container .m-contact-with-us-text-container .m-contact-with-us-text h2 {
-    width: 90%;
+    width: 85%;
     color: #242424;
     font-family: "Lato", sans-serif;
     font-weight: 700;
@@ -393,7 +393,7 @@
     letter-spacing: 1.6px;
   }
   .m-form-section-container .m-contact-with-us-text-container .m-contact-with-us-bottomtext {
-    width: 90%;
+    width: 85%;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -415,6 +415,7 @@
   }
   .m-form-section-container .m-form-container .m-contact-form .m-contact-input {
     width: 80%;
+    max-width: 600px;
     height: 53px;
     background: none;
     border: 1px #cecece solid;
@@ -452,16 +453,16 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 10px;
-    width: 90%;
+    width: 85%;
     color: #8d8d8d;
     margin: 15px 0 10px;
   }
   .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 70px;
-    width: 90%;
+    width: 85%;
   }
   .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-upload-button-container {
     display: flex;
@@ -504,7 +505,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 20px;
-    width: 156px;
+    width: 186px;
   }
   .m-form-section-container .m-form-container .m-policy-and-sender-container .m-upload-file-container .m-file-condition-container span {
     font-family: "Inter", sans-serif;
@@ -515,7 +516,7 @@
   .m-form-section-container .m-form-container .m-policy-and-sender-container .m-policy-container {
     margin-top: 20px;
     margin-bottom: 30px;
-    width: 90%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
   }
@@ -532,15 +533,16 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 90%;
+    width: 85%;
     height: 70px;
   }
   .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container .m-send-btn-container {
     width: 100%;
+    max-width: 500px;
   }
   .m-form-section-container .m-form-container .m-policy-and-sender-container .m-sender-container .m-send-btn-container .m-send-btn {
     width: 100%;
-    height: 45px;
+    height: 46px;
     border: 2px solid #6c090a;
     border-radius: 22px;
     font-family: "Lato", sans-serif;
