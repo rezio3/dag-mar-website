@@ -79,8 +79,10 @@ const Dt = () => {
 									</p>
 									<div className="button-and-DT-img">
 										<button className="see-offer2">Zobacz ofertę</button>
-										<div className="DT-img">
-											<img src={DTimage} className="DTimage" />
+										<div className="DT-img-container">
+											<div className="DT-img">
+												<img src={DTimage} className="DTimage" />
+											</div>
 										</div>
 									</div>
 								</div>
