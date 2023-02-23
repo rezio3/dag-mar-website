@@ -103,15 +103,27 @@
 			}
 		}
 		.line {
-			height: 80px;
-			width: 90%;
+			height: auto;
+			width: 85%;
 			overflow: hidden;
 			border-bottom: 1px #cecece solid;
+
+			.visible-line {
+				height: auto;
+
+				span {
+					margin: 27px 0;
+				}
+			}
+		}
+
+		.unvisible-line {
+			height: 0;
 			transition: 0.3s ease-out;
 		}
 
 		.line-active {
-			height: 160px;
+			height: 100px;
 		}
 
 		.rotate {

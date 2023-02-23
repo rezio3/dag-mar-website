@@ -90,14 +90,23 @@
     text-align: center;
   }
   .faq-container .line {
-    height: 80px;
-    width: 90%;
+    height: auto;
+    width: 85%;
     overflow: hidden;
     border-bottom: 1px #cecece solid;
+  }
+  .faq-container .line .visible-line {
+    height: auto;
+  }
+  .faq-container .line .visible-line span {
+    margin: 27px 0;
+  }
+  .faq-container .unvisible-line {
+    height: 0;
     transition: 0.3s ease-out;
   }
   .faq-container .line-active {
-    height: 160px;
+    height: 100px;
   }
   .faq-container .rotate {
     rotate: -45deg;
