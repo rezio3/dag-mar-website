@@ -146,13 +146,13 @@
 @media (max-width: 1450px) {
   @-moz-document url-prefix() {
     .footer-container .upper-footer-container {
-      width: 90%;
+      width: 85%;
     }
     .footer-container .upper-footer-container .aboutUs-footer {
       margin-right: 20px;
     }
     .footer-container .lower-footer-container {
-      width: 90%;
+      width: 85%;
     }
   }
 }
