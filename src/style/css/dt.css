@@ -104,22 +104,28 @@
     justify-content: center;
     align-items: center;
   }
-  .mgr-Dagmara-Toporowska-container .DT-container .DT-img {
+  .mgr-Dagmara-Toporowska-container .DT-container .DT-img-container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+  }
+  .mgr-Dagmara-Toporowska-container .DT-container .DT-img-container .DT-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(../../img/arc.png);
     background-size: cover;
     width: 276px;
     height: 393px;
     margin-right: 10px;
   }
-  .mgr-Dagmara-Toporowska-container .DT-container .DT-img .DTimage {
+  .mgr-Dagmara-Toporowska-container .DT-container .DT-img-container .DT-img .DTimage {
     width: 276px;
     height: 393px;
     transform: translateX(10px);
   }
-  .mgr-Dagmara-Toporowska-container .DT-container .DT-img .DTimage:hover {
+  .mgr-Dagmara-Toporowska-container .DT-container .DT-img-container .DT-img .DTimage:hover {
     width: 276px;
     height: 393px;
     transform: translateX(10px);
