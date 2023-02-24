@@ -61,13 +61,14 @@ const Map = () => {
 									<p>
 										Nasze biuro znajduje się w Lubinie na ulicy Karkonoskiej 1C,
 										na pierwszym piętrze budynku usługowego. Jesteśmy otwarci od
-										poniedziałku do piątku w godzinach 9-16.
+										poniedziałku do piątku <br /> w godzinach 9-16.
 									</p>
 								</div>
 								<div className="address">
 									<h2>Dane kontaktowe</h2>
 									<p>
-										Biuro Tłumaczeń Przysięgłych „DAG-MAR” <br />
+										Biuro Tłumaczeń Przysięgłych <br />
+										„DAG-MAR” <br />
 										ul. Karkonoska 1C, 59-300 Lubin <br />
 										tel. +48 76 846 10 64 <br /> kom. +48 607 618 567 <br />
 										NIP: 692-172-62-49, Regon: 390770661
