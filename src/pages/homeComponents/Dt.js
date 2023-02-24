@@ -29,7 +29,7 @@ const Dt = () => {
 									</p>
 									<p>
 										Zespół Tłumaczy skupiony wokół naszego biura został dobrany
-										bardzo starannie, gdyż tylko osobyz odpowiednimi
+										bardzo starannie, gdyż tylko osoby z odpowiednimi
 										predyspozycjami, doświadczeniem, szeroką wiedzą merytoryczną
 										z różnych dziedzini wielkim zaangażowaniem w pracę z
 										tłumaczeniami mogą sprostać zleceniom naszych Klientów.
@@ -64,18 +64,18 @@ const Dt = () => {
 									</p>
 									<p>
 										Zespół Tłumaczy skupiony wokół naszego biura został dobrany
-										bardzo starannie, gdyż tylko osobyz odpowiednimi
+										bardzo starannie, gdyż tylko osoby <br />z odpowiednimi
 										predyspozycjami, doświadczeniem, szeroką wiedzą merytoryczną
-										z różnych dziedzini wielkim zaangażowaniem w pracę z
+										z różnych dziedzini wielkim zaangażowaniem w pracę <br /> z
 										tłumaczeniami mogą sprostać zleceniom naszych Klientów.
 									</p>
 									<p>
 										Nieustanne dążenie do perfekcji, dostosowanie kompleksowej
-										oferty do potrzeb Klientów indywidualnych i firm, stawia
-										przed nami coraz nowsze wyzwania, które z dumą realizujemy.
-										Zadowolenie Klientów korzystających z naszych usług jest dla
-										nas priorytetem, dlatego też dołożymy wszelkich starań by
-										Państwa usatysfakcjonować.
+										oferty do potrzeb Klientów indywidualnych <br />i firm,
+										stawia przed nami coraz nowsze wyzwania, które z dumą
+										realizujemy. Zadowolenie Klientów korzystających z naszych
+										usług jest dla nas priorytetem, dlatego też dołożymy
+										wszelkich starań by Państwa usatysfakcjonować.
 									</p>
 									<div className="button-and-DT-img">
 										<button className="see-offer2">Zobacz ofertę</button>
