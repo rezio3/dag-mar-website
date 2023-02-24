@@ -44,6 +44,8 @@ const Form = () => {
 				formSent: true,
 			});
 
+			setFileName(false);
+
 			setTimeout(() => {
 				setFormVal({
 					name: "",
