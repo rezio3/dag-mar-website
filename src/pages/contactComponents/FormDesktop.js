@@ -1,7 +1,15 @@
 import React from "react";
 
 const FormDesktop = (props) => {
-	const { handleInput, handleSubmit } = props;
+	const {
+		handleInput,
+		handleSubmit,
+		formVal,
+		setFormVal,
+		fileName,
+		setFileName,
+		handleFileUpload,
+	} = props;
 	return (
 		<div className="form-section-container">
 			<div className="contact-with-us-text-container">
