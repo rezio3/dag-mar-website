@@ -81,6 +81,7 @@ const Form = () => {
 							setFormVal={setFormVal}
 							fileName={fileName}
 							setFileName={setFileName}
+							handleFileUpload={handleFileUpload}
 						/>
 					) : (
 						<div className="m-form-section-container">
