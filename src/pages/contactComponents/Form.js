@@ -199,7 +199,9 @@ const Form = () => {
 						<div className="m-form-section-container">
 							<div className="m-contact-with-us-text-container">
 								<div className="m-contact-with-us-text">
-									<h2>Skontaktuj się z nami</h2>
+									<h2>
+										Skontaktuj się <br /> z nami
+									</h2>
 								</div>
 								<span className="m-contact-with-us-bottomtext">
 									Lorem ipsum dolor sit amet consectetur. In adipiscing sed
