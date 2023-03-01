@@ -277,12 +277,14 @@
     text-transform: uppercase;
     text-align: center;
     margin: 30px 0;
+    width: 85%;
   }
   .opinions-container-0 .opinions-container .arrows-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
   }
-  .opinions-container-0 .opinions-container .carousel-arrow {
+  .opinions-container-0 .opinions-container .m-carousel-arrow {
     position: static;
     width: 54px;
     height: 54px;
@@ -298,33 +300,30 @@
     margin: 0 30px;
     cursor: pointer;
   }
-  .opinions-container-0 .opinions-container .carousel-arrow .arrow {
+  .opinions-container-0 .opinions-container .m-carousel-arrow .m-arrow {
     font-size: 60px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     background-image: url(../../img/arrow-down.svg);
     background-color: transparent;
-    background-color: black;
     border: none;
+    opacity: 0.7;
     max-width: 34px;
     height: 34px;
     background-size: cover;
   }
-  .opinions-container-0 .opinions-container .carousel-arrow .left-arrow {
+  .opinions-container-0 .opinions-container .m-carousel-arrow .m-left-arrow {
     rotate: 180deg;
   }
-  .opinions-container-0 .opinions-container .carousel-arrow .right-arrow {
+  .opinions-container-0 .opinions-container .m-carousel-arrow .m-right-arrow {
     rotate: 0deg;
   }
-  .opinions-container-0 .opinions-container .carousel-left-arrow {
+  .opinions-container-0 .opinions-container .m-carousel-left-arrow {
     left: 0%;
   }
-  .opinions-container-0 .opinions-container .carousel-right-arrow {
+  .opinions-container-0 .opinions-container .m-carousel-right-arrow {
     left: 0%;
-  }
-  .opinions-container-0 .opinions-container .carousel-arrow:hover {
-    transform: translateX(0%);
-    width: 54px;
-    height: 54px;
   }
   .opinions-container-0 .opinions-container .segments-container {
     display: flex;

@@ -314,22 +314,19 @@ const Opinions = () => {
 								</div>
 								<div className="arrows-container">
 									<div
-										className="carousel-left-arrow carousel-arrow"
+										className="m-carousel-left-arrow m-carousel-arrow"
 										onClick={opinion.leftArrowOn ? handleLeftArrow : null}
 									>
-										<button
-											className="material-symbols-outlined left-arrow arrow"
-											id="scroll-btn"
-										></button>
+										<div className="m-left-arrow m-arrow" id="scroll-btn"></div>
 									</div>
 									<div
-										className="carousel-right-arrow carousel-arrow"
+										className="m-carousel-right-arrow m-carousel-arrow"
 										onClick={opinion.rightArrowOn ? handleRightArrow : null}
 									>
-										<button
-											className="material-symbols-outlined right-arrow arrow"
+										<div
+											className="m-right-arrow m-arrow"
 											id="scroll-btn"
-										></button>
+										></div>
 									</div>
 								</div>
 								<div className="segments-container">
