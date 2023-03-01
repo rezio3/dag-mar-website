@@ -161,10 +161,10 @@ const Opinions = () => {
 										className="carousel-left-arrow carousel-arrow"
 										onClick={opinion.leftArrowOn ? handleLeftArrow : null}
 									>
-										<button
+										<div
 											className="material-symbols-outlined left-arrow arrow"
 											id="scroll-btn"
-										></button>
+										></div>
 									</div>
 									<div
 										className="opinions-description"
@@ -213,10 +213,10 @@ const Opinions = () => {
 										className="carousel-right-arrow carousel-arrow"
 										onClick={opinion.rightArrowOn ? handleRightArrow : null}
 									>
-										<button
+										<div
 											className="material-symbols-outlined right-arrow arrow"
 											id="scroll-btn"
-										></button>
+										></div>
 									</div>
 								</div>
 								<div className="segments-container">

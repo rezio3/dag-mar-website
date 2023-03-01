@@ -37,10 +37,10 @@ const Home = () => {
 					<button className="see-offer">Zobacz ofertę</button>
 				</div>
 				<div className="arrow-down-circle" onClick={scrollDown}>
-					<button
+					<div
 						className="material-symbols-outlined arrow-down"
 						id="scroll-btn"
-					></button>
+					></div>
 				</div>
 			</div>
 			<Stats />
