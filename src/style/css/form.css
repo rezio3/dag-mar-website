@@ -436,11 +436,11 @@
   }
   .m-form-section-container .m-form-container .m-contact-form .m-input-container .m-contact-msg {
     background: none;
-    width: 80%;
+    width: 77%;
     height: 179px;
     border: 1px #cecece solid;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
   }
   .m-form-section-container .m-form-container .m-policy-and-sender-container {
     width: 100%;
