@@ -12,7 +12,6 @@ const NavbarMobile = (props) => {
 			<div className="m-logo-img m-logo-up" id="m-logo"></div>
 			<div className="burger-icon-container">
 				{props.burgerActive ? (
-					// <i class="fa-regular fa-arrow-up fa-3x"></i>
 					<img src={burgerIcon} onClick={handleBurgerBtn} />
 				) : (
 					<img src={burgerIcon} onClick={handleBurgerBtn} />

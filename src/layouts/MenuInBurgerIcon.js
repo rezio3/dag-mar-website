@@ -37,16 +37,6 @@ const MenuInBurgerIcon = (props) => {
 					<span className="m-navbtn">PL</span>
 					<span className="material-symbols-outlined">expand_more</span>
 				</div>
-				{/* <div className="m-language-btn">
-				<div className="m-only-btn">
-					<span>PL</span>
-					<span className="m-material-symbols-outlined">expand_more</span>
-				</div>
-				<div className="m-language-choice-window">
-					<span className="m-eng-span">English</span>
-					<span className="m-de-span">Deutsch</span>
-				</div>
-			</div> */}
 				<NavLink to="/contact" className="m-nav-btn-desktop">
 					<button className="m-contact-button" onClick={handleClick}>
 						Skontaktuj się
