@@ -5,7 +5,6 @@ import Offer from "../pages/Offer";
 import Fortranslators from "../pages/Fortranslators";
 import Faq from "../pages/Faq";
 import Contact from "../pages/Contact";
-import Media from "react-media";
 
 const Page = () => {
 	window.onscroll = () => {
