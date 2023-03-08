@@ -174,11 +174,6 @@ html {
 		}
 	}
 
-	.language-btn:hover {
-		// margin-top: 80px;
-		// height: 100px;
-	}
-
 	.language-btn:hover .language-choice-window {
 		height: 86px;
 	}
@@ -267,20 +262,6 @@ html {
 			}
 		}
 	}
-	// @-moz-document url-prefix() {
-	// 	.navigation-contaier {
-	// 		.left-navbar {
-	// 		}
-
-	// 		.right-navbar {
-	// 			.language-btn {
-	// 				.language-choice-window {
-	// 					left: 60%;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 @media (max-width: 1300px) {

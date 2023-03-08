@@ -56,11 +56,6 @@ html {
 		height: 45px;
 
 		.fa-bars {
-			// background-size: cover;
-			// position: relative;
-			// right: 20px;
-			// width: 40px;
-			// height: 40px;
 			color: $washed-white;
 			padding: 20px;
 			cursor: pointer;
@@ -69,8 +64,6 @@ html {
 		.fa-x {
 			background-size: cover;
 			position: relative;
-			// width: 45px;
-			// height: 45px;
 			color: $washed-white;
 		}
 
@@ -82,159 +75,4 @@ html {
 			width: 200px;
 		}
 	}
-
-	// 	button {
-	// 		display: inline-block;
-	// 		padding: 10px 10px;
-
-	// 		margin: 10px 20px;
-	// 		position: relative;
-	// 		border: none;
-	// 		background-color: $claret-dark;
-	// 		color: $washed-white;
-	// 		font-size: 15px;
-	// 		font-family: "LatoLatinWebSemibold", sans-serif;
-	// 		letter-spacing: 2px;
-	// 		font-weight: normal;
-	// 		text-transform: uppercase;
-	// 		cursor: pointer;
-	// 		a {
-	// 			text-decoration: none;
-	// 		}
-	// 	}
-
-	// 	.m-navbtn::before {
-	// 		content: "";
-	// 		position: absolute;
-	// 		left: 0;
-	// 		bottom: 0;
-	// 		width: 0%;
-	// 		height: 2px;
-	// 		background-color: $washed-white;
-	// 		transition: width 0.3s ease-in-out;
-	// 	}
-
-	// 	button:hover::before {
-	// 		width: 100%;
-	// 	}
-
-	// 	.m-contact-button {
-	// 		text-align: center;
-	// 		margin: 0;
-	// 		padding: 0;
-	// 		text-transform: none;
-	// 		font-size: 15px;
-	// 		background-color: $red-btn;
-	// 		width: 149px;
-	// 		height: 44px;
-	// 		letter-spacing: 1px;
-	// 		border-radius: 40px;
-	// 		gap: 10px;
-	// 		border: 2px solid rgba(233, 232, 226, 0);
-	// 		transition: 0.3s ease-in-out;
-	// 	}
-
-	// 	.m-contact-button:hover {
-	// 		border: 2px solid rgba(233, 232, 226, 1);
-	// 		animation: contact-hover 0.3s ease-in-out;
-	// 	}
-
-	// 	.m-faq:hover::before {
-	// 		width: 100%;
-	// 	}
-	// 	.m-language-btn {
-	// 		margin-left: 5%;
-	// 		margin-right: 5%;
-	// 		margin-bottom: 2px;
-	// 		padding: 10px;
-
-	// 		.m-only-btn {
-	// 			display: flex;
-	// 			align-items: center;
-	// 			color: $washed-white;
-	// 			font-family: "LatoLatinWebSemibold", sans-serif;
-	// 			letter-spacing: 1px;
-	// 			font-weight: normal;
-	// 			cursor: default;
-	// 			font-size: 15px;
-	// 		}
-
-	// 		.m-material-symbols-outlined {
-	// 			text-align: center;
-	// 		}
-
-	// 		.m-language-choice-window {
-	// 			position: absolute;
-	// 			left: 72.5%;
-	// 			top: 70%;
-	// 			overflow: hidden;
-	// 			display: flex;
-	// 			flex-direction: column;
-	// 			justify-content: space-evenly;
-	// 			align-items: flex-start;
-	// 			height: 0px;
-	// 			width: 104px;
-
-	// 			background-color: #e5e5e5;
-	// 			border-radius: 10px;
-	// 			box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
-	// 			transition: 0.3s ease-out;
-
-	// 			span {
-	// 				margin-left: 20px;
-	// 				font-family: "Inter", sans-serif;
-	// 				font-weight: 400;
-	// 				font-size: 14px;
-	// 				color: $black;
-	// 				transition: 0.2s ease-out;
-	// 				cursor: pointer;
-	// 			}
-
-	// 			.m-eng-span:hover {
-	// 				opacity: 0.7;
-	// 			}
-	// 			.m-de-span:hover {
-	// 				opacity: 0.7;
-	// 			}
-	// 		}
-	// 	}
-
-	// 	.m-language-btn:hover {
-	// 		// margin-top: 80px;
-	// 		// height: 100px;
-	// 	}
-
-	// 	.m-language-btn:hover .m-language-choice-window {
-	// 		height: 86px;
-	// 	}
-	// }
-
-	// @keyframes contact-hover {
-	// 	0% {
-	// 		background-color: $red-btn;
-	// 	}
-
-	// 	50% {
-	// 		background-color: #972628;
-	// 	}
-
-	// 	100% {
-	// 		background-color: $red-btn;
-	// 	}
-	// }
-
-	// .active {
-	// 	.m-navbtn::before {
-	// 		content: "";
-	// 		position: absolute;
-	// 		left: 0;
-	// 		bottom: 0;
-	// 		width: 100%;
-	// 		height: 2px;
-	// 		background-color: $washed-white;
-	// 		transition: width 0.3s ease-in-out;
-	// 	}
-	// 	.m-contact-button {
-	// 		border: 2px solid rgba(233, 232, 226, 1);
-	// 	}
 }
