@@ -57,6 +57,10 @@
 				font-family: "Inter", sans-serif;
 				font-weight: 400;
 				font-size: 16px;
+				line-height: 25px;
+			}
+			span{
+				font-weight: 700;
 			}
 		}
 	}
@@ -66,7 +70,7 @@
 		border-bottom: none;
 	}
 	.linePayments-active {
-		height: 160px;
+		height: 320px;
 	}
 
 	.rotate {
@@ -123,6 +127,7 @@
 			.unvisible-line {
 				width: 100%;
 				display: flex;
+				flex-direction: column;
 				justify-content: space-between;
 
 				p {
@@ -141,7 +146,7 @@
 			border-bottom: none;
 		}
 		.linePayments-active {
-			height: 260px;
+			height: 600px;
 		}
 
 		.rotate {

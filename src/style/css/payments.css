@@ -51,13 +51,17 @@
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 25px;
+}
+.payments-container .linePayments .unvisible-line span {
+  font-weight: 700;
 }
 .payments-container .linePayments:last-child {
   margin-bottom: 150px;
   border-bottom: none;
 }
 .payments-container .linePayments-active {
-  height: 160px;
+  height: 320px;
 }
 .payments-container .rotate {
   rotate: -45deg;
@@ -108,6 +112,7 @@
   .payments-container .linePayments .unvisible-line {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
   }
   .payments-container .linePayments .unvisible-line p {
@@ -123,7 +128,7 @@
     border-bottom: none;
   }
   .payments-container .linePayments-active {
-    height: 260px;
+    height: 600px;
   }
   .payments-container .rotate {
     rotate: -45deg;
