@@ -29,8 +29,8 @@
   font-size: 24px;
 }
 .faq-container .line {
-  height: 80px;
   width: 1060px;
+  max-height: fit-content;
   overflow: hidden;
   border-bottom: 1px #cecece solid;
   transition: 0.3s ease-out;
@@ -68,14 +68,14 @@
   font-weight: 400;
   font-size: 16px;
 }
-.faq-container .line-active {
-  height: 160px;
+.faq-container [data-max-height].line-active {
+  height: calc(var(--max-height) + 20px);
 }
 .faq-container .rotate {
   rotate: -45deg;
 }
 
-#faqLine8Active {
+#faqLine11Active {
   border-bottom: none;
 }
 
