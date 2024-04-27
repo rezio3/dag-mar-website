@@ -3,6 +3,8 @@ import "../style/css/faq.css";
 import Question from "./faqComponents/Question";
 import RedSection from "./faqComponents/RedSection";
 import { questionData } from "./faqComponents/FaqAnswers";
+import Question2 from "./faqComponents/Question2";
+import Question3 from "./faqComponents/Question3";
 
 const Faq = () => {
   const [questionsView, setQuestionsView] = useState({
@@ -31,15 +33,38 @@ const Faq = () => {
         <h3 className="faq-header h3">Ty pytasz, my odpowiadamy</h3>
       </div>
       {questionData.map((e) => {
-        return (
-          <Question
-            header={e}
-            key={e.key}
-            stateLine={e.key}
-            handler={handlePlusClick}
-            state={questionsView}
-          />
-        );
+        if (e.key === "faqLine4Active") {
+          console.log(e.key === "faqLine4Active");
+          return (
+            <Question2
+              header={e}
+              key={e.key}
+              stateLine={e.key}
+              handler={handlePlusClick}
+              state={questionsView}
+            />
+          );
+        } else if (e.key === "faqLine9Active") {
+          return (
+            <Question3
+              header={e}
+              key={e.key}
+              stateLine={e.key}
+              handler={handlePlusClick}
+              state={questionsView}
+            />
+          );
+        } else {
+          return (
+            <Question
+              header={e}
+              key={e.key}
+              stateLine={e.key}
+              handler={handlePlusClick}
+              state={questionsView}
+            />
+          );
+        }
       })}
       <RedSection />
     </div>

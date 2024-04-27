@@ -68,21 +68,21 @@
       justify-content: space-between;
 
       span {
+		padding-bottom: 15px;
         color: $txt;
-        height: 80px;
         width: 100%;
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 16px;
       }
+	  ul{
+		margin-top: 10px;
+		li{
+			padding: 0px 0 10px;
+			color: $txt;
+		}
+	  }
     }
-  }
-
-  .line-active {
-    // height:
-  }
-  [data-max-height].line-active {
-    height: calc(var(--max-height) + 20px);
   }
 
   .rotate {
@@ -107,7 +107,7 @@
       }
     }
     .line {
-      height: auto;
+    //   height: fit-content;
       width: 85%;
       overflow: hidden;
       border-bottom: 1px #cecece solid;
@@ -124,10 +124,6 @@
     .unvisible-line {
       height: 0;
       transition: 0.3s ease-out;
-    }
-
-    .line-active {
-      height: 100px;
     }
 
     .rotate {

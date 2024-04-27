@@ -33,7 +33,7 @@ const Question = (props) => {
               </div>
             </div>
           ) : (
-            <div className="line" id={props.stateLine}>
+            <div className="line" id={props.stateLine} >
               <div className="visible-line">
                 <span className="visible-span-text">{props.header.quest}</span>
                 <img
@@ -53,6 +53,7 @@ const Question = (props) => {
                     ? "unvisible-line line-active"
                     : "unvisible-line"
                 }
+                style={props.state[props.stateLine] ? {height: props.header.heightMobile} : {height: "0px"}}
               >
                 <span>{props.header.res}</span>
               </div>
