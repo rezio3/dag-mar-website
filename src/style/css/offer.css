@@ -1,6 +1,102 @@
-.build-progress-span {
+.offer-container {
+  background-color: #f5f5f5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #242424;
+}
+.offer-container .offer-header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+  margin-bottom: 80px;
+  width: 1089px;
+  height: 200px;
+  background-image: url(../../img//faq-frame.png);
+}
+.offer-container .offer-header-container .offer-header {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.offer-container .offer-header-container .h3 {
+  font-size: 24px;
+}
+
+.offer-section-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.offer-section-container__left-box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.offer-section-container__left-box .left-box-button {
+  padding: 20px;
+  padding-left: 0;
+  width: 80%;
+  color: #8d8d8d;
+  text-align: start;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #8d8d8d;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+.offer-section-container__left-box .left-box-button:first-child {
+  padding-top: 0;
+}
+.offer-section-container__left-box .active {
+  color: #242424;
+  border-bottom: 1px solid #242424;
+}
+.offer-section-container .right-box {
+  width: 50%;
+}
+.offer-section-container .right-box__inner {
+  width: 100%;
+}
+.offer-section-container .right-box__inner span {
   display: block;
-  margin-top: 120px;
-  height: 600px;
-  left: auto;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #6c6c6c;
+  line-height: 32px;
+}
+.offer-section-container .right-box__list-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.offer-section-container .right-box__list-container ul li {
+  padding: 5px 0;
+  font-size: 16px;
+  color: #6c6c6c;
+  line-height: 32px;
+}
+
+@media (max-width: 992px) {
+  .offer-container .offer-header-container {
+    margin-top: 180px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 200px;
+  }
+  .offer-container .offer-header-container .h3 {
+    text-align: center;
+  }
 }
