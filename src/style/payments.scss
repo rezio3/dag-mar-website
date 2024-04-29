@@ -16,7 +16,6 @@
 	}
 
 	.linePayments {
-		height: 80px;
 		width: 1060px;
 		overflow: hidden;
 		border-bottom: 1px #cecece solid;
@@ -51,6 +50,7 @@
 			justify-content: space-between;
 
 			p {
+				margin-bottom: 45px;
 				color: $txt;
 				height: 80px;
 				width: 100%;
@@ -68,9 +68,6 @@
 	.linePayments:last-child {
 		margin-bottom: 150px;
 		border-bottom: none;
-	}
-	.linePayments-active {
-		height: 320px;
 	}
 
 	.rotate {
@@ -95,7 +92,6 @@
 		}
 
 		.linePayments {
-			height: 80px;
 			width: 85%;
 			overflow: hidden;
 			border-bottom: 1px #cecece solid;
@@ -144,9 +140,6 @@
 		.linePayments:last-child {
 			margin-bottom: 61px;
 			border-bottom: none;
-		}
-		.linePayments-active {
-			height: 600px;
 		}
 
 		.rotate {

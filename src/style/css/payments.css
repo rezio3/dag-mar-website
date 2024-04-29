@@ -13,7 +13,6 @@
   margin-bottom: 65px;
 }
 .payments-container .linePayments {
-  height: 80px;
   width: 1060px;
   overflow: hidden;
   border-bottom: 1px #cecece solid;
@@ -45,6 +44,7 @@
   justify-content: space-between;
 }
 .payments-container .linePayments .unvisible-line p {
+  margin-bottom: 45px;
   color: #6c6c6c;
   height: 80px;
   width: 100%;
@@ -59,9 +59,6 @@
 .payments-container .linePayments:last-child {
   margin-bottom: 150px;
   border-bottom: none;
-}
-.payments-container .linePayments-active {
-  height: 320px;
 }
 .payments-container .rotate {
   rotate: -45deg;
@@ -83,7 +80,6 @@
     margin-bottom: 46px;
   }
   .payments-container .linePayments {
-    height: 80px;
     width: 85%;
     overflow: hidden;
     border-bottom: 1px #cecece solid;
@@ -126,9 +122,6 @@
   .payments-container .linePayments:last-child {
     margin-bottom: 61px;
     border-bottom: none;
-  }
-  .payments-container .linePayments-active {
-    height: 600px;
   }
   .payments-container .rotate {
     rotate: -45deg;
