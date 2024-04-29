@@ -5,13 +5,13 @@ import FormDesktop from "./FormDesktop";
 import { app } from "../../firebase";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { v4 } from "uuid";
 
 const Form = () => {
   const [fileState, setFileState] = useState({
     isFileLoaded: false,
     file: null,
     fileName: "",
+    inputFileValue: "",
   });
   const [formVal, setFormVal] = useState({
     name: "",
@@ -32,30 +32,6 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, surname, email, subject, message } = formVal;
-    const randomFileId = v4();
-
-    const db = getFirestore(app);
-    const storage = getStorage(app);
-    const fileRef = ref(storage, `files/${fileState.fileName}_${randomFileId}`);
-    await uploadBytes (fileRef, fileState.file)
-
-    getDownloadURL(
-    ref(storage, `files/${fileState.fileName}_${randomFileId}`)
-    ).then(async (url) => {
-    console.log(url);
-    try {
-      await addDoc(collection(db, "mail"), {
-        to: "reziolek999@gmail.com",
-        message: {
-          subject: subject,
-          html: `${message} <br /> 
-          Załącznik: ${url}`,
-        },
-      });
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
-    })
 
     if (
       name !== "" &&
@@ -64,6 +40,28 @@ const Form = () => {
       subject !== "" &&
       message !== ""
     ) {
+      const db = getFirestore(app);
+      const storage = getStorage(app);
+      const fileRef = ref(storage, `files/${fileState.fileName}`);
+      await uploadBytes(fileRef, fileState.file);
+
+      getDownloadURL(ref(storage, `files/${fileState.fileName}`)).then(
+        async (url) => {
+          console.log(url);
+          try {
+            await addDoc(collection(db, "mail"), {
+              to: "reziolek999@gmail.com",
+              message: {
+                subject: subject,
+                html: `${message} <br /> 
+          Załącznik: ${url}`,
+              },
+            });
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
+        }
+      );
       setFormVal({
         name: "",
         surname: "",
@@ -78,6 +76,8 @@ const Form = () => {
         isFileLoaded: false,
         file: null,
         fileName: "",
+        inputFileValue: "",
+        isFileSize: false,
       });
 
       setTimeout(() => {
@@ -89,6 +89,13 @@ const Form = () => {
           message: "",
           formValid: 0,
           formSent: false,
+        });
+        setFileState({
+          isFileLoaded: false,
+          file: null,
+          fileName: "",
+          inputFileValue: "",
+          isFileSize: false,
         });
       }, 1000);
       return true;
@@ -103,10 +110,15 @@ const Form = () => {
   };
 
   const handleFileUpload = (e) => {
+    if(e.target.files[0].size > 10 * 1024 * 1024) {
+      alert("Error: Zaimportowany plik jest zbyt duży. Dopuszczalne są pliki do max. 10 MB")
+      return
+    }
     setFileState({
       isFileLoaded: true,
       file: e.target.files[0],
       fileName: e.target.files[0].name,
+      inputFileValue: e.target.value,
     });
   };
 
@@ -133,10 +145,12 @@ const Form = () => {
                   </h2>
                 </div>
                 <span className="m-contact-with-us-bottomtext">
-                  Lorem ipsum dolor sit amet consectetur. In adipiscing sed
-                  auctor est condimentum pellentesque mauris consequat quis.
-                  Sollicitudin lacus nibh metus pellentesque congue tempor risus
-                  rhoncus.{" "}
+                  Masz pytania lub wątpliwości? Chcesz dowiedzieć się więcej o
+                  usługach Biura Tłumaczeń Przysięgłych DAG-MAR lub potrzebujesz
+                  wysłać materiały do tłumaczenia?
+                </span>
+                <span className="m-contact-with-us-bottomtext">
+                  Skontaktuj się z nami za pomocą formularza poniżej.
                 </span>
               </div>
               <div className="m-form-container">
@@ -195,6 +209,7 @@ const Form = () => {
                             className="m-add-file-input"
                             id="file-upload"
                             onChange={handleFileUpload}
+                            value={fileState.inputFileValue}
                           />
                           Dodaj załącznik
                         </label>

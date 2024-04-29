@@ -21,7 +21,9 @@ const FormDesktop = (props) => {
           Biura Tłumaczeń Przysięgłych DAG-MAR lub potrzebujesz wysłać materiały
           do tłumaczenia?
         </span>
-		<span className="contact-with-us-bottomtext">Skontaktuj się z nami za pomocą formularza obok.</span>
+        <span className="contact-with-us-bottomtext">
+          Skontaktuj się z nami za pomocą formularza obok.
+        </span>
       </div>
       <div className="form-container">
         <form className="contact-form" onSubmit={handleSubmit}>
@@ -87,6 +89,7 @@ const FormDesktop = (props) => {
                       className="add-file-input"
                       id="file-upload"
                       onChange={handleFileUpload}
+                      value={fileState.inputFileValue}
                     />
                     Dodaj załącznik
                   </label>
