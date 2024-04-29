@@ -1,7 +1,9 @@
 import React, { createContext, useState } from "react";
 
 const newsData = {
-	newsOn: true,
+	newsOn: false,
+	txt1: "",
+	txt2: "",
 };
 
 export const NewsContext = createContext();
