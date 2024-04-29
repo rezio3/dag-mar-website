@@ -30,7 +30,6 @@ const Stats = () => {
 		);
 		observer.observe(myRef.current);
 	}, []);
-	console.log(scrolled);
 
 	return (
 		<>

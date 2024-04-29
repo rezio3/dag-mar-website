@@ -168,7 +168,6 @@ const Opinions = () => {
                       id="opinions-description2"
                     >
                       {opinion.activeOpinion.map((e, index) => {
-                        console.log(index);
                         return (
                           <Opinion
                             opinionText={opinionsData[e].opinionText}
