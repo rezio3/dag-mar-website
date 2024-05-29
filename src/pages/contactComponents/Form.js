@@ -5,8 +5,10 @@ import FormDesktop from "./FormDesktop";
 import { app } from "../../firebase";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import "../../style/css/loading.css";
 
 const Form = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [fileState, setFileState] = useState({
     isFileLoaded: false,
     file: null,
@@ -29,58 +31,49 @@ const Form = () => {
       [e.target.name]: e.target.value,
     });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, surname, email, subject, message } = formVal;
+      const { name, surname, email, subject, message } = formVal;
 
-    if (
-      name !== "" &&
-      surname !== "" &&
-      email !== "" &&
-      subject !== "" &&
-      message !== ""
-    ) {
-      const db = getFirestore(app);
-      const storage = getStorage(app);
-      const fileRef = ref(storage, `files/${fileState.fileName}`);
-      await uploadBytes(fileRef, fileState.file);
+      if (
+        name !== "" &&
+        surname !== "" &&
+        email !== "" &&
+        subject !== "" &&
+        message !== ""
+      ) {
+        setIsLoading(true);
+        console.log("wysyłam!!!");
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+        const fileRef = ref(storage, `files/${fileState.fileName}`);
+        await uploadBytes(fileRef, fileState.file);
 
-      getDownloadURL(ref(storage, `files/${fileState.fileName}`)).then(
-        async (url) => {
-          console.log(url);
-          try {
-            await addDoc(collection(db, "mail"), {
-              to: "reziolek999@gmail.com",
-              message: {
-                subject: subject,
-                html: `${message} <br /> 
-          Załącznik: ${url}`,
-              },
-            });
-          } catch (e) {
-            console.error("Error adding document: ", e);
+        getDownloadURL(ref(storage, `files/${fileState.fileName}`)).then(
+          async (url) => {
+            console.log(url);
+            try {
+              await addDoc(collection(db, "mail"), {
+                to: "reziolek999@gmail.com",
+                message: {
+                  subject: subject,
+                  html: `${message} <br /> Załącznik: ${url}`,
+                  attachments: [
+                    {
+                      filename: fileState.fileName,
+                      path: url,
+                    },
+                  ],
+                },
+              });
+            } catch (e) {
+              console.error("Error adding document: ", e);
+            }
           }
-        }
-      );
-      setFormVal({
-        name: "",
-        surname: "",
-        email: "",
-        subject: "",
-        message: "",
-        formValid: 0,
-        formSent: true,
-      });
+        );
+        const fileName = fileState.fileName;
 
-      setFileState({
-        isFileLoaded: false,
-        file: null,
-        fileName: "",
-        inputFileValue: "",
-        isFileSize: false,
-      });
-
-      setTimeout(() => {
         setFormVal({
           name: "",
           surname: "",
@@ -88,8 +81,9 @@ const Form = () => {
           subject: "",
           message: "",
           formValid: 0,
-          formSent: false,
+          formSent: true,
         });
+
         setFileState({
           isFileLoaded: false,
           file: null,
@@ -97,22 +91,49 @@ const Form = () => {
           inputFileValue: "",
           isFileSize: false,
         });
-      }, 1000);
-      return true;
-    } else {
-      console.log("Brak wypełnionych pól w formularzu");
-      setFormVal({
-        ...formVal,
-        formValid: 1,
-      });
-      return false;
-    }
+        setIsLoading(false);
+
+        setTimeout(() => {
+          setFormVal({
+            name: "",
+            surname: "",
+            email: "",
+            subject: "",
+            message: "",
+            formValid: 0,
+            formSent: false,
+          });
+          setFileState({
+            isFileLoaded: false,
+            file: null,
+            fileName: "",
+            inputFileValue: "",
+            isFileSize: false,
+          });
+        }, 2000);
+        setTimeout(async () => {
+          const storage = getStorage(app);
+          const deleteFileRef = ref(storage, `files/${fileName}`);
+          await uploadBytes(deleteFileRef, ".");
+        }, 4000);
+        return true;
+      } else {
+        console.log("Brak wypełnionych pól w formularzu");
+        setFormVal({
+          ...formVal,
+          formValid: 1,
+        });
+        return false;
+      }
   };
 
   const handleFileUpload = (e) => {
-    if(e.target.files[0].size > 10 * 1024 * 1024) {
-      alert("Error: Zaimportowany plik jest zbyt duży. Dopuszczalne są pliki do max. 10 MB")
-      return
+    console.log(e.target.files[0]);
+    if (e.target.files[0].size > 10 * 1024 * 1024) {
+      alert(
+        "Error: Zaimportowany plik jest zbyt duży. Dopuszczalne są pliki do max. 10 MB"
+      );
+      return;
     }
     setFileState({
       isFileLoaded: true,
@@ -122,6 +143,9 @@ const Form = () => {
     });
   };
 
+  const del = async () => {
+    const db = getFirestore(app);
+  };
   return (
     <>
       <Media query="(min-width: 992px)">
@@ -135,6 +159,8 @@ const Form = () => {
               fileState={fileState}
               setFileState={setFileState}
               handleFileUpload={handleFileUpload}
+              del={del}
+              isLoading={isLoading}
             />
           ) : (
             <div className="m-form-section-container">
@@ -154,7 +180,7 @@ const Form = () => {
                 </span>
               </div>
               <div className="m-form-container">
-                <form className="m-contact-form" onSubmit={handleSubmit}>
+                <form className="m-contact-form">
                   <div className="m-input-container">
                     <input
                       name="name"
@@ -241,8 +267,17 @@ const Form = () => {
                     </div>
                     <div className="m-sender-container">
                       <div className="m-send-btn-container">
-                        <button className="m-send-btn" type="submit">
+                        <button
+                          className="m-send-btn loading-button"
+                          onClick={handleSubmit}
+                          disabled={isLoading}
+                        >
                           Prześlij formularz
+                          {isLoading && (
+                            <div className="loading-overlay">
+                              <div className="spinner"></div>
+                            </div>
+                          )}
                         </button>
                         <label
                           id="form-error"

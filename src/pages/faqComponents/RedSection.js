@@ -13,7 +13,7 @@ const RedSection = () => {
 							<h2>Nadal nie uzyskałeś odpowiedzi?</h2>
 							<span>
 								Jesteśmy otwarci na Państwa pytania - chętnie rozwiejemy
-								wszelkie wątpliwości związane z wykonywaniem tłumaczeń <br />w
+								wszelkie wątpliwości związane z wykonywaniem <strong>tłumaczeń</strong><br />w
 								naszym biurze. Zachęcamy do skontaktowania się z nami poprzez
 								formularz kontaktowy, do którego prowadzi poniższy przycisk.
 							</span>
@@ -26,7 +26,7 @@ const RedSection = () => {
 							<h2>Nadal nie uzyskałeś odpowiedzi?</h2>
 							<span>
 								Jesteśmy otwarci na Państwa pytania - chętnie rozwiejemy
-								wszelkie wątpliwości związane z wykonywaniem tłumaczeńw naszym
+								wszelkie wątpliwości związane z wykonywaniem <strong>tłumaczeń</strong> w naszym
 								biurze. Zachęcamy do skontaktowania się z nami poprzez formularz
 								kontaktowy, do którego prowadzi poniższy przycisk.
 							</span>

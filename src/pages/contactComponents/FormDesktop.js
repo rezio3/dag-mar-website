@@ -9,6 +9,8 @@ const FormDesktop = (props) => {
     fileState,
     setFileState,
     handleFileUpload,
+    del,
+    isLoading
   } = props;
   return (
     <div className="form-section-container">
@@ -26,7 +28,7 @@ const FormDesktop = (props) => {
         </span>
       </div>
       <div className="form-container">
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form">
           <div className="name-input-container">
             <input
               name="name"
@@ -113,8 +115,13 @@ const FormDesktop = (props) => {
                 </div>
               </div>
               <div className="send-btn-container">
-                <button className="send-btn" type="submit">
+                <button className="send-btn loading-button" onClick={handleSubmit} disabled={isLoading}>
                   Prześlij formularz
+                  {isLoading && (
+                    <div className="loading-overlay">
+                      <div className="spinner"></div>
+                    </div>
+                  )}  
                 </button>
                 <label
                   id="form-error"
