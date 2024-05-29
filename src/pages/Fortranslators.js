@@ -15,10 +15,10 @@ const Fortranslators = () => {
 							<div className="second-section">
 								<h2>Czekamy na ciebie</h2>
 								<span>
-									Jeśli zna Pani/Pan perfekcyjnie jeden lub więcej języków
-									obcych, swobodnie posługuje się językiem polskim, ma
+									Jeśli zna Pani/Pan perfekcyjnie jeden lub więcej <strong>języków
+									obcych</strong>, swobodnie posługuje się językiem polskim, ma
 									przynajmniej kilkuletnie <br />
-									doświadczenie w tłumaczeniu dokumentów, jest osobą
+									doświadczenie w <strong>tłumaczeniu dokumentów</strong>, jest osobą
 									odpowiedzialną, solidną, dyspozycyjną, pracującą samodzielnie
 									lub potrafiącą
 									<br /> włączyć się do zespołu i jest zainteresowana/y
@@ -35,10 +35,10 @@ const Fortranslators = () => {
 							<div className="second-section">
 								<h2>Czekamy na ciebie</h2>
 								<span>
-									Jeśli zna Pani/Pan perfekcyjnie jeden lub więcej języków
-									obcych, swobodnie posługuje się językiem polskim, ma
-									przynajmniej kilkuletnie doświadczenie w tłumaczeniu
-									dokumentów, jest osobą odpowiedzialną, solidną, dyspozycyjną,
+									Jeśli zna Pani/Pan perfekcyjnie jeden lub więcej <strong>języków
+									obcych</strong>, swobodnie posługuje się językiem polskim, ma
+									przynajmniej kilkuletnie doświadczenie w <strong>tłumaczeniu
+									dokumentów</strong>, jest osobą odpowiedzialną, solidną, dyspozycyjną,
 									pracującą samodzielnie lub potrafiącą włączyć się do zespołu i
 									jest zainteresowana/y podjęciem współpracy z naszym Biurem
 									zapraszamy do kontaktu.

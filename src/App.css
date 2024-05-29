@@ -30,3 +30,7 @@ body {
 strong {
 	font-weight: 400;
 }
+
+h1 strong {
+	font-weight: bold;
+}

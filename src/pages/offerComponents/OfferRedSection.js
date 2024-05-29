@@ -13,7 +13,7 @@ const OfferRedSection = () => {
               <h2>Masz więcej pytań?</h2>
               <span>
                 Chętnie rozwiejemy wszelkie wątpliwości związane z wykonywaniem
-                tłumaczeń w naszym biurze.<br/> Zachęcamy do skontaktowania się z
+                <strong>tłumaczeń</strong> w naszym biurze.<br/> Zachęcamy do skontaktowania się z
                 nami poprzez formularz kontaktowy, do którego prowadzi poniższy
                 przycisk.
               </span>
@@ -26,7 +26,7 @@ const OfferRedSection = () => {
               <h2>Masz więcej pytań?</h2>
               <span>
                 Chętnie rozwiejemy wszelkie wątpliwości związane z wykonywaniem
-                tłumaczeń w naszym biurze. Zachęcamy do skontaktowania się z
+                <strong>tłumaczeń</strong> w naszym biurze. Zachęcamy do skontaktowania się z
                 nami poprzez formularz kontaktowy, do którego prowadzi poniższy
                 przycisk.
               </span>

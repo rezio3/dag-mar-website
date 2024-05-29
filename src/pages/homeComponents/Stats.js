@@ -42,7 +42,7 @@ const Stats = () => {
 								<span className="stat-number">
 									{scrolled ? <Number n={26} /> : 0}
 								</span>
-								<span className="stat-description">tłumaczonych języków</span>
+								<span className="stat-description"><strong>tłumaczonych języków</strong></span>
 							</div>
 							<div className="second-stat stats">
 								<span className="stat-number">
@@ -74,7 +74,7 @@ const Stats = () => {
 										{" "}
 										{scrolled ? <Number n={26} /> : 0}
 									</span>
-									<span className="stat-description">tłumaczonych języków</span>
+									<span className="stat-description"><strong>tłumaczonych języków</strong></span>
 								</div>
 								<div className="second-stat stats">
 									<span className="stat-number">

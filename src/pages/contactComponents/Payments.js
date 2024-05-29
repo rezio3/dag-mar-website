@@ -158,7 +158,7 @@ const Payments = () => {
               >
                 <div className="visible-line">
                   <span className="visible-span-text">
-                    Biuro Tłumaczeń Przysięgłych DAG-MAR S.C.
+                   Biuro Tłumaczeń Przysięgłych DAG-MAR S.C.
                   </span>
                   <img
                     src={plus}

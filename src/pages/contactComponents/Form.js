@@ -34,31 +34,45 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-      const { name, surname, email, subject, message } = formVal;
+    const { name, surname, email, subject, message } = formVal;
 
-      if (
-        name !== "" &&
-        surname !== "" &&
-        email !== "" &&
-        subject !== "" &&
-        message !== ""
-      ) {
-        setIsLoading(true);
-        console.log("wysyłam!!!");
-        const db = getFirestore(app);
+    if (
+      name !== "" &&
+      surname !== "" &&
+      email !== "" &&
+      subject !== "" &&
+      message !== ""
+    ) {
+      setIsLoading(true);
+      const db = getFirestore(app);
+      if (fileState.fileName === "") {
+        const sendEmail = async () => {
+          try {
+            await addDoc(collection(db, "mail"), {
+              to: "reziolek999@gmail.com",
+              message: {
+                subject: subject,
+                html: `${name} ${surname}<br />email:<br />${email}<br />message:<br />${message}`,
+              },
+            });
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
+        };
+        sendEmail();
+      } else {
         const storage = getStorage(app);
         const fileRef = ref(storage, `files/${fileState.fileName}`);
         await uploadBytes(fileRef, fileState.file);
 
         getDownloadURL(ref(storage, `files/${fileState.fileName}`)).then(
           async (url) => {
-            console.log(url);
             try {
               await addDoc(collection(db, "mail"), {
                 to: "reziolek999@gmail.com",
                 message: {
                   subject: subject,
-                  html: `${message} <br /> Załącznik: ${url}`,
+                  html: `${name} ${surname}<br />email:<br />${email}<br />message:<br />${message}`,
                   attachments: [
                     {
                       filename: fileState.fileName,
@@ -72,8 +86,28 @@ const Form = () => {
             }
           }
         );
-        const fileName = fileState.fileName;
+      }
 
+      setFormVal({
+        name: "",
+        surname: "",
+        email: "",
+        subject: "",
+        message: "",
+        formValid: 0,
+        formSent: true,
+      });
+
+      setFileState({
+        isFileLoaded: false,
+        file: null,
+        fileName: "",
+        inputFileValue: "",
+        isFileSize: false,
+      });
+      setIsLoading(false);
+
+      setTimeout(() => {
         setFormVal({
           name: "",
           surname: "",
@@ -81,9 +115,8 @@ const Form = () => {
           subject: "",
           message: "",
           formValid: 0,
-          formSent: true,
+          formSent: false,
         });
-
         setFileState({
           isFileLoaded: false,
           file: null,
@@ -91,44 +124,27 @@ const Form = () => {
           inputFileValue: "",
           isFileSize: false,
         });
-        setIsLoading(false);
-
-        setTimeout(() => {
-          setFormVal({
-            name: "",
-            surname: "",
-            email: "",
-            subject: "",
-            message: "",
-            formValid: 0,
-            formSent: false,
-          });
-          setFileState({
-            isFileLoaded: false,
-            file: null,
-            fileName: "",
-            inputFileValue: "",
-            isFileSize: false,
-          });
-        }, 2000);
+      }, 2000);
+      if (fileState.fileName !== "") {
+        const fileName = fileState.fileName;
         setTimeout(async () => {
           const storage = getStorage(app);
           const deleteFileRef = ref(storage, `files/${fileName}`);
           await uploadBytes(deleteFileRef, ".");
         }, 4000);
-        return true;
-      } else {
-        console.log("Brak wypełnionych pól w formularzu");
-        setFormVal({
-          ...formVal,
-          formValid: 1,
-        });
-        return false;
       }
+      return true;
+    } else {
+      console.log("Brak wypełnionych pól w formularzu");
+      setFormVal({
+        ...formVal,
+        formValid: 1,
+      });
+      return false;
+    }
   };
 
   const handleFileUpload = (e) => {
-    console.log(e.target.files[0]);
     if (e.target.files[0].size > 10 * 1024 * 1024) {
       alert(
         "Error: Zaimportowany plik jest zbyt duży. Dopuszczalne są pliki do max. 10 MB"
@@ -143,9 +159,6 @@ const Form = () => {
     });
   };
 
-  const del = async () => {
-    const db = getFirestore(app);
-  };
   return (
     <>
       <Media query="(min-width: 992px)">
@@ -159,7 +172,6 @@ const Form = () => {
               fileState={fileState}
               setFileState={setFileState}
               handleFileUpload={handleFileUpload}
-              del={del}
               isLoading={isLoading}
             />
           ) : (
@@ -172,8 +184,9 @@ const Form = () => {
                 </div>
                 <span className="m-contact-with-us-bottomtext">
                   Masz pytania lub wątpliwości? Chcesz dowiedzieć się więcej o
-                  usługach Biura Tłumaczeń Przysięgłych DAG-MAR lub potrzebujesz
-                  wysłać materiały do tłumaczenia?
+                  usługach <strong>Biura Tłumaczeń Przysięgłych DAG-MAR</strong>{" "}
+                  lub potrzebujesz wysłać materiały do{" "}
+                  <strong>tłumaczenia</strong>?
                 </span>
                 <span className="m-contact-with-us-bottomtext">
                   Skontaktuj się z nami za pomocą formularza poniżej.

@@ -53,14 +53,14 @@ const Home = () => {
       <div className="header-container">
         <div className="header-span-container">
           <h1>
-            Przetłumaczymy <br />
+            <strong>Przetłumaczymy</strong> <br />
             Twoje potrzeby
           </h1>
           <h3>
-            Jeśli szukacie Państwo Tłumacza przysięgłego lub osoby, która
-            przełoży tekst z języka ojczystego na język obcy lub odwrotnie to
+            Jeśli szukacie Państwo <strong>Tłumacza przysięgłego</strong> lub osoby, która
+            przełoży tekst z języka ojczystego na <strong>język obcy</strong> lub odwrotnie to
             dobrze trafiliście. W naszym Biurze możecie Państwo zlecić
-            tłumaczenie z niemal każdego języka europejskiego i nie tylko.
+            <strong>tłumaczenie</strong> z niemal <strong>każdego języka europejskiego</strong> i nie tylko.
           </h3>
           <NavLink to="/offer" className="nav-btn-desktop">
             <button className="see-offer">Zobacz ofertę</button>

@@ -18,22 +18,22 @@ const Dt = () => {
                 <div className="DT-description">
                   <h2>O NAS</h2>
                   <p>
-                    Działalnością związaną z tłumaczeniami zajmujemy się od roku
+                    Działalnością związaną z <strong>tłumaczeniami</strong> zajmujemy się od roku
                     2001. Początkowo swoją ofertę kierowaliśmy do osób, które
-                    zainteresowane były wykonaniem tłumaczeń z języka
-                    angielskiego. Dynamiczny rozwój naszych usług oraz chęć
+                    zainteresowane były wykonaniem <strong>tłumaczeń z języka
+                    angielskiego</strong>. Dynamiczny rozwój naszych usług oraz chęć
                     wyjścia naprzeciw oczekiwaniom kontrahentów sprawiły, że w
-                    roku 2005 założyliśmy Biuro Tłumaczeń. Doskonale wiemy jak
+                    roku 2005 założyliśmy <strong>Biuro Tłumaczeń</strong>. Doskonale wiemy jak
                     pomóc naszym Klientom, ponieważ sami również dokonujemy
-                    przekładu. Właścicielką Biura jest tłumacz przysięgły języka
-                    angielskiego mgr Dagmara Toporowska.
+                    przekładu. Właścicielką Biura jest <strong>tłumacz przysięgły języka
+                    angielskiego</strong> mgr Dagmara Toporowska.
                   </p>
                   <p>
-                    Zespół Tłumaczy skupiony wokół naszego biura został dobrany
+                    Zespół <strong>Tłumaczy</strong> skupiony wokół naszego biura został dobrany
                     bardzo starannie, gdyż tylko osoby z odpowiednimi
                     predyspozycjami, doświadczeniem, szeroką wiedzą merytoryczną
                     z różnych dziedzini wielkim zaangażowaniem w pracę z
-                    tłumaczeniami mogą sprostać zleceniom naszych Klientów.
+                    <strong>tłumaczeniami</strong> mogą sprostać zleceniom naszych Klientów.
                   </p>
                   <p>
                     Nieustanne dążenie do perfekcji, dostosowanie kompleksowej
@@ -55,18 +55,18 @@ const Dt = () => {
                 <div className="DT-description">
                   <h2>O NAS</h2>
                   <p>
-                    Działalnością związaną z tłumaczeniami zajmujemy się od roku
+                    Działalnością związaną z <strong>tłumaczeniami</strong> zajmujemy się od roku
                     2001. Początkowo swoją ofertę kierowaliśmy do osób, które
-                    zainteresowane były wykonaniem tłumaczeń z języka
-                    angielskiego. Dynamiczny rozwój naszych usług oraz chęć
+                    zainteresowane były wykonaniem <strong>tłumaczeń z języka
+                    angielskiego</strong>. Dynamiczny rozwój naszych usług oraz chęć
                     wyjścia naprzeciw oczekiwaniom kontrahentów sprawiły, że w
-                    roku 2005 założyliśmy Biuro Tłumaczeń. Doskonale wiemy jak
+                    roku 2005 założyliśmy <strong>Biuro Tłumaczeń</strong>. Doskonale wiemy jak
                     pomóc naszym Klientom, ponieważ sami również dokonujemy
-                    przekładu. Właścicielką Biura jest tłumacz przysięgły języka
-                    angielskiego mgr Dagmara Toporowska.
+                    przekładu. Właścicielką Biura jest <strong>tłumacz przysięgły języka
+                    angielskiego</strong> mgr Dagmara Toporowska.
                   </p>
                   <p>
-                    Zespół Tłumaczy skupiony wokół naszego biura został dobrany
+                    Zespół <strong>Tłumaczy</strong> skupiony wokół naszego biura został dobrany
                     bardzo starannie, gdyż tylko osoby <br />z odpowiednimi
                     predyspozycjami, doświadczeniem, szeroką wiedzą merytoryczną
                     z różnych dziedzini wielkim zaangażowaniem w pracę <br /> z

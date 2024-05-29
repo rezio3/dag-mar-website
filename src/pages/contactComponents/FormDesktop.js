@@ -9,7 +9,6 @@ const FormDesktop = (props) => {
     fileState,
     setFileState,
     handleFileUpload,
-    del,
     isLoading
   } = props;
   return (
@@ -20,8 +19,8 @@ const FormDesktop = (props) => {
         </div>
         <span className="contact-with-us-bottomtext">
           Masz pytania lub wątpliwości? Chcesz dowiedzieć się więcej o usługach
-          Biura Tłumaczeń Przysięgłych DAG-MAR lub potrzebujesz wysłać materiały
-          do tłumaczenia?
+          <strong>Biura Tłumaczeń Przysięgłych DAG-MAR</strong> lub potrzebujesz wysłać materiały
+          do <strong>tłumaczenia</strong>?
         </span>
         <span className="contact-with-us-bottomtext">
           Skontaktuj się z nami za pomocą formularza obok.
