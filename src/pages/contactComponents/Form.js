@@ -131,7 +131,7 @@ const Form = () => {
           const storage = getStorage(app);
           const deleteFileRef = ref(storage, `files/${fileName}`);
           await uploadBytes(deleteFileRef, ".");
-        }, 4000);
+        }, 5000);
       }
       return true;
     } else {
