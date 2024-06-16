@@ -9,7 +9,7 @@ const FormDesktop = (props) => {
     fileState,
     setFileState,
     handleFileUpload,
-    isLoading
+    isLoading,
   } = props;
   return (
     <div className="form-section-container">
@@ -19,8 +19,8 @@ const FormDesktop = (props) => {
         </div>
         <span className="contact-with-us-bottomtext">
           Masz pytania lub wątpliwości? Chcesz dowiedzieć się więcej o usługach
-          <strong>Biura Tłumaczeń Przysięgłych DAG-MAR</strong> lub potrzebujesz wysłać materiały
-          do <strong>tłumaczenia</strong>?
+          <strong> Biura Tłumaczeń Przysięgłych DAG-MAR</strong> lub
+          potrzebujesz wysłać materiały do <strong>tłumaczenia</strong>?
         </span>
         <span className="contact-with-us-bottomtext">
           Skontaktuj się z nami za pomocą formularza obok.
@@ -114,13 +114,17 @@ const FormDesktop = (props) => {
                 </div>
               </div>
               <div className="send-btn-container">
-                <button className="send-btn loading-button" onClick={handleSubmit} disabled={isLoading}>
+                <button
+                  className="send-btn loading-button"
+                  onClick={handleSubmit}
+                  disabled={isLoading}
+                >
                   Prześlij formularz
                   {isLoading && (
                     <div className="loading-overlay">
                       <div className="spinner"></div>
                     </div>
-                  )}  
+                  )}
                 </button>
                 <label
                   id="form-error"

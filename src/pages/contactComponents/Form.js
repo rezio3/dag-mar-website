@@ -184,7 +184,7 @@ const Form = () => {
                 </div>
                 <span className="m-contact-with-us-bottomtext">
                   Masz pytania lub wątpliwości? Chcesz dowiedzieć się więcej o
-                  usługach <strong>Biura Tłumaczeń Przysięgłych DAG-MAR</strong>{" "}
+                  usługach <strong>Biura Tłumaczeń Przysięgłych DAG-MAR</strong>
                   lub potrzebujesz wysłać materiały do{" "}
                   <strong>tłumaczenia</strong>?
                 </span>
