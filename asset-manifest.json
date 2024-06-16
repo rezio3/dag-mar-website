@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dag-mar-website/static/css/main.4e77a2b2.css",
-    "main.js": "/dag-mar-website/static/js/main.cbbdb63b.js",
+    "main.js": "/dag-mar-website/static/js/main.dd6a425d.js",
     "static/media/main-bg.jpg": "/dag-mar-website/static/media/main-bg.ea811e4bb2261450f306.jpg",
     "static/media/two-business-partners-working-office 1.png": "/dag-mar-website/static/media/two-business-partners-working-office 1.dbd07a35a08799fc65f8.png",
     "static/media/DT.png": "/dag-mar-website/static/media/DT.112e7992006f0aac3322.png",
@@ -22,10 +22,10 @@
     "static/media/burgerMenuX.svg": "/dag-mar-website/static/media/burgerMenuX.3431a6f1eb1e23cf932806939ec77c74.svg",
     "static/media/burger-icon.svg": "/dag-mar-website/static/media/burger-icon.4e0f038f460a8654a3f953378bcf1887.svg",
     "main.4e77a2b2.css.map": "/dag-mar-website/static/css/main.4e77a2b2.css.map",
-    "main.cbbdb63b.js.map": "/dag-mar-website/static/js/main.cbbdb63b.js.map"
+    "main.dd6a425d.js.map": "/dag-mar-website/static/js/main.dd6a425d.js.map"
   },
   "entrypoints": [
     "static/css/main.4e77a2b2.css",
-    "static/js/main.cbbdb63b.js"
+    "static/js/main.dd6a425d.js"
   ]
 }
