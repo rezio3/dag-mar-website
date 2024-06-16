@@ -3,7 +3,7 @@ import React from "react";
 const OfferInnerSection2 = () => {
   return (
     <>
-      <div className="offer-section-container__right-box right-box">
+      <div className="offer-section-container__right-box right-box right-box-mobile">
         <div className="right-box__inner">
           <span>
             Jest to grupa dokumentów, które często wydawane są w polskich

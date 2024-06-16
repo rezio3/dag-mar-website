@@ -3,7 +3,7 @@ import React from "react";
 const OfferInnerSection4 = () => {
   return (
     <>
-      <div className="offer-section-container__right-box right-box">
+      <div className="offer-section-container__right-box right-box right-box-mobile">
         <div className="right-box__inner">
           <span>
             Śluby, podpisywanie aktów notarialnych lub umów z kontrahentami,

@@ -68,20 +68,20 @@
       justify-content: space-between;
 
       span {
-		padding-bottom: 15px;
+        padding-bottom: 15px;
         color: $txt;
         width: 100%;
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 16px;
       }
-	  ul{
-		margin-top: 10px;
-		li{
-			padding: 0px 0 10px;
-			color: $txt;
-		}
-	  }
+      ul {
+        margin-top: 10px;
+        li {
+          padding: 0px 0 10px;
+          color: $txt;
+        }
+      }
     }
   }
 
@@ -101,13 +101,17 @@
       margin-bottom: 60px;
       width: 100%;
       height: 200px;
-
+      h2 {
+        width: 85%;
+        text-align: start;
+      }
       .h3 {
-        text-align: center;
+        width: 85%;
+        text-align: start;
       }
     }
     .line {
-    //   height: fit-content;
+      //   height: fit-content;
       width: 85%;
       overflow: hidden;
       border-bottom: 1px #cecece solid;

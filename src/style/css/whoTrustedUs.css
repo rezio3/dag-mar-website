@@ -26,6 +26,8 @@
   margin-top: 45px;
   position: relative;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
   overflow: hidden;
   left: -240px;
@@ -33,8 +35,9 @@
   animation: tape-logos-animation normal 40s ease-out infinite;
 }
 .who-trusted-us-container .trusted-logos .trusted-logos-animate .logo {
-  width: 216px;
-  height: 81px;
+  margin: 0 30px;
+  height: auto;
+  width: auto;
 }
 
 @keyframes tape-logos-animation {
@@ -42,10 +45,10 @@
     left: 0;
   }
   82% {
-    left: -1350px;
+    left: -1150px;
   }
   90% {
-    left: -1350px;
+    left: -1150px;
   }
   95% {
     left: 0;

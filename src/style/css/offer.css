@@ -96,7 +96,40 @@
     width: 100%;
     height: 200px;
   }
-  .offer-container .offer-header-container .h3 {
-    text-align: center;
+  .offer-container .offer-header-container h2 {
+    width: 85%;
   }
+  .offer-container .offer-header-container .h3 {
+    width: 85%;
+    text-align: start;
+  }
+  .offer-section-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .offer-section-container__left-box {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+  .offer-section-container__left-box .left-box-button-container {
+    padding-top: 20px;
+    border-bottom: 1px solid #8d8d8d;
+    overflow-y: hidden;
+    height: 80px;
+  }
+  .offer-section-container__left-box .left-box-button-container .left-box-button {
+    border-bottom: none;
+    height: 80px;
+    width: 100%;
+  }
+  .offer-section-container__left-box .left-box-button-container__active {
+    height: fit-content;
+  }
+}
+.right-box-mobile {
+  margin-bottom: 20px;
 }

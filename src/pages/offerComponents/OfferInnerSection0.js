@@ -1,9 +1,10 @@
 import React from "react";
+import "../../style/css/offer.css";
 
 const OfferInnerSection0 = () => {
   return (
     <>
-      <div className="offer-section-container__right-box right-box">
+      <div className="offer-section-container__right-box right-box right-box-mobile">
         <div className="right-box__inner">
           <span>
             Obsługujemy tłumaczenia w niemal każdym języku europejskim i nie
