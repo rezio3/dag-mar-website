@@ -18,30 +18,34 @@ const Dt = () => {
                 <div className="DT-description">
                   <h2>O NAS</h2>
                   <p>
-                    Działalnością związaną z <strong>tłumaczeniami</strong> zajmujemy się od roku
-                    2001. Początkowo swoją ofertę kierowaliśmy do osób, które
-                    zainteresowane były wykonaniem <strong>tłumaczeń z języka
-                    angielskiego</strong>. Dynamiczny rozwój naszych usług oraz chęć
-                    wyjścia naprzeciw oczekiwaniom kontrahentów sprawiły, że w
-                    roku 2005 założyliśmy <strong>Biuro Tłumaczeń</strong>. Doskonale wiemy jak
-                    pomóc naszym Klientom, ponieważ sami również dokonujemy
-                    przekładu. Właścicielką Biura jest <strong>tłumacz przysięgły języka
-                    angielskiego</strong> mgr Dagmara Toporowska.
+                    Działalnością związaną z <strong>tłumaczeniami</strong>{" "}
+                    zajmujemy się od roku 2001. Początkowo swoją ofertę
+                    kierowaliśmy do osób, które zainteresowane były wykonaniem{" "}
+                    <strong>tłumaczeń z&nbsp;języka angielskiego</strong>.
+                    Dynamiczny rozwój naszych usług oraz chęć wyjścia naprzeciw
+                    oczekiwaniom kontrahentów sprawiły, że w&nbsp;roku 2005
+                    założyliśmy <strong>Biuro Tłumaczeń</strong>. Doskonale
+                    wiemy jak pomóc naszym Klientom, ponieważ sami również
+                    dokonujemy przekładu. Właścicielką Biura jest{" "}
+                    <strong>tłumacz przysięgły języka angielskiego</strong> mgr
+                    Dagmara Toporowska.
                   </p>
                   <p>
-                    Zespół <strong>Tłumaczy</strong> skupiony wokół naszego biura został dobrany
-                    bardzo starannie, gdyż tylko osoby z odpowiednimi
-                    predyspozycjami, doświadczeniem, szeroką wiedzą merytoryczną
-                    z różnych dziedzini wielkim zaangażowaniem w pracę z
-                    <strong>tłumaczeniami</strong> mogą sprostać zleceniom naszych Klientów.
+                    Zespół <strong>Tłumaczy</strong> skupiony wokół naszego
+                    biura został dobrany bardzo starannie, gdyż tylko osoby
+                    z&nbsp;odpowiednimi predyspozycjami, doświadczeniem, szeroką
+                    wiedzą merytoryczną z&nbsp;różnych dziedzini wielkim
+                    zaangażowaniem w&nbsp;pracę z&nbsp;
+                    <strong>tłumaczeniami</strong> mogą sprostać zleceniom
+                    naszych Klientów.
                   </p>
                   <p>
                     Nieustanne dążenie do perfekcji, dostosowanie kompleksowej
-                    oferty do potrzeb Klientów indywidualnych i firm, stawia
-                    przed nami coraz nowsze wyzwania, które z dumą realizujemy.
-                    Zadowolenie Klientów korzystających z naszych usług jest dla
-                    nas priorytetem, dlatego też dołożymy wszelkich starań by
-                    Państwa usatysfakcjonować.
+                    oferty do potrzeb Klientów indywidualnych i&nbsp;firm,
+                    stawia przed nami coraz nowsze wyzwania, które z&nbsp;dumą
+                    realizujemy. Zadowolenie Klientów korzystających
+                    z&nbsp;naszych usług jest dla nas priorytetem, dlatego też
+                    dołożymy wszelkich starań by Państwa usatysfakcjonować.
                   </p>
                   <NavLink to="/offer" className="nav-btn-desktop">
                     <button className="see-offer2">Zobacz ofertę</button>
@@ -55,30 +59,34 @@ const Dt = () => {
                 <div className="DT-description">
                   <h2>O NAS</h2>
                   <p>
-                    Działalnością związaną z <strong>tłumaczeniami</strong> zajmujemy się od roku
-                    2001. Początkowo swoją ofertę kierowaliśmy do osób, które
-                    zainteresowane były wykonaniem <strong>tłumaczeń z języka
-                    angielskiego</strong>. Dynamiczny rozwój naszych usług oraz chęć
-                    wyjścia naprzeciw oczekiwaniom kontrahentów sprawiły, że w
-                    roku 2005 założyliśmy <strong>Biuro Tłumaczeń</strong>. Doskonale wiemy jak
-                    pomóc naszym Klientom, ponieważ sami również dokonujemy
-                    przekładu. Właścicielką Biura jest <strong>tłumacz przysięgły języka
-                    angielskiego</strong> mgr Dagmara Toporowska.
+                    Działalnością związaną z&nbsp;<strong>tłumaczeniami</strong>{" "}
+                    zajmujemy się od roku 2001. Początkowo swoją ofertę
+                    kierowaliśmy do osób, które zainteresowane były wykonaniem{" "}
+                    <strong>tłumaczeń z&nbsp;języka angielskiego</strong>.
+                    Dynamiczny rozwój naszych usług oraz chęć wyjścia naprzeciw
+                    oczekiwaniom kontrahentów sprawiły, że w&nbsp;roku 2005
+                    założyliśmy <strong>Biuro Tłumaczeń</strong>. Doskonale
+                    wiemy jak pomóc naszym Klientom, ponieważ sami również
+                    dokonujemy przekładu. Właścicielką Biura jest{" "}
+                    <strong>tłumacz przysięgły języka angielskiego</strong> mgr
+                    Dagmara Toporowska.
                   </p>
                   <p>
-                    Zespół <strong>Tłumaczy</strong> skupiony wokół naszego biura został dobrany
-                    bardzo starannie, gdyż tylko osoby <br />z odpowiednimi
-                    predyspozycjami, doświadczeniem, szeroką wiedzą merytoryczną
-                    z różnych dziedzini wielkim zaangażowaniem w pracę <br /> z
-                    tłumaczeniami mogą sprostać zleceniom naszych Klientów.
+                    Zespół <strong>Tłumaczy</strong> skupiony wokół naszego
+                    biura został dobrany bardzo starannie, gdyż tylko osoby{" "}
+                    <br />
+                    z&nbsp;odpowiednimi predyspozycjami, doświadczeniem, szeroką
+                    wiedzą merytoryczną z&nbsp;różnych dziedzini wielkim
+                    zaangażowaniem w&nbsp;pracę <br /> z&nbsp;tłumaczeniami mogą
+                    sprostać zleceniom naszych Klientów.
                   </p>
                   <p>
                     Nieustanne dążenie do perfekcji, dostosowanie kompleksowej
-                    oferty do potrzeb Klientów indywidualnych <br />i firm,
-                    stawia przed nami coraz nowsze wyzwania, które z dumą
-                    realizujemy. Zadowolenie Klientów korzystających z naszych
-                    usług jest dla nas priorytetem, dlatego też dołożymy
-                    wszelkich starań by Państwa usatysfakcjonować.
+                    oferty do potrzeb Klientów indywidualnych <br />
+                    i&nbsp;firm, stawia przed nami coraz nowsze wyzwania, które
+                    z&nbsp;dumą realizujemy. Zadowolenie Klientów korzystających
+                    z&nbsp;naszych usług jest dla nas priorytetem, dlatego też
+                    dołożymy wszelkich starań by Państwa usatysfakcjonować.
                   </p>
                   <div className="button-and-DT-img">
                     <button className="see-offer2">Zobacz ofertę</button>

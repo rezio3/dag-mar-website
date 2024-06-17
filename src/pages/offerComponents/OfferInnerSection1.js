@@ -7,12 +7,12 @@ const OfferInnerSection1 = () => {
         <div className="right-box__inner">
           <span>
             Dokumenty, z którymi spotykamy się na co dzień charakteryzują się
-            różną treścią, skalą trudności, terminem wykonania, językiem w
-            którym je sporządzono lub językiem na jaki mają zostać przełożone. Z
-            tego względu preferujemy indywidualną wycenę tłumaczeń. Po
-            zapoznaniu się z dokumentami jesteśmy w stanie, w krótkim czasie
-            określić cenę tłumaczenia i datę odbioru lub wysyłki przedmiotu
-            zlecenia.
+            różną treścią, skalą trudności, terminem wykonania, językiem
+            w&nbsp;którym je sporządzono lub językiem na jaki mają zostać
+            przełożone. Z&nbsp;tego względu preferujemy indywidualną wycenę
+            tłumaczeń. Po&nbsp;zapoznaniu się z&nbsp;dokumentami jesteśmy
+            w&nbsp;stanie, w&nbsp;krótkim czasie określić cenę tłumaczenia
+            i&nbsp;datę odbioru lub wysyłki przedmiotu zlecenia.
           </span>
           <div className="right-box__list-container">
             <ul>
@@ -29,7 +29,8 @@ const OfferInnerSection1 = () => {
                 ceny podlegają negocjacji.
               </li>
               <li>
-                Dokonanie zlecenia jest równoznaczne z akceptacją regulaminu.
+                Dokonanie zlecenia jest równoznaczne
+                z&nbsp;akceptacją regulaminu.
               </li>
             </ul>
           </div>

@@ -22,7 +22,7 @@ const NavbarDesktop = () => {
         <NavLink to="/faq" className="nav-btn-desktop">
           <button className="faq navbtn">FAQ</button>
         </NavLink>
-        <div className="language-btn">
+        {/* <div className="language-btn">
           <div className="only-btn">
             <span>PL</span>
             <span className="material-symbols-outlined">expand_more</span>
@@ -31,7 +31,7 @@ const NavbarDesktop = () => {
             <span className="eng-span">English</span>
             <span className="de-span">Deutsch</span>
           </div>
-        </div>
+        </div> */}
         <NavLink to="/contact" className="nav-btn-desktop">
           <button className="contact-button">Skontaktuj się</button>
         </NavLink>

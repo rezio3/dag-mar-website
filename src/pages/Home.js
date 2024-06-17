@@ -37,7 +37,6 @@ const Home = () => {
       });
     }
     fetchData();
-   
 
     // if (docSnap.exists()) {
     //   console.log("Document data:", docSnap.data());
@@ -57,10 +56,12 @@ const Home = () => {
             Twoje potrzeby
           </h1>
           <h3>
-            Jeśli szukacie Państwo <strong>Tłumacza przysięgłego</strong> lub osoby, która
-            przełoży tekst z języka ojczystego na <strong>język obcy</strong> lub odwrotnie to
-            dobrze trafiliście. W naszym Biurze możecie Państwo zlecić
-            <strong>tłumaczenie</strong> z niemal <strong>każdego języka europejskiego</strong> i nie tylko.
+            Jeśli szukacie Państwo <strong>Tłumacza przysięgłego</strong> lub
+            osoby, która przełoży tekst z&nbsp;języka ojczystego na{" "}
+            <strong>język obcy</strong> lub odwrotnie to dobrze trafiliście.
+            W&nbsp;naszym Biurze możecie Państwo zlecić
+            <strong>tłumaczenie</strong> z&nbsp;niemal{" "}
+            <strong>każdego języka europejskiego</strong> i&nbsp;nie tylko.
           </h3>
           <NavLink to="/offer" className="nav-btn-desktop">
             <button className="see-offer">Zobacz ofertę</button>

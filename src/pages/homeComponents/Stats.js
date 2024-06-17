@@ -85,7 +85,7 @@ const Stats = () => {
                 <div className="second-stat stats">
                   <span className="stat-number">
                     {" "}
-                    {scrolled ? <Number n={21} /> : 0}
+                    {scrolled ? <Number n={yearsOfExperience} /> : 0}
                   </span>
                   <span className="stat-description">lat doświadczenia</span>
                 </div>

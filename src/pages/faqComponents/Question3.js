@@ -102,7 +102,7 @@ const Question3 = (props) => {
                 style={
                   props.state[props.stateLine]
                     ? {
-                        height: props.header.heightMobile,
+                        height: "fit-content",
                         display: "flex",
                         flexDirection: "column",
                       }
