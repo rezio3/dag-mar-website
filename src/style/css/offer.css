@@ -132,4 +132,8 @@
 }
 .right-box-mobile {
   margin-bottom: 20px;
+  color: #6c6c6c;
+}
+.right-box-mobile ul li {
+  color: #6c6c6c;
 }

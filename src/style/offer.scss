@@ -141,10 +141,15 @@
         height: fit-content;
       }
     }
-    
   }
 }
 
 .right-box-mobile {
   margin-bottom: 20px;
+  color: $txt;
+  ul {
+    li {
+      color: $txt;
+    }
+  }
 }
