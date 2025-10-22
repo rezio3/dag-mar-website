@@ -13,7 +13,7 @@ const MapBox = () => {
 
 const Map = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBmWq272OEqZfCcLneiOPt5wg01SIvcG8A",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
   return (
     <>
@@ -31,18 +31,19 @@ const Map = () => {
                 <div className="location">
                   <h2>Gdzie i kiedy stacjonujemy?</h2>
                   <p>
-                    Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy Karkonoskiej 1C,
-                    na pierwszym piętrze budynku usługowego. Biuro czynne jest w
-                    poniedziałki, wtorki i czwartki w godzinach 8:00–14:30. <br/>W
-                    środy i piątki prosimy o kontakt telefoniczny. Można się <br />z
-                    nami również kontaktować telefonicznie (pn-pt) do godziny
-                    20:00.
+                    Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy
+                    Karkonoskiej 1C, na pierwszym piętrze budynku usługowego.
+                    Biuro czynne jest w poniedziałki, wtorki i czwartki w
+                    godzinach 8:00–14:30. <br />W środy i piątki prosimy o
+                    kontakt telefoniczny. Można się <br />z nami również
+                    kontaktować telefonicznie (pn-pt) do godziny 20:00.
                   </p>
                 </div>
                 <div className="address">
                   <h2>Dane kontaktowe</h2>
                   <p>
-                    <strong>Biuro Tłumaczeń Przysięgłych „DAG-MAR”</strong> <br />
+                    <strong>Biuro Tłumaczeń Przysięgłych „DAG-MAR”</strong>{" "}
+                    <br />
                     ul. Karkonoska 1C, 59-300 Lubin <br />
                     tel. +48 76 846 10 64, kom. +48 607 618 567 <br />
                     NIP: 692-172-62-49, Regon: 390770661
@@ -62,9 +63,10 @@ const Map = () => {
                 <div className="location">
                   <h2>Gdzie i kiedy stacjonujemy?</h2>
                   <p>
-                    Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy Karkonoskiej 1C,
-                    na pierwszym piętrze budynku usługowego. Jesteśmy otwarci od
-                    poniedziałku do piątku <br /> w godzinach 9-16.
+                    Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy
+                    Karkonoskiej 1C, na pierwszym piętrze budynku usługowego.
+                    Jesteśmy otwarci od poniedziałku do piątku <br /> w
+                    godzinach 9-16.
                   </p>
                 </div>
                 <div className="address">
