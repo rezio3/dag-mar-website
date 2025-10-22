@@ -60,7 +60,7 @@ const Home = () => {
             osoby, która przełoży tekst z&nbsp;języka ojczystego na{" "}
             <strong>język obcy</strong> lub odwrotnie to dobrze trafiliście.
             W&nbsp;naszym Biurze możecie Państwo zlecić
-            <strong>tłumaczenie</strong> z&nbsp;niemal{" "}
+            <strong> tłumaczenie</strong> z&nbsp;niemal{" "}
             <strong>każdego języka europejskiego</strong> i&nbsp;nie tylko.
           </h3>
           <NavLink to="/offer" className="nav-btn-desktop">
