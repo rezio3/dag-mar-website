@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import "../../style/css/form.css";
 import Media from "react-media";
 import FormDesktop from "./FormDesktop";
-import { app } from "../../firebase";
-import { collection, addDoc, getFirestore } from "firebase/firestore";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import "../../style/css/loading.css";
 
 const Form = () => {
@@ -33,115 +30,7 @@ const Form = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const { name, surname, email, subject, message } = formVal;
-
-    if (
-      name !== "" &&
-      surname !== "" &&
-      email !== "" &&
-      subject !== "" &&
-      message !== ""
-    ) {
-      setIsLoading(true);
-      const db = getFirestore(app);
-      if (fileState.fileName === "") {
-        const sendEmail = async () => {
-          try {
-            await addDoc(collection(db, "mail"), {
-              to: "reziolek999@gmail.com",
-              message: {
-                subject: subject,
-                html: `${name} ${surname}<br />email:<br />${email}<br />message:<br />${message}`,
-              },
-            });
-          } catch (e) {
-            console.error("Error adding document: ", e);
-          }
-        };
-        sendEmail();
-      } else {
-        const storage = getStorage(app);
-        const fileRef = ref(storage, `files/${fileState.fileName}`);
-        await uploadBytes(fileRef, fileState.file);
-
-        getDownloadURL(ref(storage, `files/${fileState.fileName}`)).then(
-          async (url) => {
-            try {
-              await addDoc(collection(db, "mail"), {
-                to: "reziolek999@gmail.com",
-                message: {
-                  subject: subject,
-                  html: `${name} ${surname}<br />email:<br />${email}<br />message:<br />${message}`,
-                  attachments: [
-                    {
-                      filename: fileState.fileName,
-                      path: url,
-                    },
-                  ],
-                },
-              });
-            } catch (e) {
-              console.error("Error adding document: ", e);
-            }
-          }
-        );
-      }
-
-      setFormVal({
-        name: "",
-        surname: "",
-        email: "",
-        subject: "",
-        message: "",
-        formValid: 0,
-        formSent: true,
-      });
-
-      setFileState({
-        isFileLoaded: false,
-        file: null,
-        fileName: "",
-        inputFileValue: "",
-        isFileSize: false,
-      });
-      setIsLoading(false);
-
-      setTimeout(() => {
-        setFormVal({
-          name: "",
-          surname: "",
-          email: "",
-          subject: "",
-          message: "",
-          formValid: 0,
-          formSent: false,
-        });
-        setFileState({
-          isFileLoaded: false,
-          file: null,
-          fileName: "",
-          inputFileValue: "",
-          isFileSize: false,
-        });
-      }, 2000);
-      if (fileState.fileName !== "") {
-        const fileName = fileState.fileName;
-        setTimeout(async () => {
-          const storage = getStorage(app);
-          const deleteFileRef = ref(storage, `files/${fileName}`);
-          await uploadBytes(deleteFileRef, ".");
-        }, 7000);
-      }
-      return true;
-    } else {
-      console.log("Brak wypełnionych pól w formularzu");
-      setFormVal({
-        ...formVal,
-        formValid: 1,
-      });
-      return false;
-    }
+    console.log("wysłane");
   };
 
   const handleFileUpload = (e) => {

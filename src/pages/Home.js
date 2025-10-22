@@ -9,9 +9,6 @@ import WhoTrustedUs from "./homeComponents/WhoTrustedUs";
 import { NewsContext } from "../context/NewsContext";
 import NewsWindow from "../layouts/NewsWindow";
 import { NavLink } from "react-router-dom";
-import { getFirestore } from "firebase/firestore";
-import { app } from "../firebase.js";
-import { doc, getDoc } from "firebase/firestore";
 
 const Home = () => {
   const [news, setNews] = useContext(NewsContext);
@@ -23,28 +20,6 @@ const Home = () => {
       behavior: "smooth",
     });
   };
-  const db = getFirestore(app);
-
-  const docRef = doc(db, "popup", "notification");
-  useEffect(() => {
-    async function fetchData() {
-      const docSnap = await getDoc(docRef);
-      // console.log();
-      setNews({
-        newsOn: docSnap.data().isActive,
-        txt1: docSnap.data().txt1,
-        txt2: docSnap.data().txt2,
-      });
-    }
-    fetchData();
-
-    // if (docSnap.exists()) {
-    //   console.log("Document data:", docSnap.data());
-    // } else {
-    //   // docSnap.data() will be undefined in this case
-    //   console.log("No such document!");
-    // }
-  }, []);
 
   return (
     <div className="page-container">
